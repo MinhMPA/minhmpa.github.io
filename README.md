@@ -1,3 +1,9 @@
+# Minh Nguyen personal homepage - powered by Massively and hosted by GitHub pages
+
+> Welcome to the repo of my homepage. This page is built by Jekyll using the Massively theme. Below you will find the original information and instructions on how to use Jekyll to build your own site.
+
+**ORIGINAL CONTENT BELOW**
+
 # Massively
 > This is Massively, a text-heavy, article-oriented design built around a huge background
 image.
