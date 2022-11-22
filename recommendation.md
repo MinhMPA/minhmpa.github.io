@@ -68,11 +68,13 @@ I wholeheartedly recommend the following articles, which were suggested to me an
 
 - Kayak (along the Huron river)
 - Ice skate (any lake during winter)
+- Watch our football team play at the Michigan stadium
 
 ### Munich
 
 - Christmas markets (of course!)
 - Parks: Englischen Garten, Olympiapark (esp. during the cherry blossom or festival seasons), Luitpoldpark (next to Olympiapark, you can see the Alps from the top of the hill)
+- Museums on Sundays
 - Beer gardens: Hirschgarten or SEEHAUS in Englischen Garten
 - Gelato: Der verr&uuml;ckte Eismacher - im Wunderland (they have beer and obatzda flavors!), True & 12
 - P&acirc;tisserie and/or chocolaterie: Widmann, Tanpopo, Andreas Muschler (in Freising not Munich, but it is worth it!)
