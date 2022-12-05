@@ -7,11 +7,11 @@ sitemap:
     changefreq: weekly
 ---
 
-Here is a (heavyly biased!) list of random things I would recommend. I hope you find some useful suggestion(s) below.
+Here is a (heavily biased!) list of random things I would recommend. I hope you find some useful suggestion(s) below.
 
 ## Textbooks
 
-- Dragan Huterer's upcoming book provides the perfect balance (and connection) between theory and observation. If you are an undergrad or first-year grad student, I think this is a great starting point.
+- Dragan Huterer's upcoming book, "A Course in Cosmology: From Theory to Practice", provides the perfect balance (and connection) between theory and observation. If you are an undergrad or first-year grad student, I think this is a great starting point.
 
 - Scott Dodelson's and Fabian Schmidt's <a href="https://search.lib.umich.edu/catalog/record/990182621100106381">Modern Cosmology (2nd edition)</a> discusses both theories of CMB and LSS, and how to connect them to observation. The treatment of perturbations, starting from Bolztmann equations, is extremely comprehensive.
 
@@ -68,11 +68,13 @@ I wholeheartedly recommend the following articles, which were suggested to me an
 
 - Kayak (along the Huron river)
 - Ice skate (any lake during winter)
+- Watch our football team play at the Michigan stadium
 
 ### Munich
 
 - Christmas markets (of course!)
 - Parks: Englischen Garten, Olympiapark (esp. during the cherry blossom or festival seasons), Luitpoldpark (next to Olympiapark, you can see the Alps from the top of the hill)
+- Museums on Sundays
 - Beer gardens: Hirschgarten or SEEHAUS in Englischen Garten
 - Gelato: Der verr&uuml;ckte Eismacher - im Wunderland (they have beer and obatzda flavors!), True & 12
 - P&acirc;tisserie and/or chocolaterie: Widmann, Tanpopo, Andreas Muschler (in Freising not Munich, but it is worth it!)

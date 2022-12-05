@@ -20,6 +20,8 @@ In particular, physical processes and systematic effects are explicitly modeled 
 
 To this end, I combine perturbative approaches, e.g. perturbation theory (PT) or effective field theory of large-scale structure (EFTofLSS) and Bayesian statistics to build roburst (forward-)models that yield unbiased inference. To interface Bayesian inference with galaxy and/or CMB survey datasets requires developing sophisticated computer algorithms and scalable implementations, while, sometimes, to reach beyond the regime of PT and EFTofLSS necessitates utilizing N-body simulations and simulation-based inference (SBI) techniques.
 
+The full list of my publications can be found <a href="https://arxiv.org/search/?query=nguyen%2C+nhat-minh&searchtype=author&abstracts=show&order=-announced_date_first&size=50">here</a> on arxiv. Below I highlight some key projects where I have a) led the effort or b) made key contributions and/or am one the co-corresponding authors.
+
 ### Field-level, forward-modeling of galaxy clustering
 
 <p align="center">
