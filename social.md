@@ -6,7 +6,6 @@ sitemap:
     lastmod: 2017-11-02
     changefreq: weekly
 ---
-
 ## LCTP Social Coffee Hour (every Monday, 4pm @ Randall 3444
 
 <p>Two of my favorite things at work are coffee and conversations. I really enjoy drinking coffee while listening to others' works, perhaps even more than telling people about my own.</p>

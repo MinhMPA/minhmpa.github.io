@@ -6,7 +6,6 @@ sitemap:
     lastmod: 2017-11-02
     changefreq: weekly
 ---
-
 Traveling is one part of the job that I really like. Here is a list of most recent events and places where I have visited to give a talk and to discuss research.
 
 - Aspen workshop on "Large-Scale Structure Cosmology beyond 2-Point Statistics", June 2022. (My first ever blackboard talk, pictured at the bottom.)

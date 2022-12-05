@@ -70,4 +70,3 @@ Specifically, using an inferred tidal field of Cold Dark Matter (which cannot be
 <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2022/08/003"><b>Open-access article</b></a>, published on <i>Journal of Cosmology and Astroparticle Physics</i>, August 2022. See also this <a href="https://www.mpa-garching.mpg.de/1052846/hl202204?c=27981">press release</a> featured on MPA research highlights, April 2022.</p>
 
 <p>My follow-up project involves developing field-level model of galaxy intrinsic shapes as biased tracers of the LSS tidal field and initial conditions. This will unlock the potential of (intrinsic) shapes as a novel probe of cosmological parameters. I choose the EFTofLSS approach for data modeling and the <a href="https://gitlab.mpcdf.mpg.de/leftfield">LEFTfield framework</a> for code implementation. The latter is going to be publicly released <a href="https://gitlab.mpcdf.mpg.de/leftfield/release">here</a> on GitLab once ready.
-
