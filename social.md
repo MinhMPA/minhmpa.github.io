@@ -16,7 +16,6 @@ So I organized a ``platform`` for those conversations, disguised as something (I
 
 <p>Thanks to the kind support from the department, we have been going strong since Spring 2022.</p>
 
-
 <hr />
 
 ## VLLT Joint Seminar Series on Physics & Astronomy
@@ -26,10 +25,14 @@ So I organized a ``platform`` for those conversations, disguised as something (I
 <p>We have had many young international and Vietnamese researchers as our speakers. And we plan to continue doing so.</p>
  ![VLLT seminar participants #1 >](/images/VLLT_seminar_screenshot.jpg#left){:height="225px" width="400px"} ![VLLT seminar participants #2 >](/images/VLLT_seminar_screenshot1.jpg#right){:height="225px" width="400px"}
 
+<hr />
+
 ## Skype a Scientist
 
  <span class="image right"><img src="{{ "images/Skype_a_Scientist.jpg" | absolute_url }}" style="float:right;" alt="" /></span> 
 Skype a Scientist is a non-profit educational program, based in the US, that connects science classrooms to active researchers. Through informal interviews and conversations, the students get to learn more about science, scientific research and what it is like to work as a scientist. If you are either a scientist or a science teacher, I strongly encourage you to consider <a href="https://www.skypeascientist.com/sign-up.html">signing up</a>.
+
+<hr />
 
 ## Hobbies 
 
