@@ -8,6 +8,9 @@ sitemap:
 ---
 Traveling is one part of the job that I really like. Here is a list of most recent events and places where I have visited to give a talk and to discuss research.
 
+- Kavli IPMU visit, Chiba (near Tokyo), April 2023. (During the Opening Symposium for the new Kavli IPMU Center for Data-Driven Discovery)
+- Future Science with CMB x LSS workshop, YITP, Kyoto, April 2023.
+- TACOS seminar, Arizona Cosmology Lab, University of Arizona, February 2023. (During the "Beyond 2-point data challenge" workshop.)
 - Aspen workshop on "Large-Scale Structure Cosmology beyond 2-Point Statistics", June 2022. (My first ever blackboard talk, pictured at the bottom.)
 - Astro Lunch Seminar, Kavli IPMU, May 2022.
 - KIPAC Cosmology Seminar, Stanford, May 2022.
