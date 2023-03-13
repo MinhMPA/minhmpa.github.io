@@ -41,7 +41,7 @@ Here is my interview with Shaun Hotchkiss at Cosmology Talks about this result:
 <iframe
     width="640"
     height="480"
-    src="https://youtu.be/Tov5KahGEVQ"
+    src="https://www.youtube.com/embed/Tov5KahGEVQ"
     frameborder="0"
     allow="encrypted-media"
     allowfullscreen
