@@ -37,7 +37,7 @@ padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />
 padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />
 </p>
 
-Here is my interview with Shaun Hotchkiss at Cosmology Talks about this result:
+Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result:
 <iframe
     width="640"
     height="480"
