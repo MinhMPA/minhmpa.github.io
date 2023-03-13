@@ -22,6 +22,27 @@ To this end, I combine perturbative approaches, e.g. perturbation theory (PT) or
 
 The full list of my publications can be found <a href="https://arxiv.org/search/?query=nguyen%2C+nhat-minh&searchtype=author&abstracts=show&order=-announced_date_first&size=50">here</a> on arxiv. Below I highlight some key projects where I have a) led the effort or b) made key contributions and/or am one the co-corresponding authors.
 
+### Latest result
+
+Analyzing current CMB and LSS data, we detect evidence for a suppressed growth rate of large scale structure in the late Universe.
+
+The first plot below illustrate this growth suppression effect. It compares the constraint on growth rate assuming General Relativity (GR) and the concordance cosmological model $\Lambda$CDM (black) and the constraint on growth rate should growth be allowed to deviate from the prediction by GR+$\Lambda$CDM. The second plot elucidates a very interesting feature of the suppressed growth. That is, it offers a new interpretation for the so-called S8 tension: If LSS growth rate was to be suppressed fairly recently, the constraints on matter fluctuation amplitude at redshift $z=0$, S8, from CMB and LSS can be brought into well agreement.
+
+<p align="center">
+<img src="{{ "/images/fsigma8z_constraints_vs_data.png" | absolute_url }}"  width="100%" height="80%" style="float:left; padding-left:-1px;
+padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />
+</p>
+<p align="center">
+<img src="{{ "/images/gamma_S8_omegam_H0_2Dcontours.png" | absolute_url }}"  width="100%" height="80%" style="float:left; padding-left:-1px;
+padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />
+</p>
+
+Here is my interview with Shaun Hotchkiss at Cosmology Talks about this result:
+
+[![Youtube interview with Cosmology Talks](https://img.youtube.com/vi/Tov5KahGEVQ/default.jpg)](https://youtu.be/Tov5KahGEVQ)
+
+If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details.
+
 ### Field-level, forward-modeling of galaxy clustering
 
 <p align="center">
