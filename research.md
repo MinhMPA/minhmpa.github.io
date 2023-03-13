@@ -38,8 +38,15 @@ padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />
 </p>
 
 Here is my interview with Shaun Hotchkiss at Cosmology Talks about this result:
-
-[![Youtube interview with Cosmology Talks](https://img.youtube.com/vi/Tov5KahGEVQ/default.jpg)](https://youtu.be/Tov5KahGEVQ)
+<iframe
+    width="640"
+    height="480"
+    src="https://youtu.be/Tov5KahGEVQ"
+    frameborder="0"
+    allow="encrypted-media"
+    allowfullscreen
+>
+</iframe>
 
 If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details.
 
