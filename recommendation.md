@@ -11,7 +11,7 @@ Here is a (heavily biased!) list of random things I would recommend. I hope you 
 
 ## Textbooks
 
-- Dragan Huterer's upcoming book, "A Course in Cosmology: From Theory to Practice", provides the perfect balance (and connection) between theory and observation. If you are an undergrad or first-year grad student, I think this is a great starting point.
+- Dragan Huterer's book, <a href="https://www.cambridge.org/highereducation/books/a-course-in-cosmology/3D74B59DC8D6219D079F777DFD3FB1DE#overview">A Course in Cosmology: From Theory to Practice</a>, provides the perfect balance (and connection) between theory and observation. If you are an undergrad or first-year grad student, I think this is a great starting point.
 
 - Scott Dodelson's and Fabian Schmidt's <a href="https://search.lib.umich.edu/catalog/record/990182621100106381">Modern Cosmology (2nd edition)</a> discusses both theories of CMB and LSS, and how to connect them to observation. The treatment of perturbations, starting from Bolztmann equations, is extremely comprehensive.
 
