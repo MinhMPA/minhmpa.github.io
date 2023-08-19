@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Recommendation
+title: Random
 sitemap:
     priority: 0.7
     lastmod: 2017-11-02
