@@ -54,6 +54,7 @@ Here is a (heavily biased!) list of random things I would recommend. I hope you 
 ## Code
 
 - <a href="https://www.dask.org/">Dask</a> provides a straightforward way to scale up your python implementation to handle big datasets while giving you a lot of control.
+- <a href="https://cosmosis.readthedocs.io/en/latest/">CosmoSIS</a> is a framework to analyze Weak Lensing survey data. Here is a <a href=""https://github.com/MinhMPA/cosmosis/blob/40d41e4e8d6d64d5eebd4eea5f23f93d01ce69d6/CosmoSIS_installation-and-execution.md>manual installation guide for new developers</a>.
 
 ## General advice on doing research
 
