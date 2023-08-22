@@ -73,7 +73,7 @@ I wholeheartedly recommend the following articles, which were suggested to me an
 
 ### Munich
 
-- Christmas markets (of course!)
+- Christmas markets (Christkindlmarkt): all of them
 - Parks: Englischen Garten, Olympiapark (esp. during the cherry blossom or festival seasons), Luitpoldpark (next to Olympiapark, you can see the Alps from the top of the hill)
 - Museums on Sundays
 - Beer gardens: Hirschgarten or SEEHAUS in Englischen Garten
