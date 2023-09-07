@@ -48,7 +48,7 @@ Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchki
 >
 </iframe>
 
-If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details. PRL in press; Editor's Suggestion.
+If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details. Physical Review Letters; Editor's Suggestion; American Physics Society's Outreach-to-the-Press..
 
 ### Field-level, forward-modeling of galaxy clustering
 
