@@ -13,11 +13,8 @@ Below are some group photos and descriptions of the groups I have been a member 
 
 Our big group consists of members from Prof. Huterer's, Prof. Evrard, Prof. Avestruz, and Prof. Soares-Santos's research groups. As observed in the photos, we are an ever growing international group of researchers and are reaching the critical mass. I have been working towards bringing our people together through group/journal club meetings and social coffee!
 
-<p>Spring 2022: meetings were hybrid so some people only appeared on the Zoom screen</p>
- <span class="image center"><img src="{{ "images/UM_group_early2022.jpg" | absolute_url }}" width="80%" height="80%" style="float:center;" alt="" /></span> 
-
-<p>Fall 2022: back to in-person meetings (yay!)</p>
- <span class="image center"><img src="{{ "images/UM_group_late2022.jpg" | absolute_url }}" width="80%" height="80%" style="float:center;" alt="" /></span> 
+<p>Fall 2023: in front of our old Randall Lab, now Neal Laboratory, home of LCTP</p>
+ <span class="image center"><img src="{{ "images/UM_group_fall2023.jpg" | absolute_url }}" width="80%" height="80%" style="float:center;" alt="" /></span> 
 <hr />
 
 
