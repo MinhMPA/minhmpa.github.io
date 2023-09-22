@@ -49,7 +49,7 @@ Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchki
 </iframe>
 
 If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details.
-The published version is now <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">online</a> at Physical Review Letters as an Editor's Suggestion. <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="154036584"></div>
+The published version is now <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">online</a> at Physical Review Letters as an Editor's Suggestion. <div class='altmetric-embed' data-badge-type='medium-donut' data-badge-details='right' data-doi='10.1103/PhysRevLett.131.111001'></div>
 
 You can read the original press release by University of Michigan News <a href="https://news.umich.edu/the-universe-caught-suppressing-cosmic-structure-growth/">here</a>.
 And here is my <a href="https://drive.google.com/file/d/1n8CXz9rjoiPBGgbkAQXByujPVaYo3saO/view?usp=sharing">personal copy</a> of the article about our work on NewScientist.
