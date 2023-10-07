@@ -49,10 +49,10 @@ Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchki
 </iframe>
 
 If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details.
-<The published version is now <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">online</a> at Physical Review Letters as an <a href="https://drive.google.com/file/d/1IRPuo9XLeOXeCcimqh63ZLEVlmJye4iP/view?usp=sharing">Editor's Suggestion</a>.
+The published version is now <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">online</a> at Physical Review Letters as an <a href="https://drive.google.com/file/d/1IRPuo9XLeOXeCcimqh63ZLEVlmJye4iP/view?usp=sharing">Editor's Suggestion</a>.
 
 New Scientist's coverage of our results can be found <a href="https://drive.google.com/file/d/1n8CXz9rjoiPBGgbkAQXByujPVaYo3saO/view?usp=sharing">here</a>.
-You might also want to check out the original press release by University of Michigan News <a href="https://news.umich.edu/the-universe-caught-suppressing-cosmic-structure-growth/">here</a>.
+The original press release by University of Michigan News is <a href="https://news.umich.edu/the-universe-caught-suppressing-cosmic-structure-growth/">here</a>.
 If you prefer to read about it in my own words, <a href="https://phys.org/news/2023-10-molasses-cosmic-large-scale-caught-slower.html">here</a> is my Science x Dialog on Phys.org.
 
 ### Field-level, forward-modeling of galaxy clustering
