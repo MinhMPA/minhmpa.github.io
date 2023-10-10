@@ -11,10 +11,12 @@ sitemap:
 *How exactly did galaxies, galaxy clusters and filaments form and evolve?*  
 *How do tiny initial fluctuations that seed the large-scale structure look?*  
 *What set those initial conditions of our Universe?*  
-I work between the interface of astrophysics and cosmology trying to answer those questions.
+I am a modeler working between the interface of astrophysics and cosmology trying to model the observed universe and answer those questions.
 
-For cosmologists, I am a modeler. I model different observables, including galaxy number counts, galaxy intrinsic shapes, cluster Sunyaev-Zeldovich (SZ) effect in the Cosmic Microwave Background (CMB), and growth of LSS, in order to confront theoretical assumptions and predictions with current and future observations. Specifically, most of my works have focused on *forward*-modeling the aforementioned statistics directly at the *field*-level.
-In particular, physical processes and systematic effects are explicitly modeled in forward simulations, all starting from initial conditions of the observed volume.
+Stage-IV cosmic microwave background (CMB) experiments and galaxy surveys will open a wide and deep window into our universe and the cosmic large-scale structure (LSS), at both late and early times; CMBxLSS analyses provide a tomographic scan uncovering the evolution of the mysterious dark energy and the elusive dark matter. Unfortunately, hints of new cosmological physics beyond the standard model of cosmology are often convoluted by systematics from astrophysical processes. To effectively break this degeneracy requires explicit modeling of both signal and systematics—beyond the regimes of linear theory and standard summary statistics—and/or clever, consistent modeling of the signal when combining CMB and LSS. However, so far the two approaches have been largely explored as two separate dimensions. My past research explored and developed both approaches to elevate cosmological constraints, in particular, those on late-time new physics. My NHFP program is to merge these two directions into one single dimension where I will forward-model the growth of LSS, going from the early to late universe, in both CMB and LSS observables, at the map level. Late-time new physics is consistently encoded in the LSS growth history, hence naturally separated from the astrophysics which has a different time evolution.
+
+<!--For cosmologists, I am a modeler. I model different observables, including galaxy number counts, galaxy intrinsic shapes, cluster Sunyaev-Zeldovich (SZ) effect in the Cosmic Microwave Background (CMB), and growth of LSS, in order to confront theoretical assumptions and predictions with current and future observations. Specifically, most of my works have focused on *forward*-modeling the aforementioned statistics at the map-level, i.e. at the level of 3D and/or 2D fields.-->
+<!--In particular, physical processes and systematic effects are explicitly modeled in forward simulations, all starting from initial conditions of the early universe, within the observed volume.-->
 
 <hr />
 
@@ -49,7 +51,7 @@ Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchki
 </iframe>
 
 If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details.
-The published version is now <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">online</a> at Physical Review Letters as an <a href="https://drive.google.com/file/d/1IRPuo9XLeOXeCcimqh63ZLEVlmJye4iP/view?usp=sharing">Editor's Suggestion</a>. <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="154036584"></div>
+The published version is now <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">online</a> at Physical Review Letters as an <a href="https://drive.google.com/file/d/1IRPuo9XLeOXeCcimqh63ZLEVlmJye4iP/view?usp=sharing">Editor's Suggestion</a>.
 
 New Scientist's coverage of our results can be found <a href="https://drive.google.com/file/d/1n8CXz9rjoiPBGgbkAQXByujPVaYo3saO/view?usp=sharing">here</a>.
 The original press release by University of Michigan News is <a href="https://news.umich.edu/the-universe-caught-suppressing-cosmic-structure-growth/">here</a>.
