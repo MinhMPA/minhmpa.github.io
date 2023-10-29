@@ -6,30 +6,22 @@ sitemap:
     lastmod: 2017-11-02
     changefreq: weekly
 ---
-## LCTP Social Coffee Hour (every Monday, 4pm @ Randall 3444
+## LCTP Social Coffee Hour (Monday, 4pm @ Randall 3444)
 
 <p>Two of my favorite things at work are coffee and conversations. I really enjoy drinking coffee while listening to others' works, perhaps even more than telling people about my own.</p>
  <span class="image right"><img src="{{ "images/LCTP_coffee.jpg" | absolute_url }}" style="float:right;" alt="" /></span> 
 <p>When I arrived at the Leinweber Center for Theoretical Physics (LCTP), we have a lot of graduate students, postdocs and faculties who work on either High Energy Physics (HEP) or Astrophysics and Cosmology. It could be one of the long COVID symptomps, but I noticed that HEP people and astro/cosmo people do not cross-talk very often.
 So I organized a ``platform`` for those conversations, disguised as something (I hope) most researchers love as much as I am: a social coffee with brownies and cookies.</p>
 
-<p>Thanks to the kind support from the department, we have been going strong since Spring 2022.</p>
+<p>Thanks to the kind support from the UM Physics Department, we have been going strong since Spring 2022.</p>
 
 <hr />
 
-## VLLT Joint Seminar Series on Physics & Astronomy
+## Cosmology Student-Postdoc Journal Club (Wednesday, 1pm @ Randall 3246)
 
-<p>The idea started during the pandemic, when all seminars moved to the virtual format hosted on e.g. Zoom.</p>
-<p>I put together a group of Vietnamese junior postdocs and graduate students in Physics and Astrophysics to organize this series of virtual talks in <a href="https://vllt-joint-seminar-series.github.io/2021/">2021</a> and <a href="https://vllt-joint-seminar-series.github.io/2022/">2022</a> for undergraduate and early graduate students in Vietnam, hoping to expose them to state-of-the-art scientific research in Physics and Astronomy. The kind of exposure I wish I had during my undergraduate days.</p>
-<p>We have had many young international and Vietnamese researchers as our speakers. And we plan to continue doing so.</p>
- ![VLLT seminar participants #1 >](/images/VLLT_seminar_screenshot.jpg#left){:height="225px" width="400px"} ![VLLT seminar participants #2 >](/images/VLLT_seminar_screenshot1.jpg#right){:height="225px" width="400px"}
+<p>This is, strictly speaking, not a social activities. But we do enjoy sharing (free!) lunch and daily life stories while also discussing papers and science.
 
-<hr />
-
-## Skype a Scientist
-
- <span class="image right"><img src="{{ "images/Skype_a_Scientist.jpg" | absolute_url }}" style="float:right;" alt="" /></span> 
-Skype a Scientist is a non-profit educational program, based in the US, that connects science classrooms to active researchers. Through informal interviews and conversations, the students get to learn more about science, scientific research and what it is like to work as a scientist. If you are either a scientist or a science teacher, I strongly encourage you to consider <a href="https://www.skypeascientist.com/sign-up.html">signing up</a>.
+<p>We are funded by the UM Physics Department.</p>
 
 <hr />
 
