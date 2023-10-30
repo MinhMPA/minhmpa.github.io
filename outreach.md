@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Social
+title: Outreach
 sitemap:
     priority: 0.7
     lastmod: 2017-11-02
@@ -25,15 +25,7 @@ I really like CfH and love their outreach component. At each CfH conference, the
 
 Here is the CfH2023 session where others and I answered questions from the public about cosmology, including the <a href="https://www.reddit.com/r/askscience/comments/14zdckv/askscience_ama_series_we_are_cosmologists_experts/">r/askscience thread</a> and the Youtube recording.
 
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/live/Wqod1s8LvNY?si=klv7qbolUx5vsUY0"
-    frameborder="0"
-    allow="encrypted-media"
-    allowfullscreen
->
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Wqod1s8LvNY?si=qsUHOJyiA076PmK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Skype a Scientist
 
