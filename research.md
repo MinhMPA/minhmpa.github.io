@@ -40,15 +40,7 @@ Analyzing current CMB and LSS data, we detect evidence for a suppressed growth r
 <!--</p>-->
 
 Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result:
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/embed/Tov5KahGEVQ"
-    frameborder="0"
-    allow="encrypted-media"
-    allowfullscreen
->
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tov5KahGEVQ?si=B1wzJ2EoYavb-Avw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details.
 The published version is now <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">online</a> at Physical Review Letters as an <a href="https://drive.google.com/file/d/1IRPuo9XLeOXeCcimqh63ZLEVlmJye4iP/view?usp=sharing">Editor's Suggestion</a>.
