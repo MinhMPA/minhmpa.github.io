@@ -34,6 +34,6 @@ Skype a Scientist is a non-profit, international program, that connects science 
 
 ## Physicists To-Go
 
-This is similar to Skype a Scientist, but managed by the American Physical Society (APS). It is my understanding that it is currently limited to within the US.
+This is similar to Skype a Scientist, but managed by the American Physical Society (APS). If you are in the US, consider signing up <a href="https://www.aps.org/programs/outreach/physiciststogo.cfm">here</a>.
 
 <hr />
