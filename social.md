@@ -25,7 +25,7 @@ So I organized a ``platform`` for those conversations, disguised as something (I
 
 <hr />
 
-## Hobbies 
+## Hobbies
 
  <span class="image left"><img src="{{ "images/BSV_pool.jpg" | absolute_url }}" style="float:left;" alt="" /></span> 
-I am an avid fan of (random order): mechanical keyboards, role-playing (board/video) games and cue sports. I played in a <a href="https://bbv.billardarea.de/cms_leagues">Bavarian regional league </a> with my team at <a href="https://bsv-muenchen.de/">BSV M&uuml;nchen</a> when I was living in Munich.
+I am an avid fan of: mechanical keyboards, role-playing board/video games and cue sports. I played in a <a href="https://bbv.billardarea.de/cms_leagues">Bavarian regional league </a> with my team at <a href="https://bsv-muenchen.de/">BSV M&uuml;nchen</a> when I was living in Munich.
