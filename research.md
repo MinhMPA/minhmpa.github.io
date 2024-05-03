@@ -22,9 +22,20 @@ Stage-IV cosmic microwave background (CMB) experiments and galaxy surveys will o
 
 To this end, I combine perturbative approaches, e.g. perturbation theory (PT) or effective field theory of large-scale structure (EFTofLSS) and Bayesian statistics to build roburst (forward-)models that yield unbiased inference. To interface Bayesian inference with galaxy and/or CMB survey datasets requires developing sophisticated computer algorithms and scalable implementations, while, sometimes, to reach beyond the regime of PT and EFTofLSS necessitates utilizing N-body simulations and simulation-based inference (SBI) techniques.
 
-The full list of my publications can be found <a href="https://arxiv.org/search/?query=nguyen%2C+nhat-minh&searchtype=author&abstracts=show&order=-announced_date_first&size=50">here</a> on arxiv. Below I highlight some key projects where I have a) led the effort or b) made key contributions and/or am one the co-corresponding authors.
+The full list of my publications can be found <a href="https://arxiv.org/search/?query=nguyen%2C+nhat-minh&searchtype=author&abstracts=show&order=-announced_date_first&size=50">here</a> on arXiv, or <a href="https://ui.adsabs.harvard.edu/public-libraries/nPbakMDVTWazN8MCEJy62Q">here</a> on NASA/ADS. Below I highlight some key projects where I have a) led the effort or b) made key contributions and/or am one the co-corresponding authors.
 
-### Latest (interesting!) result
+### Results discussed at Cosmology Talks interviews
+
+#### Field-level Bayesian Inference (FBI) to jointly infer cosmological models and initial conditions of the Universe
+
+We built a novel forward-modeling pipeline to infer the initial conditions of the Universe from the observed large-scale structure (LSS) field. This Field-level Bayesian Inference (FBI) pipeline is based on the effective field theory of LSS (EFTofLSS) and Bayesian statistics. FBI is designed to infer the initial conditions of the Universe, i.e. the primordial density field, from the observed LSS field, i.e. the galaxy density field, while simultaneously inferring the parameters of the cosmological models. FBI is guaranteed to provide an optimal inference without any information loss. We demonstrated that FBI can robustly recover not only the correct initial conditions of the test simulations, but also *unbiased* cosmological parameters---with a factor of x5 improvement over standard analysis involving low-order $n$-point summary statistics, namely the power spectrum (2-point correlation function) and bispectrum (3-point function).
+
+Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result, featuring <a href="https://wwwmpa.mpa-garching.mpg.de/~tucci/">Beatriz Tucci</a> (PhD candidate, MPA and IMPRS), the stellar half of this work and interview.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Pxfsf89jZwI?si=dbtN2Z3yNqWdSHfv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+ArXiv preprint is <a href="https://arxiv.org/abs/2403.03220">here</a>. Draft submitted to PRL.
+
+#### Growth of Structure Suppression in the Late Universe
 
 Analyzing current CMB and LSS data, we detect evidence for a suppressed growth rate of large scale structure in the late Universe.
 
