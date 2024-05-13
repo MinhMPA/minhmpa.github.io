@@ -12,7 +12,7 @@ Traveling is one part of the job that I really like. Here is a list of most rece
 - PASCOS 2024, Parallel Session (originally invited for a Plenary but rescheduled and dedicated the Plenary for DESI-Y1 results), Quy Nhon, Vietnam, July 2024.
 - Cosmology from Home, online conference, June 2024.
 - DESI Research Forum (remote, slides), June 2024.
-- **Aspen workshop, "Fundamental Physics in the Era of Big Data and Machine Learning"**, May-June 2024.
+- **Aspen workshop, "[Fundamental Physics in the Era of Big Data and Machine Learning](https://aspenphys.org/summer-workshops/#event2401)"**, May-June 2024.
 - KIPAC Cosmology Seminar, Stanford (remote, slides), May 2024.
 - **Cosmology Talks** (with Beyond-2point Collaboration), [Youtube](), May 2024.
 - [Fundamental Physics from Future Spectroscopic Surveys](https://indico.physics.lbl.gov/event/2769/), Lawrence Berkeley National Laboratory ([recording](https://www.youtube.com/live/6JN-cKVTZYQ?si=w4N1zmmTNU5NDtf4),[slides](https://indico.physics.lbl.gov/event/2769/contributions/8883/attachments/4414/5965/%5BMinhNguyen%5D_Fundamental_Physics_from_Future_Spectrocospic_Surveys-LBNL-May2024.pdf)), May 2024.
