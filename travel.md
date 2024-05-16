@@ -30,7 +30,8 @@ Traveling is one part of the job that I really like. Here is a list of most rece
 - Future Science with CMB x LSS workshop, YITP, Kyoto, April 2023.
 - **Cosmology Talks**, [Youtube](https://youtu.be/Tov5KahGEVQ), Mar 2023.
 - TACOS seminar, Arizona Cosmology Lab, University of Arizona, February 2023. (During the "Beyond 2-point data challenge" workshop.)
-- Aspen workshop on "Large-Scale Structure Cosmology beyond 2-Point Statistics", June 2022. (My first ever blackboard talk, pictured at the bottom.)
+- **Aspen workshop on "[Large-Scale Structure Cosmology beyond 2-Point Statistics](https://aspenphys.org/summer/past-workshops/)"**, June 2022. (My first ever blackboard talk, pictured at the bottom.)spen
+n
 - Astro Lunch Seminar, Kavli IPMU, May 2022.
 - KIPAC Cosmology Seminar, Stanford, May 2022.
 - Berkeley Cosmology Group Seminar, Berkeley Center for Cosmological Physics, April 2022.
