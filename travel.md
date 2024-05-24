@@ -7,8 +7,8 @@ sitemap:
     changefreq: weekly
 ---
 Traveling is one part of the job that I really like. Here is a list of most recent events and places where I have visited to give a talk and to discuss research.
-<p align="right">
- <span><img src="{{ "images/TimesSquare_Apr2024.png" | absolute_url }}" alt="" width="30%" height="30%" /></span></p>
+<!--<p align="right">-->
+ <!--<span><img src="{{ "images/TimesSquare_Apr2024.png" | absolute_url }}" alt="" width="30%" height="30%" /></span></p>-->
 
 - **[PASCOS 2024](http://vietnam.in2p3.fr/2024/PASCOS/overview.php), Plenary Session**, Quy Nhon, Vietnam, July 2024.
 - PASCOS 2024, Parallel Session (originally invited for a Plenary but rescheduled and dedicated the Plenary for DESI-Y1 results), Quy Nhon, Vietnam, July 2024.
