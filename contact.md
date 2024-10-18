@@ -7,14 +7,10 @@ sitemap:
     lastmod: 2017-11-02
     changefreq: weekly
 ---
+Address: 
+Kavli Institute for the Physics and Mathematics of the Universe, Office A18
+5-1-5 Kashiwanoha, Kashiwa, Chiba, 277-8583, Japan
 
-I hope you find some useful information on this site.
+Email: 
+<a href="mailto:nhat.minh.nguyen@ipmu.jp">nhat.minh.nguyen@ipmu.jp</a>
 
-If you want to discuss something, please do not hesistate to reach me at: <a href="mailto:nguyenmn@umich.edu">nguyenmn@umich.edu</a>
-
-If you are in Ann Arbor, I can also be found at my office:\
-Room 3420 (third floor), Homer A. Neal Lab (previously Randall Lab), 450 Church Street, Ann Arbor, MI 48109.
-
-<span class="image center"><img src="{{ "/images/GallupPark_A2_fall.jpg" | absolute_url }}" alt="" style="width:100%; height:50%"/></span>
-
-Gallup Park, Ann Arbor in the fall. Photo: djhardy
