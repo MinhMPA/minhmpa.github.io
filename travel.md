@@ -10,8 +10,9 @@ Traveling is one part of the job that I really like. Here is a list of most rece
 <!--<p align="right">-->
  <!--<span><img src="{{ "images/TimesSquare_Apr2024.png" | absolute_url }}" alt="" width="30%" height="30%" /></span></p>-->
 
+- COSMO'24, Large-scale Structure Session, Kyoto, Japan, September 2024.
 - **[PASCOS 2024](http://vietnam.in2p3.fr/2024/PASCOS/overview.php), Plenary Session**, Quy Nhon, Vietnam, July 2024.
-- PASCOS 2024, Parallel Session (originally invited for a Plenary but rescheduled and dedicated the Plenary for DESI-Y1 results), Quy Nhon, Vietnam, July 2024.
+- PASCOS 2024, Cosmology Session, Quy Nhon, Vietnam, July 2024.
 - Cosmology from Home, online conference, June 2024.
 - DESI Research Forum (remote, slides), June 2024.
 - **Aspen workshop, "[Fundamental Physics in the Era of Big Data and Machine Learning](https://aspenphys.org/summer-workshops/#event2401)"**, May-June 2024.
