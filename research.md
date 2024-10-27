@@ -12,13 +12,13 @@ sitemap:
 *How exactly did galaxies, galaxy clusters and cosmic filaments form and evolve from those primordial fluctuations?*  
 I am a cosmological modeler working at the interface of theory and observations, looking for hints to (hopefully!) answer the above questions.
 
-<!--Stage-IV cosmic microwave background (CMB) experiments and galaxy surveys will open a wide and deep window into our universe and the cosmic large-scale structure (LSS), at both late and early times; CMBxLSS analyses provide a tomographic scan uncovering the evolution of the mysterious dark energy and the elusive dark matter. Unfortunately, hints of new cosmological physics beyond the standard model of cosmology are often convoluted by systematics from astrophysical processes. To effectively break this degeneracy requires explicit modeling of both signal and systematics—beyond the regimes of linear theory and standard summary statistics—and/or clever, consistent modeling of the signal when combining CMB and LSS. However, so far the two approaches have been largely explored as two separate dimensions. My past research explored and developed both approaches to elevate cosmological constraints, in particular, those on late-time new physics. My current research program is to merge these two directions into one single dimension where I will forward-model the growth of LSS, going from the early to late universe, in both CMB and LSS observables, at the map level. Late-time new physics is consistently encoded in the LSS growth history, hence naturally separated from the astrophysics which has a different time evolution.-->
-
 <hr />
 
 My research combine perturbative approaches, i.e. perturbation theory (PT) and the effective field theory of large-scale structure (EFTofLSS), with novel statistics to build accurate and roburst forward models that yield optimal Bayesian inference and comparison of cosmological parameters and models.
 
 The full list of my publications can be found <a href="https://arxiv.org/search/?query=nguyen%2C+nhat-minh&searchtype=author&abstracts=show&order=-announced_date_first&size=50">here</a> on arXiv, or <a href="https://ui.adsabs.harvard.edu/public-libraries/nPbakMDVTWazN8MCEJy62Q">here</a> on NASA/ADS. Below I highlight some key projects where I have a) led the effort or b) contributed as one the key authors.
+
+<hr />
 
 ### Results discussed at Cosmology Talks interviews
 
@@ -29,22 +29,11 @@ We built a novel forward-modeling pipeline to infer the initial conditions of th
 Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result, featuring <a href="https://wwwmpa.mpa-garching.mpg.de/~tucci/">Beatriz Tucci</a> (PhD candidate, MPA and IMPRS), the stellar half of this work and interview.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pxfsf89jZwI?si=dbtN2Z3yNqWdSHfv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-ArXiv preprint is <a href="https://arxiv.org/abs/2403.03220">here</a>. Draft submitted to PRL.
+<a href="https://journals.aps.org/prl/accepted/6c07eYe8Ed91e78d54448792756f666f9a2c45641">PRL in press</a>. Preprint can be found <a href="https://arxiv.org/abs/2403.03220">here</a> on arXiv.
 
 #### Growth of Structure Suppression in the Late Universe
 
 Analyzing current CMB and LSS data, we detect evidence for a suppressed growth rate of large scale structure in the late Universe.
-
-<!--The first plot below illustrate this growth suppression effect. It compares the constraint on growth rate assuming General Relativity (GR) and the concordance cosmological model $\Lambda$CDM (black) and the constraint on growth rate should growth be allowed to deviate from the prediction by GR+$\Lambda$CDM. The second plot elucidates a very interesting feature of the suppressed growth. That is, it offers a new interpretation for the so-called S8 tension: If LSS growth rate was to be suppressed fairly recently, the constraints on matter fluctuation amplitude at redshift $z=0$, S8, from CMB and LSS can be brought into well agreement.-->
-
-<!--<p align="center">-->
-<!--<img src="{{ "/images/fsigma8z_constraints_vs_data.png" | absolute_url }}"  width="100%" height="80%" style="float:left; padding-left:-1px;-->
-<!--padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />-->
-<!--</p>-->
-<!--<p align="center">-->
-<!--<img src="{{ "/images/gamma_S8_omegam_H0_2Dcontours.png" | absolute_url }}"  width="100%" height="80%" style="float:left; padding-left:-1px;-->
-<!--padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />-->
-<!--</p>-->
 
 Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tov5KahGEVQ?si=B1wzJ2EoYavb-Avw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -55,6 +44,8 @@ The published version is now <a href="https://journals.aps.org/prl/abstract/10.1
 New Scientist's coverage of our results can be found <a href="https://drive.google.com/file/d/1n8CXz9rjoiPBGgbkAQXByujPVaYo3saO/view?usp=sharing">here</a>.
 The original press release by University of Michigan News is <a href="https://news.umich.edu/the-universe-caught-suppressing-cosmic-structure-growth/">here</a>.
 If you prefer to read about it in my own words, <a href="https://phys.org/news/2023-10-molasses-cosmic-large-scale-caught-slower.html">here</a> is my Science x Dialog on Phys.org.
+
+<hr />
 
 ### Field-level, forward-modeling of galaxy clustering
 
