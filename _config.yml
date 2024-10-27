@@ -1,6 +1,6 @@
 # Site
 title:              Minh Nguyen
-bio:                'Born and raised in Saigon, Vietnam. Obtained PhD at MPA and LMU in Munich, Germany. Now working at UMich, Ann Arbor MI, USA.'
+bio:                'Born and raised in Saigon, Vietnam. Obtained PhD at MPA and LMU in Munich, Germany. Now working at Kavli IPMU, Kashiwa, Chiba prefecture, Japan.'
 description:        "Astrophysicist and Cosmologist"
 locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -17,12 +17,12 @@ instagram:          default
 github:             default
 
 # personal
-location:           Ann Arbor, MI
-phone:              310-318-5555
-email:              nhat.minh.nguyen.111@gmail.com # change this to your email to receive free emails for your contact submissions via Slapform.com
+location:           Kashiwa, Chiba, Japan
+phone:              +81-80-8375-4684
+email:              nhat.minh.nguyen@ipmu.jp # change this to your email to receive free emails for your contact submissions via Slapform.com
 
 # Other
-background_image:   /images/DESI_galaxies.gif
+background_image:   /images/cosmic-surprise.png
 # Tip: The color palette and other styles can be configured in /_sass/lib/_vars.scss
 slapform_thankyou_page: /thank-you
 
