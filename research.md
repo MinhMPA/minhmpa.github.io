@@ -12,15 +12,13 @@ sitemap:
 *How exactly did galaxies, galaxy clusters and cosmic filaments form and evolve from those primordial fluctuations?*  
 I am a cosmological modeler working at the interface of theory and observations, looking for hints to (hopefully!) answer the above questions.
 
-<hr />
-
 My research combine perturbative approaches, i.e. perturbation theory (PT) and the effective field theory of large-scale structure (EFTofLSS), with novel statistics to build accurate and roburst forward models that yield optimal Bayesian inference and comparison of cosmological parameters and models.
 
 The full list of my publications can be found <a href="https://arxiv.org/search/?query=nguyen%2C+nhat-minh&searchtype=author&abstracts=show&order=-announced_date_first&size=50">here</a> on arXiv, or <a href="https://ui.adsabs.harvard.edu/public-libraries/nPbakMDVTWazN8MCEJy62Q">here</a> on NASA/ADS. Below I highlight some key projects where I have a) led the effort or b) contributed as one the key authors.
 
 <hr />
 
-### Results discussed at Cosmology Talks interviews
+### Research highlights
 
 #### Field-level Bayesian Inference (FBI) to jointly infer cosmological models and initial conditions of the Universe
 
@@ -30,6 +28,8 @@ Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchki
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pxfsf89jZwI?si=dbtN2Z3yNqWdSHfv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <a href="https://journals.aps.org/prl/accepted/6c07eYe8Ed91e78d54448792756f666f9a2c45641">PRL in press</a>. Preprint can be found <a href="https://arxiv.org/abs/2403.03220">here</a> on arXiv.
+
+<hr />
 
 #### Growth of Structure Suppression in the Late Universe
 
@@ -47,7 +47,9 @@ If you prefer to read about it in my own words, <a href="https://phys.org/news/2
 
 <hr />
 
-### Field-level, forward-modeling of galaxy clustering
+### Research topics
+
+#### Field-level, forward-modeling of galaxy clustering
 
 <p align="center">
 <img src="{{ "/images/ICBORG_flowchart.png" | absolute_url }}"  width="100%" height="80%" style="float:left; padding-left:-1px;
@@ -62,7 +64,7 @@ In a follow-up work, we build a novel framework to ensure robustness of the infe
 
 <hr />
 
-### Measuring the kinematic Sunyaev-Zel'dovich while optimally account for cluster velocity uncertainty
+#### Measuring the kinematic Sunyaev-Zel'dovich while optimally account for cluster velocity uncertainty
 
 As CMB photons traverse the Universe towards us and our telescopes, they encounter and scatter off free electrons inside cluster of galaxies along the line-of-sight (LOS). These scatterings leave tiny secondary anisotropiess on the CMB map.
 The cartoon below illustrates such imprints, specifically the *kinematic Sunyaev-Zel'dovich effect* (kSZ): the CMB photons appear to be Doppler-shifted towards either blue or red -- that is, hot or cold relatively to the primary CMB blackbody temperature -- depending on whether the cluster is moving away or towards the observer. At first order, for each individual galaxy cluster, the shift is linearly proportional to the product of cluster's LOS velocity and free electron abundance.
@@ -75,12 +77,12 @@ The cartoon below illustrates such imprints, specifically the *kinematic Sunyaev
 
 <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2020/12/011"><b>Open-access article</b></a> published on <i>Journal of Cosmology and Astroparticle Physics</i>, December 2020. See also the same MPA <a href="https://www.mpa-garching.mpg.de/926077/hl202103?c=1056316">research highlight article</a> highlighted above.
 
-I continue to develop forward-model pipeline to infer cluster gas properties from CMB measurements, which is publicly available on <a href="https://github.com/MinhMPA/VelmaSZ">here</a> on GitHub.
-The goal is to turn the kSZ effect into not only a measurement of cluster gas properties but also a cosmological probe for primordial non-Gaussianity or growth of structure.
+<!--I continue to develop forward-model pipeline to infer cluster gas properties from CMB measurements, which is publicly available on <a href="https://github.com/MinhMPA/VelmaSZ">here</a> on GitHub.-->
+<!--The goal is to turn the kSZ effect into not only a measurement of cluster gas properties but also a cosmological probe for primordial non-Gaussianity or growth of structure.-->
 
 <hr />
 
-### Measuring and modeling galaxy shapes at the field level
+#### Measuring and modeling galaxy shapes at the field level
 
 The tidal field of large-scale structure tends to align with large-scale filaments. This has indeed been observed in both gravity-only and hydrodynamics cosmological simulations, e.g. the HORIZON-AGN shown in the figure below, taken from Codis et al. 2015.
 <p align="center">
@@ -96,4 +98,4 @@ Specifically, using an inferred tidal field of Cold Dark Matter (which cannot be
 <p>This work was done in collaboration with <a href="https://www.su.se/english/profiles/elts6570-1.450440">Eleni Tsaprazi</a> and the Aquila consortium.<br/>
 <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2022/08/003"><b>Open-access article</b></a>, published on <i>Journal of Cosmology and Astroparticle Physics</i>, August 2022. See also this <a href="https://www.mpa-garching.mpg.de/1052846/hl202204?c=27981">press release</a> featured on MPA research highlights, April 2022.</p>
 
-<p>My follow-up project involves developing field-level model of galaxy intrinsic shapes as biased tracers of the LSS tidal field and initial conditions. This will unlock the potential of (intrinsic) shapes as a novel probe of cosmological parameters. I choose the EFTofLSS approach for data modeling and the <a href="https://gitlab.mpcdf.mpg.de/leftfield">LEFTfield framework</a> for code implementation. The latter is going to be publicly released <a href="https://gitlab.mpcdf.mpg.de/leftfield/release">here</a> on GitLab once ready.
+<!--<p>My follow-up project involves developing field-level model of galaxy intrinsic shapes as biased tracers of the LSS tidal field and initial conditions. This will unlock the potential of (intrinsic) shapes as a novel probe of cosmological parameters. I choose the EFTofLSS approach for data modeling and the <a href="https://gitlab.mpcdf.mpg.de/leftfield">LEFTfield framework</a> for code implementation. The latter is going to be publicly released <a href="https://gitlab.mpcdf.mpg.de/leftfield/release">here</a> on GitLab once ready.-->
