@@ -10,7 +10,8 @@ Traveling is one part of the job that I really like. Here is a list of most rece
 <!--<p align="right">-->
  <!--<span><img src="{{ "images/TimesSquare_Apr2024.png" | absolute_url }}" alt="" width="30%" height="30%" /></span></p>-->
 
-- COSMO'24, Large-scale Structure Session, Kyoto, Japan, September 2024.
+- YITP molecule-type Workshop, ["Theory and Data Analysis Challenges for Cosmological Large-Scale Structure Observations"](https://sites.google.com/kyoto-u.ac.jp/yitp-t-24-05/home), Kyoto, Japan, November 2024.
+- **[COSMO'24](https://sites.google.com/view/cosmo2024/parallel-sessions), Large-scale Structure Session**, Kyoto, Japan, September 2024.
 - **[PASCOS 2024](http://vietnam.in2p3.fr/2024/PASCOS/overview.php), Plenary Session**, Quy Nhon, Vietnam, July 2024.
 - PASCOS 2024, Cosmology Session, Quy Nhon, Vietnam, July 2024.
 - Cosmology from Home, online conference, June 2024.
