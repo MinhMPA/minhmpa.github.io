@@ -10,7 +10,7 @@ Traveling is one part of the job that I really like. Here is a list of most rece
 <!--<p align="right">-->
  <!--<span><img src="{{ "images/TimesSquare_Apr2024.png" | absolute_url }}" alt="" width="30%" height="30%" /></span></p>-->
 
-- YITP molecule-type Workshop, ["Theory and Data Analysis Challenges for Cosmological Large-Scale Structure Observations"](https://sites.google.com/kyoto-u.ac.jp/yitp-t-24-05/home), Kyoto, Japan, November 2024.
+- YITP Workshop, ["Theory and Data Analysis Challenges for Cosmological Large-Scale Structure Observations"](https://sites.google.com/kyoto-u.ac.jp/yitp-t-24-05/home), Kyoto, Japan, November 2024.
 - **[COSMO'24](https://sites.google.com/view/cosmo2024/parallel-sessions), Large-scale Structure Session**, Kyoto, Japan, September 2024.
 - **[PASCOS 2024](http://vietnam.in2p3.fr/2024/PASCOS/overview.php), Plenary Session**, Quy Nhon, Vietnam, July 2024.
 - PASCOS 2024, Cosmology Session, Quy Nhon, Vietnam, July 2024.
@@ -34,7 +34,7 @@ Traveling is one part of the job that I really like. Here is a list of most rece
 - Future Science with CMB x LSS workshop, YITP, Kyoto, April 2023.
 - **Cosmology Talks**, [Youtube](https://youtu.be/Tov5KahGEVQ), Mar 2023.
 - TACOS seminar, Arizona Cosmology Lab, University of Arizona, February 2023. (During the "Beyond 2-point data challenge" workshop.)
-- **Aspen workshop on "[Large-Scale Structure Cosmology beyond 2-Point Statistics](https://aspenphys.org/summer/past-workshops/)"**, June 2022. (My first ever blackboard talk, pictured at the bottom.)spen
+- **Aspen workshop, "[Large-Scale Structure Cosmology beyond 2-Point Statistics](https://aspenphys.org/summer/past-workshops/)"**, June 2022. (My first ever blackboard talk, pictured at the bottom.)spen
 n
 - Astro Lunch Seminar, Kavli IPMU, May 2022.
 - KIPAC Cosmology Seminar, Stanford, May 2022.
