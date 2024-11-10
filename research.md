@@ -23,7 +23,7 @@ The full list of my publications can be found on <a href="https://arxiv.org/sear
 
 ### Research highlights
 
-#### Field-level Bayesian Inference (FBI) to jointly infer cosmological models and initial conditions of the Universe
+#### Field-level Bayesian Inference of Large-scale Structure
 
 <p align="center">
 <span><img src="{{ "/images/LEFTfield_animation.gif" | absolute_url }}" alt="LEFTfield_animation" width="100%" height="100%"/></span></p>  
