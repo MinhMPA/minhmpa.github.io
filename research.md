@@ -56,20 +56,20 @@ If you prefer to read about it in my own words, <a href="https://phys.org/news/2
 
 <hr />
 
-### Research topics
+### Related Topics
 
-#### Forward modeling of galaxy clustering at the field level
+<!--#### Forward modeling of galaxy clustering at the field level-->
 
-<p align="center">
-<img src="{{ "/images/ICBORG_flowchart.png" | absolute_url }}"  width="100%" height="80%" style="float:left; padding-left:-1px;
-padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />
-</p>
+<!--<p align="center">-->
+<!--<img src="{{ "/images/ICBORG_flowchart.png" | absolute_url }}"  width="100%" height="80%" style="float:left; padding-left:-1px;-->
+<!--padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />-->
+<!--</p>-->
 
-The above flowchart depicts the process of how to connect early fluctuations to late-time 3D galaxy field observed by galaxy redshift surveys in the forward-modeling framework. The whole process involves quite a number of moving parts. Using N-body simulations as the reference, I have systematically investigated how each ingredient, including but not limited to gravity, galaxy bias model and likelihood (red blocks), affects the inferred initial conditions (first blue block). I demonstrate that the Fourier phase of initial conditions are robustly recovered well beyond the linear limit in quasi-linear regime. Further, I show that the bias model and likelihood for galaxy can significantly bias the inferred amplitude of initial conditions, which implies the same for inference of cosmological parameters. Alarmingly, none of the models I tested could avoid this bias. My findings underlie the demand for either a more rigorous physical model or a more flexible data-driven approach.
+<!--The above flowchart depicts the process of how to connect early fluctuations to late-time 3D galaxy field observed by galaxy redshift surveys in the forward-modeling framework. The whole process involves quite a number of moving parts. Using N-body simulations as the reference, I have systematically investigated how each ingredient, including but not limited to gravity, galaxy bias model and likelihood (red blocks), affects the inferred initial conditions (first blue block). I demonstrate that the Fourier phase of initial conditions are robustly recovered well beyond the linear limit in quasi-linear regime. Further, I show that the bias model and likelihood for galaxy can significantly bias the inferred amplitude of initial conditions, which implies the same for inference of cosmological parameters. Alarmingly, none of the models I tested could avoid this bias. My findings underlie the demand for either a more rigorous physical model or a more flexible data-driven approach.-->
 
-<a href="https://iopscience.iop.org/article/10.1088/1475-7516/2021/03/058"><b>Open-access article</b></a> published on <i>Journal of Cosmology and Astroparticle Physics</i>, March 2021.
+<!--<a href="https://iopscience.iop.org/article/10.1088/1475-7516/2021/03/058"><b>Open-access article</b></a> published on <i>Journal of Cosmology and Astroparticle Physics</i>, March 2021.-->
 
-<hr />
+<!--<hr />-->
 
 #### Measuring the kinematic Sunyaev-Zel'dovich while optimally account for cluster velocity uncertainty
 
