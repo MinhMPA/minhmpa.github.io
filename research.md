@@ -29,7 +29,7 @@ The full list of my publications can be found on <a href="https://arxiv.org/sear
 <span><img src="{{ "/images/LEFTfield_animation.gif" | absolute_url }}" alt="LEFTfield_animation" width="100%" height="100%"/></span></p>  
 We built a novel forward-modeling pipeline for field-level Bayesian inference (FBI), based on the EFTofLSS and Bayesian frameworks. FBI aims to infer the initial conditions of the Universe, i.e. the primordial density field, from the observed LSS field, i.e. the galaxy density field, while simultaneously inferring the parameters of the cosmological models. FBI guarantees optimal inference without information loss. We demonstrated that FBI can robustly recover not only the correct initial conditions of the test simulations, but also *unbiased* cosmological parameters---with a factor of x5 improvement over standard analysis involving low-order n-point summary statistics, namely the power spectrum (2-point correlation function) and bispectrum (3-point function).
 <p align="center">
-<span><img src="{{ "/images/LEFTfield_FBI_vs_P+B_comparison.png" | absolute_url }}" alt="LEFTfield_FBI_vs_P+B" width="100%" height="100%"/></span></p>  
+<span><img src="{{ "/images/LEFTfield_FBI_vs_standard_flowchart.png" | absolute_url }}" alt="LEFTfield_FBI_vs_standard" width="100%" height="100%"/></span></p>  
 
 
 Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result, featuring <a href="https://wwwmpa.mpa-garching.mpg.de/~tucci/">Beatriz Tucci</a> (PhD candidate, MPA and IMPRS), the stellar half of this work and interview.
