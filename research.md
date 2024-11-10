@@ -14,7 +14,7 @@ I am a cosmological modeler working at the interface of theory and observations,
 
 My research combine perturbative approaches, i.e. perturbation theory (PT) and the effective field theory of large-scale structure (EFTofLSS), with novel statistics to build accurate and roburst forward models that yield optimal Bayesian inference and comparison of cosmological parameters and models.
 
-The full list of my publications can be found <a href="https://arxiv.org/search/?query=nguyen%2C+nhat-minh&searchtype=author&abstracts=show&order=-announced_date_first&size=50">here</a> on arXiv, or <a href="https://ui.adsabs.harvard.edu/public-libraries/nPbakMDVTWazN8MCEJy62Q">here</a> on NASA/ADS. Below I highlight some key projects where I have a) led the effort or b) contributed as one the key authors.
+The full list of my publications can be found on <a href="https://arxiv.org/search/?query=nguyen%2C+nhat-minh&searchtype=author&abstracts=show&order=-announced_date_first&size=50">arXiv</a>, <a href="https://ui.adsabs.harvard.edu/public-libraries/nPbakMDVTWazN8MCEJy62Q">NASA/ADS</a> and <a href=" ">iNSPIRE</a>. Below are highlights from key projects where I have a) led the effort or b) contributed as a key author.
 
 <hr />
 
