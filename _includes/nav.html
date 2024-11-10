@@ -2,10 +2,11 @@
   <li class="{% if page.url == "/" %} active {% endif %}"><a href="{{ "/" | absolute_url }}">Bio</a></li>
   <li class="{% if page.url contains '/research/' %} active {% endif %}"><a href="{{ "/research/" | absolute_url }}">Research</a></li>
   <li class="{% if page.url contains '/visit/' %} active {% endif %}"><a href="{{ "/travel/" | absolute_url }}">Travel</a></li>
-  <li class="{% if page.url contains '/social/' %} active {% endif %}"><a href="{{ "/social/" | absolute_url }}">Social</a></li>
+  <li class="{% if page.url contains '/teaching/' %} active {% endif %}"><a href="{{ "/teaching/" | absolute_url }}">Teach</a></li>
   <li class="{% if page.url contains '/group/' %} active {% endif %}"><a href="{{ "/outreach/" | absolute_url }}">Outreach</a></li>
+  <li class="{% if page.url contains '/social/' %} active {% endif %}"><a href="{{ "/social/" | absolute_url }}">Social</a></li>
   <li class="{% if page.url contains '/sciart/' %} active {% endif %}"><a href="{{ "/sciart/" | absolute_url }}">SciArt</a></li>
-  <li class="{% if page.url contains '/random/' %} active {% endif %}"><a href="{{ "/random/" | absolute_url }}">Random</a></li>
+  <!--<li class="{% if page.url contains '/random/' %} active {% endif %}"><a href="{{ "/random/" | absolute_url }}">Random</a></li>-->
   <li class="{% if page.url contains '/contact/' %} active {% endif %}"><a href="{{ "/contact/" | absolute_url }}">Contact</a></li>
 </ul>
 
