@@ -26,16 +26,17 @@ The full list of my publications can be found on <a href="https://arxiv.org/sear
 #### Field-level Bayesian Inference of Large-scale Structure
 
 <p align="center">
-<span><img src="{{ "/images/LEFTfield_animation.gif" | absolute_url }}" alt="LEFTfield_animation" width="100%" height="100%"/></span></p>  
-We built a novel forward-modeling pipeline for field-level Bayesian inference (FBI), based on the EFTofLSS and Bayesian frameworks. FBI aims to infer the initial conditions of the Universe, i.e. the primordial density field, from the observed LSS field, i.e. the galaxy density field, while simultaneously inferring the parameters of the cosmological models. FBI guarantees optimal inference without information loss. We demonstrated that FBI can robustly recover not only the correct initial conditions of the test simulations, but also *unbiased* cosmological parameters---with a factor of x5 improvement over standard analysis involving low-order n-point summary statistics, namely the power spectrum (2-point correlation function) and bispectrum (3-point function).
-<p align="center">
 <span><img src="{{ "/images/LEFTfield_FBI_vs_standard_flowchart.png" | absolute_url }}" alt="LEFTfield_FBI_vs_standard" width="100%" height="100%"/></span></p>  
+In a work published on <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2023/07/063">JCAP</a>and featured on <a href="https://www.mpa-garching.mpg.de/1095991/hl202405">MPA research highlight</a>, we built a novel forward-modeling pipeline for field-level Bayesian inference (FBI), based on the EFTofLSS and Bayesian frameworks. FBI aims to infer the initial conditions of the Universe, i.e. the primordial density field, from the observed LSS field, i.e. the galaxy density field, while simultaneously inferring the parameters of the cosmological models. FBI guarantees optimal inference without information loss.
 
+<p align="center">
+<span><img src="{{ "/images/LEFTfield_animation.gif" | absolute_url }}" alt="LEFTfield_animation" width="100%" height="100%"/></span></p>  
+In a recent follow-up to appear on <a href="https://journals.aps.org/prl/accepted/6c07eYe8Ed91e78d54448792756f666f9a2c45641">Physical Review Letters</a>, we further demonstrated that FBI can robustly recover not only the correct initial conditions of the test simulations, but also *unbiased* cosmological parameters---with a factor of x5 improvement over standard analysis involving low-order n-point summary statistics, namely the power spectrum (2-point correlation function) and bispectrum (3-point function).
+Preprint of the PRL article can be found on <a href="https://arxiv.org/abs/2403.03220">arXiv</a>.
 
 Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result, featuring <a href="https://wwwmpa.mpa-garching.mpg.de/~tucci/">Beatriz Tucci</a> (PhD candidate, MPA and IMPRS), the stellar half of this work and interview.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pxfsf89jZwI?si=dbtN2Z3yNqWdSHfv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<a href="https://journals.aps.org/prl/accepted/6c07eYe8Ed91e78d54448792756f666f9a2c45641">PRL in press</a>. Preprint can be found <a href="https://arxiv.org/abs/2403.03220">here</a> on arXiv.
 
 <hr />
 
@@ -46,8 +47,8 @@ Analyzing current CMB and LSS data, we detect evidence for a suppressed growth r
 Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tov5KahGEVQ?si=B1wzJ2EoYavb-Avw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-If you are still curious, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a> for full details.
-The published version is now <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">online</a> at Physical Review Letters as an <a href="https://drive.google.com/file/d/1IRPuo9XLeOXeCcimqh63ZLEVlmJye4iP/view?usp=sharing">Editor's Suggestion</a>.
+Thi work is published on <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001">PRL</a> as an <a href="https://drive.google.com/file/d/1IRPuo9XLeOXeCcimqh63ZLEVlmJye4iP/view?usp=sharing">Editor's Suggestion</a>.
+For open access, please see the <a href="https://arxiv.org/abs/2302.01331">arXiv preprint</a>.
 
 New Scientist's coverage of our results can be found <a href="https://drive.google.com/file/d/1n8CXz9rjoiPBGgbkAQXByujPVaYo3saO/view?usp=sharing">here</a>.
 The original press release by University of Michigan News is <a href="https://news.umich.edu/the-universe-caught-suppressing-cosmic-structure-growth/">here</a>.
@@ -67,8 +68,6 @@ padding-bottom:25px; padding-right:25px ; padding-top:10px" alt="" />
 The above flowchart depicts the process of how to connect early fluctuations to late-time 3D galaxy field observed by galaxy redshift surveys in the forward-modeling framework. The whole process involves quite a number of moving parts. Using N-body simulations as the reference, I have systematically investigated how each ingredient, including but not limited to gravity, galaxy bias model and likelihood (red blocks), affects the inferred initial conditions (first blue block). I demonstrate that the Fourier phase of initial conditions are robustly recovered well beyond the linear limit in quasi-linear regime. Further, I show that the bias model and likelihood for galaxy can significantly bias the inferred amplitude of initial conditions, which implies the same for inference of cosmological parameters. Alarmingly, none of the models I tested could avoid this bias. My findings underlie the demand for either a more rigorous physical model or a more flexible data-driven approach.
 
 <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2021/03/058"><b>Open-access article</b></a> published on <i>Journal of Cosmology and Astroparticle Physics</i>, March 2021.
-
-In a follow-up work, we build a novel framework to ensure robustness of the inference. The work was published on <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2023/07/063">JCAP</a>, as well as featured in this <a href="https://www.mpa-garching.mpg.de/1095991/hl202405">press release</a> on MPA research highlights, May 2024. 
 
 <hr />
 
