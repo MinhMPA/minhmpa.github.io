@@ -7,9 +7,12 @@ sitemap:
     changefreq: weekly
 ---
 <p align="center">
- <span><img src="{{ "images/ESA_Planck_cosmic_history.jpg" | absolute_url }}" alt="" width="100%" height="100%" /></span></p>
-*What really seed the tiny initial fluctuations in our Universe?*  
-*How exactly did galaxies, galaxy clusters and cosmic filaments form and evolve from those primordial fluctuations?*  
+ <span><img src="{{ "images/lsa_umich_mag_LSS_growth_Fullpage_Extended.jpg" | absolute_url }}" alt="" width="100%" height="100%" /></span></p>
+*Is all dark matter cold?*
+*Is dark energy merely the vacuum energy and a constant in Einstein equation of general relativity (GR)?*
+*Does GR still describe gravity on cosmological scales?*
+*How did tiny initial fluctuations in the early Universe look like?*  
+*How did galaxies, galaxy clusters and cosmic filaments form and evolve from those primordial seeds?*  
 I am a cosmological modeler working at the interface of theory and observations, looking for hints to (hopefully!) answer the above questions.
 
 My research combine perturbative approaches, i.e. perturbation theory (PT) and the effective field theory of large-scale structure (EFTofLSS), with novel statistics to build accurate and roburst forward models that yield optimal Bayesian inference and comparison of cosmological parameters and models.
