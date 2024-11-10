@@ -27,7 +27,7 @@ The full list of my publications can be found on <a href="https://arxiv.org/sear
 
 <p align="center">
 <span><img src="{{ "/images/LEFTfield_FBI_vs_standard_flowchart.png" | absolute_url }}" alt="LEFTfield_FBI_vs_standard" width="100%" height="100%"/></span></p>  
-In a work published on <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2023/07/063">JCAP</a>and featured on <a href="https://www.mpa-garching.mpg.de/1095991/hl202405">MPA research highlight</a>, we built a novel forward-modeling pipeline for field-level Bayesian inference (FBI), based on the EFTofLSS and Bayesian frameworks. FBI aims to infer the initial conditions of the Universe, i.e. the primordial density field, from the observed LSS field, i.e. the galaxy density field, while simultaneously inferring the parameters of the cosmological models. FBI guarantees optimal inference without information loss.
+In a work published on <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2023/07/063">JCAP</a> and featured on <a href="https://www.mpa-garching.mpg.de/1095991/hl202405">MPA research highlight</a>, we built a novel forward-modeling pipeline for field-level Bayesian inference (FBI), based on the EFTofLSS and Bayesian frameworks. FBI aims to infer the initial conditions of the Universe, i.e. the primordial density field, from the observed LSS field, i.e. the galaxy density field, while simultaneously inferring the parameters of the cosmological models. FBI guarantees optimal inference without information loss.
 
 <p align="center">
 <span><img src="{{ "/images/LEFTfield_animation.gif" | absolute_url }}" alt="LEFTfield_animation" width="100%" height="100%"/></span></p>  
