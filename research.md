@@ -58,7 +58,7 @@ If you prefer to read about it in my own words, <a href="https://phys.org/news/2
 
 ### Research topics
 
-#### Field-level, forward-modeling of galaxy clustering
+#### Forward modeling of galaxy clustering at the field level
 
 <p align="center">
 <img src="{{ "/images/ICBORG_flowchart.png" | absolute_url }}"  width="100%" height="80%" style="float:left; padding-left:-1px;
