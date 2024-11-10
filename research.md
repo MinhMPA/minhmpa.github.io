@@ -8,9 +8,9 @@ sitemap:
 ---
 <p align="center">
  <span><img src="{{ "images/lsa_umich_mag_LSS_growth_Fullpage_Extended.jpg" | absolute_url }}" alt="" width="100%" height="100%" /></span></p>
-*Is all dark matter cold?*
-*Is dark energy merely the vacuum energy and a constant in Einstein equation of general relativity (GR)?*
-*Does GR still describe gravity on cosmological scales?*
+*Is all dark matter cold?*  
+*Is dark energy merely the vacuum energy and a constant in Einstein equation of general relativity?*  
+*Does GR still describe gravity on cosmological scales?*  
 *How did tiny initial fluctuations in the early Universe look like?*  
 *How did galaxies, galaxy clusters and cosmic filaments form and evolve from those primordial seeds?*  
 I am a cosmological modeler working at the interface of theory and observations, looking for hints to (hopefully!) answer the above questions.
@@ -26,6 +26,9 @@ The full list of my publications can be found on <a href="https://arxiv.org/sear
 #### Field-level Bayesian Inference (FBI) to jointly infer cosmological models and initial conditions of the Universe
 
 We built a novel forward-modeling pipeline to infer the initial conditions of the Universe from the observed large-scale structure (LSS) field. This Field-level Bayesian Inference (FBI) pipeline is based on the EFTofLSS and Bayesian frameworks. FBI is designed to infer the initial conditions of the Universe, i.e. the primordial density field, from the observed LSS field, i.e. the galaxy density field, while simultaneously inferring the parameters of the cosmological models. FBI is guaranteed to provide an optimal inference without any information loss. We demonstrated that FBI can robustly recover not only the correct initial conditions of the test simulations, but also *unbiased* cosmological parameters---with a factor of x5 improvement over standard analysis involving low-order n-point summary statistics, namely the power spectrum (2-point correlation function) and bispectrum (3-point function).
+<p align="center">
+<span><img src="{{ "/images/LEFTfield_FBI_vs_P+B_comparison.png" | absolute_url }}" alt="LEFTfield_FBI_vs_P+B" width="100%" height="100%"/></span></p>  
+
 
 Here is my interview with <a href="https://twitter.com/just_shaun">Shaun Hotchkiss</a> on Cosmology Talks about this result, featuring <a href="https://wwwmpa.mpa-garching.mpg.de/~tucci/">Beatriz Tucci</a> (PhD candidate, MPA and IMPRS), the stellar half of this work and interview.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pxfsf89jZwI?si=dbtN2Z3yNqWdSHfv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
