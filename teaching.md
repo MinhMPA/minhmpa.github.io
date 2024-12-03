@@ -15,4 +15,5 @@ I adopt an effective, personalized approach to mentoring and advising students. 
 ## Teaching
 I am continously refining my teaching approach to provide students an inclusive and active learning experience. I taught an astronomy and cosmology course for motivated high school students at Michigan Math and Science Scholars, <a href="https://sites.lsa.umich.edu/mmss/astronomy/">``Climbing the Distance Ladder to the Big Bang: How Astronomers Survey the Universe''</a>. The course encouraged students to climb the ladder of higher education esp. for astronomy, astrophysics and cosmology and received overwhelmingly positive responses.
 
- ![MMSS feedback](/images/MMSS_2024.png#left){:height="225px" width="400px"} ![VLLT seminar participants #2 >](/images/MMSS_2024.png#right){:height="225px" width="400px"}
+<p align="center">
+<span><img src="{{ "/images/MMSS_2024.png" | absolute_url }}" alt="MMSS 2024 student feedback" width="100%" height="100%"/></span></p>  
