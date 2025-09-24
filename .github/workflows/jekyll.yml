@@ -39,6 +39,15 @@ jobs:
           ruby-version: '3.1' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
+        run: |
+          git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $GITHUB_ENV
+          ~/.rbenv/bin/rbenv init
+          git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+          ~/.rbenv/bin/rbenv install 3.1.0
+          ~/.rbenv/bin/rbenv global 3.1.0
+          echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> $GITHUB_ENV
+          ruby --version
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
