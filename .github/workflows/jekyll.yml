@@ -35,19 +35,17 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Ruby manually for self-hosted runner
         run: |
-          sudo apt-get update
-          sudo apt-get install -y git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev
           git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $GITHUB_ENV
-          ~/.rbenv/bin/rbenv init
           git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-          ~/.rbenv/bin/rbenv install 3.1.0
-          ~/.rbenv/bin/rbenv global 3.1.0
+          export PATH="$HOME/.rbenv/bin:$PATH"
+          eval "$(rbenv init -)"
+          rbenv install 3.2.2
+          rbenv global 3.2.2
           ruby -v
       - name: Setup Ruby
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
+          ruby-version: '3.2.2' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
