@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby '3.4.5'
+ruby "~> 3.2.0"
 gem 'github-pages'
 gem 'rdiscount'
 group :jekyll_plugins do
