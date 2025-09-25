@@ -1,8 +1,7 @@
 source "https://rubygems.org"
-
+ruby '3.4.5'
 gem 'github-pages'
 gem 'rdiscount'
-gem "jekyll"
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-mentions"
