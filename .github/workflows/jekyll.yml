@@ -33,15 +33,72 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Ruby manually for self-hosted runner
+
+      # Self-hosted workaround: ensure Ruby is in the tool cache once
+      - name: Install Ruby 3.2.2 into RUNNER_TOOL_CACHE (once, with lock)
+        shell: bash
         run: |
-          git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-          git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-          export PATH="$HOME/.rbenv/bin:$PATH"
-          eval "$(rbenv init -)"
-          rbenv install 3.2.2
-          rbenv global 3.2.2
-          ruby -v
+          set -euxo pipefail
+          RUBY_VERSION=3.2.2
+          TOOLCACHE="${RUNNER_TOOL_CACHE:-/opt/hostedtoolcache}"
+          INSTALL_DIR="${TOOLCACHE}/Ruby/${RUBY_VERSION}/x64"
+          COMPLETE_FILE="${INSTALL_DIR}.complete"
+          LOCKFILE="${TOOLCACHE}/ruby-${RUBY_VERSION}.lock"
+
+          # Fast-path if already installed
+          if [[ -f "$COMPLETE_FILE" ]]; then
+            echo "Ruby ${RUBY_VERSION} already present in toolcache."
+            exit 0
+          fi
+
+          # Prepare cache dir and take a file lock to avoid parallel compiles
+          sudo mkdir -p "$INSTALL_DIR"
+          sudo chown -R "${USER}:$(id -gn)" "$TOOLCACHE"
+          exec 9>"$LOCKFILE"
+          if ! flock -n 9; then
+            echo "Another job is installing Ruby ${RUBY_VERSION}. Waiting on lock..."
+            flock 9
+          fi
+
+          # Re-check after acquiring the lock
+          if [[ -f "$COMPLETE_FILE" ]]; then
+            echo "Ruby ${RUBY_VERSION} was installed by another job."
+            exit 0
+          fi
+
+          # Build deps (safe to run repeatedly)
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            git curl ca-certificates build-essential autoconf bison \
+            libssl-dev zlib1g-dev libreadline-dev libyaml-dev \
+            libncurses5-dev libffi-dev libgdbm-dev libdb-dev \
+            uuid-dev libgmp-dev libsqlite3-dev pkg-config
+
+          # Install ruby-build standalone
+          tmpdir="$(mktemp -d)"
+          git clone --depth 1 https://github.com/rbenv/ruby-build.git "$tmpdir/ruby-build"
+          sudo "$tmpdir/ruby-build/install.sh"   # installs /usr/local/bin/ruby-build
+
+          # Compile Ruby into the toolcache
+          ruby-build "${RUBY_VERSION}" "${INSTALL_DIR}"
+
+          # Mark as complete so setup-ruby can use it
+          touch "${COMPLETE_FILE}"
+
+          # Quick sanity check
+          "${INSTALL_DIR}/bin/ruby" -v
+        # Optional: keep this from running on GH-hosted images that already have prebuilt Rubies
+        if: ${{ runner.os == 'Linux' }}
+
+      # Now setup-ruby will detect the cached Ruby and just wire it up
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.2'
+          bundler-cache: true
+          # You can also force toolcache usage on custom images:
+          # self-hosted: true
+
+      - run: ruby -v && gem -v && bundle -v
       - name: Setup Ruby
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
