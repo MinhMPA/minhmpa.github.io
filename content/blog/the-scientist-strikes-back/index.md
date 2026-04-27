@@ -26,7 +26,7 @@ Less than a month ago, my fellow cosmologist Siddharth Mishra-Sharma published a
 
 I wanted to see what happens in harder territory.
 
-So Claude and I extended `clax` with a module called `clax-pt`. It is a reimplementation of the one-loop perturbation theory calculations in [`CLASS-PT`](https://github.com/Michalychforever/CLASS-PT). In plain language, this means predicting a harder observable: not the early-universe radiation signal, but how galaxies cluster in three-dimensional space, the signal that spectroscopic surveys like DESI and PFS actually measure.
+So Claude and I extended `clax` with a module called [`clax-pt`](https://github.com/MinhMPA/clax-pt). It is a reimplementation of the one-loop perturbation theory calculations in [`CLASS-PT`](https://github.com/Michalychforever/CLASS-PT). In plain language, this means predicting a harder observable: not the early-universe radiation signal, but how galaxies cluster in three-dimensional space, the signal that spectroscopic surveys like DESI and PFS actually measure.
 
 Here is the rough idea. Galaxies do not trace matter perfectly. Their apparent positions are also distorted by motion along our line of sight. Getting this signal right at modern survey precision means evaluating difficult correction terms, the sort of calculation most people would rather not implement from scratch. The key algorithmic trick is FFTLog: a decomposition that rewrites these expensive integrals as a sum of terms you can evaluate with fast matrix operations. Think of it as a Fourier transform, but in logarithmic space. Many cosmologists rely on this machinery indirectly. Few would choose to rebuild it from first principles.
 
