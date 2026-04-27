@@ -3,7 +3,7 @@ title: The Scientist Strikes Back
 date: 2026-04-20
 lastmod: 2026-04-26T16:00:00+09:00
 summary: A story about AI agents, test suites, and why the breakthroughs that mattered still came from scientific judgment and human conversation.
-show_date_updated: false
+show_date_updated: true
 ---
 
 {{< figure src="sakura_kashiwanoha.jpg" caption="Kashiwanoha park, under the sakura." >}}
@@ -118,5 +118,4 @@ I thank Siddharth Mishra-Sharma for helpful correspondence and his review of `cl
 ## References
 
 1. D. Blas, J. Lesgourgues, and T. Tram, "The Cosmic Linear Anisotropy Solving System (CLASS) II: Approximation schemes," *JCAP* **07**, 034 (2011), [arXiv:1104.2933](https://arxiv.org/abs/1104.2933).
-2. O. Hahn, F. List, and N. Porqueres, "DISCO-DJ I: a differentiable Einstein-Boltzmann solver for cosmology," *JCAP* **06**, 063 (2024), [arXiv:2311.03291](https://arxiv.org/abs/2311.03291).
-3. A. Chudaykin, M. M. Ivanov, O. H. E. Philcox, and M. Simonović, "Non-linear perturbation theory extension of the Boltzmann code CLASS," *Phys. Rev. D* **102**, 063533 (2020), [arXiv:2004.10607](https://arxiv.org/abs/2004.10607).
+2. A. Chudaykin, M. M. Ivanov, O. H. E. Philcox, and M. Simonović, "Non-linear perturbation theory extension of the Boltzmann code CLASS," *Phys. Rev. D* **102**, 063533 (2020), [arXiv:2004.10607](https://arxiv.org/abs/2004.10607).
