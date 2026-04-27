@@ -1,125 +1,56 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+name: Deploy Hugo Site to GitHub Pages
 
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+env:
+  HUGO_VERSION: '0.149.0'
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: ["master", "main"]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-
-      # Self-hosted workaround: ensure Ruby is in the tool cache once
-      - name: Install Ruby 3.2.2 into RUNNER_TOOL_CACHE (once, with lock)
-        shell: bash
-        run: |
-          set -euxo pipefail
-          RUBY_VERSION=3.2.2
-          TOOLCACHE="${RUNNER_TOOL_CACHE:-/opt/hostedtoolcache}"
-          INSTALL_DIR="${TOOLCACHE}/Ruby/${RUBY_VERSION}/x64"
-          COMPLETE_FILE="${INSTALL_DIR}.complete"
-          LOCKFILE="${TOOLCACHE}/ruby-${RUBY_VERSION}.lock"
-
-          # Fast-path if already installed
-          if [[ -f "$COMPLETE_FILE" ]]; then
-            echo "Ruby ${RUBY_VERSION} already present in toolcache."
-            exit 0
-          fi
-
-          # Prepare cache dir and take a file lock to avoid parallel compiles
-          sudo mkdir -p "$INSTALL_DIR"
-          sudo chown -R "${USER}:$(id -gn)" "$TOOLCACHE"
-          exec 9>"$LOCKFILE"
-          if ! flock -n 9; then
-            echo "Another job is installing Ruby ${RUBY_VERSION}. Waiting on lock..."
-            flock 9
-          fi
-
-          # Re-check after acquiring the lock
-          if [[ -f "$COMPLETE_FILE" ]]; then
-            echo "Ruby ${RUBY_VERSION} was installed by another job."
-            exit 0
-          fi
-
-          # Build deps (safe to run repeatedly)
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            git curl ca-certificates build-essential autoconf bison \
-            libssl-dev zlib1g-dev libreadline-dev libyaml-dev \
-            libncurses5-dev libffi-dev libgdbm-dev libdb-dev \
-            uuid-dev libgmp-dev libsqlite3-dev pkg-config
-
-          # Install ruby-build standalone
-          tmpdir="$(mktemp -d)"
-          git clone --depth 1 https://github.com/rbenv/ruby-build.git "$tmpdir/ruby-build"
-          sudo "$tmpdir/ruby-build/install.sh"   # installs /usr/local/bin/ruby-build
-
-          # Compile Ruby into the toolcache
-          ruby-build "${RUBY_VERSION}" "${INSTALL_DIR}"
-
-          # Mark as complete so setup-ruby can use it
-          touch "${COMPLETE_FILE}"
-
-          # Quick sanity check
-          "${INSTALL_DIR}/bin/ruby" -v
-        # Optional: keep this from running on GH-hosted images that already have prebuilt Rubies
-        if: ${{ runner.os == 'Linux' }}
-
-      # Now setup-ruby will detect the cached Ruby and just wire it up
-      - uses: ruby/setup-ruby@v1
+        uses: actions/checkout@v4
         with:
-          ruby-version: '3.2.2'
-          bundler-cache: true
-          # You can also force toolcache usage on custom images:
-          # self-hosted: true
+          fetch-depth: 0
 
-      - run: ruby -v && gem -v && bundle -v
-      - name: Install build dependencies for rdiscount
-        run: sudo apt-get update && sudo apt-get install -y build-essential
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+      - name: Setup Go
+        uses: actions/setup-go@v5
         with:
-          ruby-version: '3.2.2' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          go-version-file: go.mod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/configure-pages@v5
 
-  # Deployment job
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
   deploy:
     environment:
       name: github-pages
