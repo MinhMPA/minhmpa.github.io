@@ -13,7 +13,7 @@ sections:
       text: ""
       button:
         text: Download CV
-        url: https://minhmpa.github.io/academic-cv/
+        url: /cv/Nhat-Minh-Nguyen-academic-cv.pdf
     design:
       css_class: dark
       background:
