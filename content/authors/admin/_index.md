@@ -24,10 +24,10 @@ profiles:
   - icon: academicons/orcid
     url: https://orcid.org/0000-0002-2542-7233
 interests:
-  - Growth of Cosmic Structure
-  - Field-level Bayesian Inference
-  - Effective Field Theory of Large-scale Structure
-  - CMB and Galaxy Survey Cosmology
+  - Field-level and forward inference for galaxy surveys
+  - Nonlinear structure formation and EFT-based modeling
+  - Growth, gravity, and dark-energy tests
+  - Primordial physics and multi-probe survey cosmology
 education:
   - area: PhD Astronomy
     institution: Max Planck Institute for Astrophysics and Ludwig Maximilian University of Munich
@@ -69,3 +69,9 @@ I am a cosmologist working at the interface of nonlinear structure formation, st
 My work includes the first 4-sigma evidence for a late-time suppression in the growth of large-scale structure, highlighted in [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001) and covered by [Scientific American](https://www.scientificamerican.com/article/a-possible-crisis-in-the-cosmos-could-lead-to-a-new-understanding-of-the-universe/) and [New Scientist](https://www.newscientist.com/article/2391414-the-universes-evolution-seems-to-be-slowing-and-we-dont-know-why/). I have also developed field-level Bayesian inference methods for galaxy surveys, a research direction that led to a second [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.221006) paper and the [2024 Buchalter Cosmology Prize](https://www.buchaltercosmologyprize.org/).
 
 I am currently a Kavli IPMU Fellow at the Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo. Before joining IPMU, I was a Leinweber Fellow at the University of Michigan and completed my PhD at the Max Planck Institute for Astrophysics and LMU Munich. My [CV](https://minhmpa.github.io/academic-cv/), research highlights, talks and travel, teaching, outreach, and contact information are available through the navigation tabs above.
+
+## Research Program
+
+- **Inference:** field-level Bayesian inference, forward modeling, EFT-informed likelihoods, and simulation-based validation.
+- **Physics:** growth of structure, gravity, dark energy, primordial physics, and consistency tests of ΛCDM.
+- **Surveys:** galaxy clustering, weak lensing, CMB/LSS cross-correlations, and current or future surveys including PFS, DESI, Roman, Euclid, HSC, Rubin, and CMB-S4.
