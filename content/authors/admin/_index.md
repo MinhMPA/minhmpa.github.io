@@ -5,7 +5,7 @@ first_name: Minh
 last_name: Nguyen
 superuser: true
 highlight_name: true
-role: Kavli IPMU Fellow
+role: Field-level inference for fundamental physics with galaxy surveys
 organizations:
   - name: Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo
     url: https://www.ipmu.jp/en
@@ -64,10 +64,8 @@ work:
 
 ## About Me
 
-Hello and Xin chao! I am a cosmologist interested in tracking the growth of large-scale structure across the history of the Universe. I model and combine different probes of cosmic structure, from [counting galaxies](https://www.mpa-garching.mpg.de/1106522/hl202412) to [measuring galaxy alignment](https://www.mpa-garching.mpg.de/1052846/hl202204?c=27981) and [weighing galaxy clusters](https://www.mpa-garching.mpg.de/926077/hl202103).
+I am a cosmologist working at the interface of nonlinear structure formation, statistical inference, and galaxy surveys. My research develops forward-modeling and field-level Bayesian inference methods to extract maximal information from cosmic structure and use it to test growth, gravity, dark energy, and primordial physics.
 
-My work has led to the first 4-sigma evidence for a late-time suppression in the growth of large-scale structure, highlighted in [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001) and covered by [Scientific American](https://www.scientificamerican.com/article/a-possible-crisis-in-the-cosmos-could-lead-to-a-new-understanding-of-the-universe/) and [New Scientist](https://www.newscientist.com/article/2391414-the-universes-evolution-seems-to-be-slowing-and-we-dont-know-why/). I also developed a field-level Bayesian inference framework for galaxy surveys, a line of work that led to a second [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.221006) paper and the [2024 Buchalter Cosmology Prize](https://www.buchaltercosmologyprize.org/).
+My work includes the first 4-sigma evidence for a late-time suppression in the growth of large-scale structure, highlighted in [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001) and covered by [Scientific American](https://www.scientificamerican.com/article/a-possible-crisis-in-the-cosmos-could-lead-to-a-new-understanding-of-the-universe/) and [New Scientist](https://www.newscientist.com/article/2391414-the-universes-evolution-seems-to-be-slowing-and-we-dont-know-why/). I have also developed field-level Bayesian inference methods for galaxy surveys, a research direction that led to a second [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.221006) paper and the [2024 Buchalter Cosmology Prize](https://www.buchaltercosmologyprize.org/).
 
-I am currently a Kavli IPMU Fellow at the Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo. Before joining IPMU, I was a Leinweber Fellow at the University of Michigan, and before that I completed my PhD at the Max Planck Institute for Astrophysics.
-
-Summary of my research and education can be found in my [CV](https://minhmpa.github.io/academic-cv/). The navigation tabs above link to research highlights, travel, teaching, outreach, and contact information.
+I am currently a Kavli IPMU Fellow at the Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo. Before joining IPMU, I was a Leinweber Fellow at the University of Michigan and completed my PhD at the Max Planck Institute for Astrophysics and LMU Munich. My [CV](https://minhmpa.github.io/academic-cv/), research highlights, talks and travel, teaching, outreach, and contact information are available through the navigation tabs above.
