@@ -14,3 +14,5 @@ Office A18
 5-1-5 Kashiwanoha, Kashiwa, Chiba 277-8583, Japan
 
 Email: [nhat.minh.nguyen@ipmu.jp](mailto:nhat.minh.nguyen@ipmu.jp)
+
+{{< research-bot >}}
