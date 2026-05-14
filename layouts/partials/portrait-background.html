@@ -1,0 +1,52 @@
+{{ if .Params.portrait_background }}
+<style>
+  .portrait-background-scope {
+    isolation: isolate;
+    position: relative;
+  }
+
+  .portrait-background-scope::before {
+    background: url('/images/bg_portrait.png') center / contain no-repeat;
+    bottom: clamp(1.5rem, 6vw, 5rem);
+    content: "";
+    filter: blur(1.5px) saturate(0.8);
+    height: min(72vh, 680px);
+    opacity: 0.11;
+    pointer-events: none;
+    position: absolute;
+    right: clamp(1rem, 6vw, 6rem);
+    width: min(44vw, 520px);
+    z-index: -1;
+  }
+
+  .portrait-background-scope::after {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 2rem;
+    bottom: clamp(1.5rem, 6vw, 5rem);
+    content: "";
+    height: min(72vh, 680px);
+    pointer-events: none;
+    position: absolute;
+    right: clamp(1rem, 6vw, 6rem);
+    width: min(44vw, 520px);
+    z-index: -1;
+  }
+
+  .dark .portrait-background-scope::after {
+    background: rgba(15, 23, 42, 0.16);
+  }
+
+  @media (max-width: 768px) {
+    .portrait-background-scope::before,
+    .portrait-background-scope::after {
+      bottom: 1.5rem;
+      height: min(55vh, 420px);
+      opacity: 0.08;
+      right: -5rem;
+      width: min(80vw, 360px);
+    }
+  }
+</style>
+{{ end }}

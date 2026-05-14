@@ -7,11 +7,8 @@ reading_time: false
 share: false
 pager: false
 show_date_updated: false
+portrait_background: true
 ---
-
-<p align="center">
-  <img src="/images/contact_profile.png" alt="Portrait of Minh Nguyen" width="100%" />
-</p>
 
 Kavli Institute for the Physics and Mathematics of the Universe  
 Office A18  

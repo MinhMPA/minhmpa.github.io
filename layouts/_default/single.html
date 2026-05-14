@@ -9,7 +9,9 @@
   {{ end }}
 {{ end }}
 
-<div class="mx-auto flex max-w-screen-xl">
+{{ partial "portrait-background.html" . }}
+
+<div class="mx-auto flex max-w-screen-xl {{ if .Params.portrait_background }}portrait-background-scope{{ end }}">
   {{ partial "components/toc.html" . }}
   <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
     <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
