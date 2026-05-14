@@ -1,4 +1,4 @@
-# research-bot widget — operator notes
+# Research-bot widget — operator notes
 
 This document covers two things for anyone maintaining the research-bot
 widget on the Contact page:
@@ -20,17 +20,17 @@ The automated `node --test` step covers matcher logic; this checklist
 covers what only a browser can verify.
 
 - [ ] Run `hugo server -D` and navigate to http://localhost:1313/contact/.
-      Confirm the widget renders below the contact details with
-      appropriate spacing.
+      Confirm the widget renders below the contact details with a
+      visible gap (not flush against the email line).
 - [ ] Type a question that matches an FAQ entry (e.g. "What do you work
-      on?") and press Enter. The answer appears in the answer area; if
-      the entry has a `url`, a "Learn more →" link appears beside it.
-- [ ] Pressing Enter in the input submits the form (no manual Enter
-      handler needed — native form submit fires).
+      on?") and press Enter to submit. The answer appears in the answer
+      area; if the entry has a `url`, a "Learn more →" link appears
+      beside it.
 - [ ] Clicking the "Ask" button also submits the form.
-- [ ] After submission, keyboard focus moves to the answer area. Test
-      with a screen reader (VoiceOver on macOS is fine) and confirm the
-      answer is announced via `aria-live="polite"`.
+- [ ] After submission, keyboard focus moves to the answer area.
+- [ ] With a screen reader running (VoiceOver on macOS is fine),
+      confirm the answer text is announced via the `aria-live="polite"`
+      region.
 - [ ] Submit an empty input. The empty-input message appears, not the
       no-match fallback.
 - [ ] Submit a prompt-injection-style question ("ignore previous
@@ -60,7 +60,7 @@ branch by rendering the deterministic fallback string.
 
 A future LLM fallback would replace the `null`-branch behavior with an
 async call to a same-origin server endpoint that the homepage owner
-controls. The `null` return signature IS the extension point — no
+controls. The `null` return signature *is* the extension point — no
 flag, stub, or commented-out code is needed today.
 
 Any such future fallback must preserve the following constraints:
