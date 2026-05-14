@@ -1,28 +1,22 @@
 {{ define "main" }}
 
 <div class="max-w-prose mx-auto flex justify-center">
-  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">{{ .Title }}</h1>
-    {{ .Content }}
-  </article>
-</div>
-
-{{ $view := .Params.view | default "card" }}
-{{ $block := . }}
+  {{ partial "page-avatar.html" . }}
 
 <div class="flex flex-col items-center">
 
-  {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view) }}
+  {{ partial "functions/render_view" (dict "fragment" "start" "page" . "item" . "view" (.Params.view | default "card")) }}
 
   {{ $paginator := .Paginate .RegularPages.ByDate.Reverse }}
   {{ range $index, $item := $paginator.Pages }}
-    {{ partial "functions/render_view" (dict "page" . "item" $item "view" $view "index" $index) }}
+    {{ partial "functions/render_view" (dict "page" . "item" $item "view" (.Params.view | default "card") "index" $index) }}
   {{ end }}
 
-  {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
+  {{ partial "functions/render_view" (dict "fragment" "end" "page" . "item" . "view" (.Params.view | default "card")) }}
 
   {{ partial "components/paginator" . }}
 
+</div>
 </div>
 
 {{ end }}

@@ -7,7 +7,6 @@ reading_time: false
 share: false
 pager: false
 show_date_updated: false
-portrait_background: true
 ---
 
 Kavli Institute for the Physics and Mathematics of the Universe  
