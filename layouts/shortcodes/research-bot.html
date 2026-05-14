@@ -1,0 +1,55 @@
+<section
+  id="research-bot"
+  aria-labelledby="research-bot-title"
+  class="mt-12 rounded-lg border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-700 dark:bg-neutral-900"
+>
+  <h2
+    id="research-bot-title"
+    class="text-2xl font-semibold text-neutral-800 dark:text-neutral-100"
+  >
+    Ask about my work
+  </h2>
+  <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+    Answers are generated from a curated public profile.
+  </p>
+
+  <form
+    id="research-bot-form"
+    class="mt-4 flex flex-col gap-2 md:flex-row md:items-center"
+  >
+    <label for="research-bot-input" class="sr-only">Question</label>
+    <input
+      id="research-bot-input"
+      type="text"
+      autocomplete="off"
+      placeholder="Ask about research, publications, software..."
+      class="flex-1 rounded-md border border-neutral-300 bg-white px-3 py-2 text-neutral-900 placeholder-neutral-400 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder-neutral-500"
+    />
+    <button
+      type="submit"
+      class="rounded-md bg-primary-600 px-4 py-2 font-medium text-white hover:bg-primary-700"
+    >
+      Ask
+    </button>
+  </form>
+
+  <div
+    id="research-bot-answer"
+    tabindex="-1"
+    aria-live="polite"
+    class="mt-4 text-neutral-800 dark:text-neutral-200"
+  ></div>
+
+  <noscript>
+    <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-400">
+      This feature requires JavaScript. You're welcome to email me directly — the address is above.
+    </p>
+  </noscript>
+
+  <script type="application/json" id="research-bot-faq">
+    {{ site.Data.research_bot | jsonify }}
+  </script>
+
+  {{ $js := resources.Get "js/research-bot.js" | js.Build (dict "format" "esm" "minify" true) | resources.Fingerprint }}
+  <script type="module" src="{{ $js.RelPermalink }}" defer></script>
+</section>
