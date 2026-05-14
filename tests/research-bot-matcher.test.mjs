@@ -23,6 +23,29 @@ const FAQ = JSON.parse(
   readFileSync(resolve(__dirname, "fixtures/research_bot.json"), "utf8"),
 );
 
+// Drift detection: if YAML and JSON disagree on which entries exist, this
+// test fails. Updating one without the other is the most common sync break.
+const EXPECTED_IDS = [
+  "research-overview",
+  "field-level-inference",
+  "eft-modeling",
+  "publications",
+  "software",
+  "collaboration",
+  "contact",
+  "affiliation",
+  "growth-of-structure",
+  "awards",
+  "outreach",
+];
+
+test("JSON fixture entry ids match the expected set (YAML/JSON sync)", () => {
+  assert.deepEqual(
+    FAQ.map((e) => e.id),
+    EXPECTED_IDS,
+  );
+});
+
 // ---------- normalize() ----------
 
 test("normalize lowercases input", () => {

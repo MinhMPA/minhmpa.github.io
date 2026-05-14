@@ -7,6 +7,11 @@
 export const THRESHOLD = 20;
 export const MIN_TOKEN_LENGTH = 3;
 
+const SCORE_EXACT_QUESTION = 100;
+const SCORE_QUESTION_SUBSTRING = 40;
+const SCORE_KEYWORD_SUBSTRING = 30;
+const SCORE_TOKEN_OVERLAP = 5;
+
 export const EMPTY_INPUT =
   "Please ask a question about Minh Nguyen's research, publications, software, or collaboration interests.";
 
@@ -82,16 +87,16 @@ function scoreEntry(q, entry) {
     const c = normalize(candidate);
     if (!c) continue;
     if (q === c) {
-      score += 100;
+      score += SCORE_EXACT_QUESTION;
     } else if (q.includes(c) || c.includes(q)) {
-      score += 40;
+      score += SCORE_QUESTION_SUBSTRING;
     }
   }
 
   for (const k of entry.keywords || []) {
     const nk = normalize(k);
     if (!nk) continue;
-    if (q.includes(nk)) score += 30;
+    if (q.includes(nk)) score += SCORE_KEYWORD_SUBSTRING;
   }
 
   const qTokens = new Set(tokenize(q));
@@ -100,7 +105,7 @@ function scoreEntry(q, entry) {
   for (const t of qTokens) {
     if (eTokens.has(t)) overlap += 1;
   }
-  score += 5 * overlap;
+  score += SCORE_TOKEN_OVERLAP * overlap;
 
   return score;
 }
@@ -113,10 +118,6 @@ function scoreEntry(q, entry) {
  *   { answer, sourceId, url? }                         on a confident match
  */
 export function answerQuestion(question, faq) {
-  if (question == null) return { empty: true };
-  if (typeof question !== "string") return { empty: true };
-  if (question.trim() === "") return { empty: true };
-
   const q = normalize(question);
   if (q === "") return { empty: true };
 
@@ -167,8 +168,7 @@ export function init({ rootSelector = "#research-bot" } = {}) {
 
   form.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    // Clear previous answer container children.
-    while (answer.firstChild) answer.removeChild(answer.firstChild);
+    answer.replaceChildren();
 
     const value = input.value;
     const result = answerQuestion(value, faq);
