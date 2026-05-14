@@ -2,7 +2,7 @@
 
 <div class="max-w-prose mx-auto flex justify-center">
   <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ .Title }}</h1>
-  <img src="/images/IPMU_profile_2.png" alt="Minh Nguyen" class="w-[150px] h-[150px] rounded-full object-cover border-4 border-white shadow mt-4" />
+  <img src="/images/IPMU_profile.png" alt="Minh Nguyen" class="w-[150px] h-[150px] rounded-full object-cover border-4 border-white shadow mt-4" />
 
   {{ $posts := where site.RegularPages "Section" "blog" }}
   {{ $posts = $posts.ByDate.Reverse }}
