@@ -10,7 +10,7 @@ show_date_updated: false
 ---
 
 <p align="center">
-  <img src="/images/IPMU_fujiwara-hall.jpg" alt="IPMU Fujiwara Hall" width="100%" />
+  <img src="/images/contact_profile.png" alt="Portrait of Minh Nguyen" width="100%" />
 </p>
 
 Kavli Institute for the Physics and Mathematics of the Universe  

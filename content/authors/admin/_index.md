@@ -6,6 +6,7 @@ last_name: Nguyen
 superuser: true
 highlight_name: true
 role: Field-level inference for fundamental physics with galaxy surveys
+avatar_alt: Portrait of Minh Nguyen
 organizations:
   - name: Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo
     url: https://www.ipmu.jp/en
