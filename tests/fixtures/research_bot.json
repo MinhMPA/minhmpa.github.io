@@ -1,0 +1,208 @@
+[
+  {
+    "id": "research-overview",
+    "questions": [
+      "What do you work on?",
+      "What is your research about?",
+      "Tell me about your research"
+    ],
+    "keywords": [
+      "research",
+      "cosmology",
+      "field-level inference",
+      "FLI",
+      "large-scale structure",
+      "EFT",
+      "redshift space",
+      "statistical methods",
+      "astronomical observations"
+    ],
+    "answer": "Minh Nguyen works on statistical methods and observables for extracting cosmological information from astronomical observations, with interests including field-level inference, EFT-based cosmological modeling, and redshift-space statistics.",
+    "url": "/research/"
+  },
+  {
+    "id": "field-level-inference",
+    "questions": [
+      "What is field-level inference?",
+      "Tell me about field-level inference",
+      "What is FLI?"
+    ],
+    "keywords": [
+      "field-level inference",
+      "FLI",
+      "Bayesian inference",
+      "simulations",
+      "density field",
+      "large-scale structure",
+      "JAX-PM",
+      "redshift space"
+    ],
+    "answer": "Field-level inference aims to extract cosmological information directly from high-dimensional observed fields, rather than compressing the data only into summary statistics such as the power spectrum. Minh is interested in applying these methods to large-scale structure and redshift-space analyses.",
+    "url": "/research/"
+  },
+  {
+    "id": "eft-modeling",
+    "questions": [
+      "What is EFT modeling?",
+      "Tell me about EFT-based modeling",
+      "What is the effective field theory of large-scale structure?"
+    ],
+    "keywords": [
+      "EFT",
+      "effective field theory",
+      "cosmological modeling",
+      "large-scale structure",
+      "perturbation theory"
+    ],
+    "answer": "Minh is interested in EFT-based cosmological modeling as a way to connect theoretical predictions, simulations, and observational statistics for large-scale structure.",
+    "url": "/research/"
+  },
+  {
+    "id": "publications",
+    "questions": [
+      "Where can I find your publications?",
+      "Do you have a list of papers?",
+      "Where are your arXiv papers?"
+    ],
+    "keywords": [
+      "publications",
+      "papers",
+      "arXiv",
+      "research papers",
+      "articles"
+    ],
+    "answer": "Please see the publications section of this homepage for Minh's current paper list. The bot does not invent or summarize papers that are not listed in the public profile data."
+  },
+  {
+    "id": "software",
+    "questions": [
+      "Do you have public code?",
+      "Where is your software?",
+      "Is there a GitHub repository?"
+    ],
+    "keywords": [
+      "software",
+      "code",
+      "GitHub",
+      "repositories",
+      "packages"
+    ],
+    "answer": "Please see the software or GitHub links on this homepage for public code associated with Minh's work."
+  },
+  {
+    "id": "collaboration",
+    "questions": [
+      "Can we collaborate?",
+      "Are you taking students?",
+      "Do you accept visitors or postdocs?"
+    ],
+    "keywords": [
+      "collaboration",
+      "collaborate",
+      "contact",
+      "email",
+      "student",
+      "postdoc",
+      "visitor"
+    ],
+    "answer": "For collaboration inquiries, please use the contact information listed on this homepage. Relevant topics include field-level inference, cosmological statistics, large-scale structure, and EFT-based modeling.",
+    "url": "/contact/"
+  },
+  {
+    "id": "contact",
+    "questions": [
+      "How can I contact you?",
+      "What is your email?",
+      "How do I reach you?"
+    ],
+    "keywords": [
+      "contact",
+      "email",
+      "reach",
+      "message"
+    ],
+    "answer": "Please use the contact information listed on this homepage.",
+    "url": "/contact/"
+  },
+  {
+    "id": "affiliation",
+    "questions": [
+      "Where do you work?",
+      "What is your current position?",
+      "What is your affiliation?",
+      "Where are you based?"
+    ],
+    "keywords": [
+      "where",
+      "work",
+      "position",
+      "affiliation",
+      "university",
+      "institute",
+      "IPMU",
+      "Kavli",
+      "Tokyo",
+      "Japan",
+      "Michigan",
+      "fellow"
+    ],
+    "answer": "Minh is currently a Kavli IPMU Fellow at the Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo. Previously, he was a Leinweber Fellow at the Leinweber Center for Theoretical Physics, University of Michigan, and completed his PhD at the Max Planck Institute for Astrophysics and LMU Munich."
+  },
+  {
+    "id": "growth-of-structure",
+    "questions": [
+      "What is your work on the growth of structure?",
+      "Tell me about the suppressed growth result",
+      "What is the S8 tension work?"
+    ],
+    "keywords": [
+      "growth",
+      "structure",
+      "growth of structure",
+      "late-time",
+      "suppression",
+      "tension",
+      "sigma 8",
+      "S8"
+    ],
+    "answer": "Minh contributed to the first ~4-sigma evidence for a late-time suppression in the growth of large-scale structure. The result was published in Physical Review Letters (2023) and covered by Scientific American and New Scientist.",
+    "url": "/research/"
+  },
+  {
+    "id": "awards",
+    "questions": [
+      "Have you received any awards?",
+      "What prizes have you won?",
+      "Tell me about your recognition"
+    ],
+    "keywords": [
+      "prize",
+      "award",
+      "recognition",
+      "Buchalter",
+      "honor"
+    ],
+    "answer": "Minh received the 2024 Buchalter Cosmology Prize for work on field-level inference."
+  },
+  {
+    "id": "outreach",
+    "questions": [
+      "What outreach do you do?",
+      "Tell me about your public engagement",
+      "Do you work with students?"
+    ],
+    "keywords": [
+      "outreach",
+      "public engagement",
+      "students",
+      "Vietnam",
+      "VLLT",
+      "seminar",
+      "science communication",
+      "AMA",
+      "museum"
+    ],
+    "answer": "Minh organizes the VLLT Joint Seminar Series for Vietnamese undergraduate and graduate students in physics and astronomy. He is also a Science Communication Fellow at the University of Michigan Museum of Natural History and participates in Cosmology from Home Ask-Me-Anything sessions.",
+    "url": "/outreach/"
+  }
+]
