@@ -47,7 +47,7 @@
   </noscript>
 
   <script type="application/json" id="research-bot-faq">
-    {{ site.Data.research_bot | jsonify }}
+    {{ site.Data.research_bot | jsonify | safeJS }}
   </script>
 
   {{ $js := resources.Get "js/research-bot.js" | js.Build (dict "format" "esm" "minify" true) | resources.Fingerprint }}
