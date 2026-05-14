@@ -9,10 +9,6 @@ pager: false
 show_date_updated: false
 ---
 
-<p align="center">
-  <img src="/images/lsa_umich_mag_LSS_growth_Fullpage_Extended.jpg" alt="Large-scale structure growth collage" width="100%" />
-</p>
-
 ## Executive Summary
 
 I work at the interface of cosmological theory, forward modeling, and data analysis. The main goal is to extract more information from large-scale structure data while keeping the inference physically controlled and statistically robust.
@@ -109,3 +105,7 @@ I have also worked on measuring and modeling galaxy-shape correlations with the 
 
 - [Open-access JCAP article](https://iopscience.iop.org/article/10.1088/1475-7516/2022/08/003)
 - [MPA research highlight](https://www.mpa-garching.mpg.de/1052846/hl202204?c=27981)
+
+<p align="center">
+  <img src="/images/lsa_umich_mag_LSS_growth_Fullpage_Extended.jpg" alt="Large-scale structure growth collage" width="100%" />
+</p>
