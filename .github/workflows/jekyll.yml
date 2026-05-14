@@ -37,6 +37,14 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Test research-bot matcher
+        run: node --test tests/*.test.mjs
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
