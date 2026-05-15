@@ -46,3 +46,7 @@ Here is the Cosmology from Home 2023 session, including the [Reddit thread](http
 ## Physicists To-Go
 
 This is similar to Skype a Scientist, but managed by the American Physical Society. If you are in the United States, consider signing up [here](https://www.aps.org/programs/outreach/physiciststogo.cfm).
+
+<p align="center">
+  <img src="/images/cosmic_structure_growth_lineart.png" alt="Cosmic structure growth line art" width="100%" />
+</p>
