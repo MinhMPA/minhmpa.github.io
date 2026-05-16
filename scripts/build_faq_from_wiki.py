@@ -22,10 +22,65 @@ Exit codes:
 
 from __future__ import annotations
 
+import re
 import sys
+from pathlib import Path
+
+import yaml
 
 
-def main(argv: list[str]) -> int:
+REQUIRED_RECORD_FIELDS = ("title", "authors", "raw_path", "page_path")
+
+_ARXIV_ID_RE = re.compile(r"(\d{4}\.\d{4,5})(v\d+)?")
+
+
+def load_wiki_records(wiki_root: Path) -> dict[str, dict]:
+    """Load all SRC-*.yaml records, keyed by record_id.
+
+    Each record dict gets an extra `arxiv_id` field derived from `raw_path`.
+    Raises FileNotFoundError if wiki_records/sources/ does not exist.
+    Raises ValueError if a record is missing any required field.
+    """
+    records_dir = wiki_root / "wiki_records" / "sources"
+    if not records_dir.is_dir():
+        raise FileNotFoundError(
+            f"expected {records_dir} to exist; is {wiki_root} a wiki root?"
+        )
+    out: dict[str, dict] = {}
+    for yaml_path in sorted(records_dir.glob("SRC-*.yaml")):
+        with yaml_path.open() as fh:
+            r = yaml.safe_load(fh)
+        if not isinstance(r, dict):
+            raise ValueError(f"{yaml_path}: top-level value is not a mapping")
+        for field in REQUIRED_RECORD_FIELDS:
+            if not r.get(field):
+                raise ValueError(f"{yaml_path}: missing required field '{field}'")
+        m = _ARXIV_ID_RE.search(Path(r["raw_path"]).name)
+        if not m:
+            raise ValueError(
+                f"{yaml_path}: cannot extract arxiv id from raw_path={r['raw_path']!r}"
+            )
+        r["arxiv_id"] = m.group(1)
+        out[r["record_id"]] = r
+    return out
+
+
+def extract_summary_body(page_path: Path) -> str:
+    """Return the prose under the `## Summary` heading of a source page.
+
+    Strips frontmatter, the title/H1, the metadata bullets above the heading,
+    and any trailing whitespace. Returns the body verbatim, including any
+    placeholder lines like `_Not yet written._`.
+    """
+    text = page_path.read_text(encoding="utf-8")
+    parts = re.split(r"^##\s+Summary\s*$", text, maxsplit=1, flags=re.MULTILINE)
+    if len(parts) < 2:
+        return ""
+    body = parts[1].strip()
+    return body
+
+
+def main(argv: list[str]) -> int:  # placeholder; filled in by later tasks
     raise NotImplementedError("filled in by subsequent tasks")
 
 

@@ -1,0 +1,20 @@
+record_id: SRC-0002
+record_type: source
+status: active
+duplicate_of:
+superseded_by:
+source_storage: local
+raw_path: raw/review_papers/1611.09787v5.pdf
+source_url:
+page_path: wiki_pages/sources/SRC-0002-not-authored-paper.md
+source_type: paper
+source_format: pdf
+title: "Large-Scale Galaxy Bias"
+authors:
+  - "Vincent Desjacques"
+  - "Donghui Jeong"
+  - "Fabian Schmidt"
+added_date: 2026-05-15
+processed_date: 2026-05-15
+published_date: 2016-11-29
+content_fingerprint:
