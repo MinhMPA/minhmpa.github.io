@@ -11,6 +11,10 @@ const SCORE_EXACT_QUESTION = 100;
 const SCORE_QUESTION_SUBSTRING = 40;
 const SCORE_KEYWORD_SUBSTRING = 30;
 const SCORE_TOKEN_OVERLAP = 5;
+// Hand-authored entries (no source, or source !== 'wiki') get a priority bonus
+// so that curator-written entries always win over auto-generated wiki entries
+// when both match the same query.
+const SCORE_HAND_ENTRY = 50;
 
 export const EMPTY_INPUT =
   "Please ask a question about Minh Nguyen's research, publications, software, or collaboration interests.";
@@ -81,22 +85,22 @@ function entryTokenSet(entry) {
  * Score a single entry against a normalized question q.
  */
 function scoreEntry(q, entry) {
-  let score = 0;
+  let contentScore = 0;
 
   for (const candidate of entry.questions || []) {
     const c = normalize(candidate);
     if (!c) continue;
     if (q === c) {
-      score += SCORE_EXACT_QUESTION;
+      contentScore += SCORE_EXACT_QUESTION;
     } else if (q.includes(c) || c.includes(q)) {
-      score += SCORE_QUESTION_SUBSTRING;
+      contentScore += SCORE_QUESTION_SUBSTRING;
     }
   }
 
   for (const k of entry.keywords || []) {
     const nk = normalize(k);
     if (!nk) continue;
-    if (q.includes(nk)) score += SCORE_KEYWORD_SUBSTRING;
+    if (q.includes(nk)) contentScore += SCORE_KEYWORD_SUBSTRING;
   }
 
   const qTokens = new Set(tokenize(q));
@@ -105,7 +109,14 @@ function scoreEntry(q, entry) {
   for (const t of qTokens) {
     if (eTokens.has(t)) overlap += 1;
   }
-  score += SCORE_TOKEN_OVERLAP * overlap;
+  let score = contentScore + SCORE_TOKEN_OVERLAP * overlap;
+
+  // Hand-authored entries (no source or source !== 'wiki') get a priority
+  // bonus when they have genuine question/keyword content overlap, so they
+  // always win over auto-generated wiki entries for the same query.
+  if (contentScore > 0 && (!entry.source || entry.source !== "wiki")) {
+    score += SCORE_HAND_ENTRY;
+  }
 
   return score;
 }
