@@ -99,6 +99,73 @@ def is_authored(authors: list[str]) -> bool:
     return False
 
 
+FAILURE_MARKERS = frozenset(
+    {
+        "_not yet written._",
+        "_pdf could not be read._",
+        "_pdf text extraction was unusable._",
+    }
+)
+
+_SENTENCE_BOUNDARY = re.compile(r"(?<=[.!?])\s+")
+
+
+def _surname(full_name: str) -> str:
+    return full_name.strip().split()[-1] if full_name.strip() else ""
+
+
+def _is_failure(body: str) -> bool:
+    first_line = body.strip().split("\n", 1)[0].strip().casefold()
+    if first_line in FAILURE_MARKERS:
+        return True
+    # also catch the more verbose "_PDF could not be read: <reason>._" form
+    if first_line.startswith("_pdf could not be read") and first_line.endswith("._"):
+        return True
+    return False
+
+
+def distill_answer(
+    *,
+    body: str,
+    arxiv_id: str,
+    authored: bool,
+    first_author: str,
+    title: str,
+) -> str:
+    """Excerpt 1-2 sentences (≤80 words) from `body`, prepend author tone."""
+    if _is_failure(body):
+        return (
+            f"{title} by {_surname(first_author) or first_author} et al. "
+            f"(arXiv:{arxiv_id}). A summary is not yet available; see the arXiv "
+            "abstract."
+        )
+
+    sentences = _SENTENCE_BOUNDARY.split(body.strip())
+    selected: list[str] = []
+    words_total = 0
+    for s in sentences:
+        s = s.strip()
+        if not s:
+            continue
+        words = s.split()
+        if words_total == 0 and len(words) > 80:
+            selected.append(" ".join(words[:80]) + "…")
+            words_total = 80
+            break
+        selected.append(s)
+        words_total += len(words)
+        if words_total >= 60:
+            break
+
+    excerpt = " ".join(selected)
+    if authored:
+        prefix = f"Minh and collaborators (arXiv:{arxiv_id}):"
+    else:
+        surname = _surname(first_author) or first_author
+        prefix = f"{surname} et al. (arXiv:{arxiv_id}):"
+    return f"{prefix} {excerpt}"
+
+
 def main(argv: list[str]) -> int:  # placeholder; filled in by later tasks
     raise NotImplementedError("filled in by subsequent tasks")
 
