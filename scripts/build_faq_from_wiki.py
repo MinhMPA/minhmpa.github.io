@@ -501,6 +501,64 @@ def build_per_paper_entry(
     }
 
 
+def _entry_sort_key(entry: dict) -> tuple[int, str]:
+    """Per-paper entries (id starts with 'wiki-<digits>') come before bucket
+    entries (id starts with 'wiki-bucket-'). Within each group, sort by id."""
+    eid = entry.get("id", "")
+    if eid.startswith("wiki-bucket-"):
+        return (1, eid)
+    return (0, eid)
+
+
+class _LiteralStr(str):
+    """Marker class to force PyYAML's block-folded style for long strings."""
+
+
+def _folded_representer(dumper, data):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", str(data), style=">")
+
+
+yaml.add_representer(_LiteralStr, _folded_representer)
+
+
+def _stylize_answers(entries: list[dict]) -> list[dict]:
+    """Mark answer fields for block-folded YAML output (>)."""
+    out = []
+    for e in entries:
+        e2 = dict(e)
+        if "answer" in e2 and isinstance(e2["answer"], str):
+            e2["answer"] = _LiteralStr(e2["answer"])
+        out.append(e2)
+    return out
+
+
+def merge_yaml(*, existing_text: str, new_entries: list[dict]) -> str:
+    """Merge wiki-derived entries into the existing YAML text.
+
+    Strategy:
+      1. Parse existing YAML to a list of dicts.
+      2. Drop entries with `source == 'wiki'`.
+      3. Append new_entries, sorted: per-paper first (by id), then bucket
+         entries (by id).
+      4. Dump with block-folded answers, allow_unicode=True, sort_keys=False,
+         width=80, indent=2.
+    """
+    existing = yaml.safe_load(existing_text) or []
+    if not isinstance(existing, list):
+        raise ValueError("existing YAML must be a top-level list of entries")
+    hand = [e for e in existing if not (isinstance(e, dict) and e.get("source") == "wiki")]
+    sorted_new = sorted(new_entries, key=_entry_sort_key)
+    merged = hand + sorted_new
+    styled = _stylize_answers(merged)
+    return yaml.dump(
+        styled,
+        sort_keys=False,
+        allow_unicode=True,
+        width=80,
+        indent=2,
+    )
+
+
 def main(argv: list[str]) -> int:  # placeholder; filled in by later tasks
     raise NotImplementedError("filled in by subsequent tasks")
 

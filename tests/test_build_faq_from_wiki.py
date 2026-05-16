@@ -294,5 +294,60 @@ class BuildPerPaperEntryTest(unittest.TestCase):
         self.assertLessEqual(len(e["keywords"]), 12)
 
 
+class MergeYamlTest(unittest.TestCase):
+    def setUp(self):
+        self.sample = (Path(__file__).parent / "fixtures" / "sample_research_bot.yaml").read_text()
+        self.new_entries = [
+            {
+                "id": "wiki-1611-09787",
+                "source": "wiki",
+                "arxiv_id": "1611.09787",
+                "authored": False,
+                "questions": ["What is 1611.09787 about?"],
+                "keywords": ["1611.09787", "EFT", "galaxy bias"],
+                "answer": "Desjacques et al. (arXiv:1611.09787): example.",
+                "url": "https://arxiv.org/abs/1611.09787",
+            },
+            {
+                "id": "wiki-bucket-field-level-inference",
+                "source": "wiki",
+                "questions": ["Tell me about field-level inference"],
+                "keywords": ["field-level inference", "LEFTfield"],
+                "answer": "Minh works on FLI. arXiv:2403.03220.",
+                "url": "/research/",
+            },
+        ]
+
+    def test_preserves_hand_entries_in_order(self):
+        merged_text = bfw.merge_yaml(existing_text=self.sample, new_entries=self.new_entries)
+        idx_overview = merged_text.find("id: research-overview")
+        idx_fli = merged_text.find("id: field-level-inference\n")
+        idx_wiki = merged_text.find("id: wiki-")
+        self.assertGreater(idx_overview, -1)
+        self.assertGreater(idx_fli, -1)
+        self.assertGreater(idx_wiki, -1)
+        self.assertLess(idx_overview, idx_wiki)
+        self.assertLess(idx_fli, idx_wiki)
+
+    def test_drops_existing_source_wiki_entries(self):
+        with_existing = self.sample + "\n- id: wiki-old-stale\n  source: wiki\n  questions: []\n  keywords: []\n  answer: stale\n"
+        merged_text = bfw.merge_yaml(existing_text=with_existing, new_entries=self.new_entries)
+        self.assertNotIn("wiki-old-stale", merged_text)
+        self.assertIn("wiki-1611-09787", merged_text)
+
+    def test_idempotent(self):
+        merged1 = bfw.merge_yaml(existing_text=self.sample, new_entries=self.new_entries)
+        merged2 = bfw.merge_yaml(existing_text=merged1, new_entries=self.new_entries)
+        self.assertEqual(merged1, merged2)
+
+    def test_per_paper_before_buckets(self):
+        merged_text = bfw.merge_yaml(existing_text=self.sample, new_entries=self.new_entries)
+        idx_paper = merged_text.find("id: wiki-1611-09787")
+        idx_bucket = merged_text.find("id: wiki-bucket-field-level-inference")
+        self.assertGreater(idx_paper, -1)
+        self.assertGreater(idx_bucket, -1)
+        self.assertLess(idx_paper, idx_bucket)
+
+
 if __name__ == "__main__":
     unittest.main()
