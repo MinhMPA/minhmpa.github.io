@@ -201,3 +201,40 @@ test("Match with url includes the url field", () => {
   assert.ok(r && !r.empty);
   assert.equal(r.url, "/research/");
 });
+
+// ---------- wiki-derived entries ----------
+// These rely on the generator having been run at least once. They assert
+// the spec's coexistence rules between hand and wiki entries.
+
+test("12. 'Tell me about 2403.03220' -> wiki per-paper entry", () => {
+  const r = answerQuestion("Tell me about 2403.03220", FAQ);
+  assert.ok(r && !r.empty, `expected a match, got ${JSON.stringify(r)}`);
+  assert.equal(r.sourceId, "wiki-2403-03220");
+});
+
+test("13. 'Tell me about your DESI 2024 paper' -> DESI bucket or per-paper", () => {
+  const r = answerQuestion("Tell me about your DESI 2024 paper", FAQ);
+  assert.ok(r && !r.empty);
+  assert.ok(
+    r.sourceId === "wiki-bucket-desi-2024" ||
+      r.sourceId.startsWith("wiki-2404-") ||
+      r.sourceId.startsWith("wiki-2411-"),
+    `unexpected sourceId ${r.sourceId}`,
+  );
+});
+
+test("14. Generic 'tell me about field-level inference' still prefers hand entry", () => {
+  const r = answerQuestion("tell me about field-level inference", FAQ);
+  assert.ok(r && !r.empty);
+  assert.equal(
+    r.sourceId,
+    "field-level-inference",
+    "hand entry should win via the +50 hand-entry bonus when content scores tie",
+  );
+});
+
+test("15. arXiv-id keyword wins against generic hand-entry overlap", () => {
+  const r = answerQuestion("what is 1611.09787 about", FAQ);
+  assert.ok(r && !r.empty);
+  assert.equal(r.sourceId, "wiki-1611-09787");
+});
