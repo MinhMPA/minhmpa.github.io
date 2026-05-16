@@ -80,6 +80,25 @@ def extract_summary_body(page_path: Path) -> str:
     return body
 
 
+MINH_NAME_FORMS = frozenset(
+    {
+        "nhat-minh nguyen",
+        "nhat minh nguyen",
+        "minh nguyen",
+        "n. nguyen",
+        "n nguyen",
+    }
+)
+
+
+def is_authored(authors: list[str]) -> bool:
+    """True iff any author name matches a canonical form of Minh's name."""
+    for a in authors or []:
+        if a.strip().casefold() in MINH_NAME_FORMS:
+            return True
+    return False
+
+
 def main(argv: list[str]) -> int:  # placeholder; filled in by later tasks
     raise NotImplementedError("filled in by subsequent tasks")
 

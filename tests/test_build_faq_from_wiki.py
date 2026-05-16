@@ -45,5 +45,28 @@ class ExtractSummaryBodyTest(unittest.TestCase):
         self.assertEqual(body.strip(), "_Not yet written._")
 
 
+class IsAuthoredTest(unittest.TestCase):
+    def test_exact_full_name_matches(self):
+        self.assertTrue(bfw.is_authored(["Nhat-Minh Nguyen", "Fabian Schmidt"]))
+
+    def test_initial_form_matches(self):
+        self.assertTrue(bfw.is_authored(["N. Nguyen", "F. Schmidt"]))
+
+    def test_short_form_matches(self):
+        self.assertTrue(bfw.is_authored(["Minh Nguyen"]))
+
+    def test_no_hyphen_form_matches(self):
+        self.assertTrue(bfw.is_authored(["Nhat Minh Nguyen"]))
+
+    def test_case_insensitive(self):
+        self.assertTrue(bfw.is_authored(["NHAT-MINH NGUYEN"]))
+
+    def test_returns_false_when_absent(self):
+        self.assertFalse(bfw.is_authored(["Vincent Desjacques", "Donghui Jeong"]))
+
+    def test_handles_empty_list(self):
+        self.assertFalse(bfw.is_authored([]))
+
+
 if __name__ == "__main__":
     unittest.main()
