@@ -22,6 +22,7 @@ Exit codes:
 
 from __future__ import annotations
 
+import argparse
 import re
 import sys
 from pathlib import Path
@@ -559,8 +560,88 @@ def merge_yaml(*, existing_text: str, new_entries: list[dict]) -> str:
     )
 
 
-def main(argv: list[str]) -> int:  # placeholder; filled in by later tasks
-    raise NotImplementedError("filled in by subsequent tasks")
+DEFAULT_WIKI = Path("/Users/nguyenmn/research-wiki")
+
+
+def main(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(
+        description="Generate wiki-derived FAQ entries for the research-bot widget."
+    )
+    parser.add_argument(
+        "--wiki", default=str(DEFAULT_WIKI),
+        help="Path to the LLM wiki root (default: %(default)s)",
+    )
+    parser.add_argument(
+        "--repo", default=".",
+        help="Path to the github.io repo root (default: cwd)",
+    )
+    args = parser.parse_args(argv)
+
+    wiki_root = Path(args.wiki)
+    repo_root = Path(args.repo)
+
+    try:
+        records = load_wiki_records(wiki_root)
+    except FileNotFoundError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 3
+    except ValueError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 4
+
+    if not records:
+        print(f"error: no SRC records found under {wiki_root}", file=sys.stderr)
+        return 3
+
+    # attach summary body to each record
+    for src_id, rec in records.items():
+        page_path = wiki_root / rec["page_path"]
+        if not page_path.is_file():
+            print(f"error: {src_id}: page_path missing: {page_path}", file=sys.stderr)
+            return 4
+        rec["summary_body"] = extract_summary_body(page_path)
+
+    # bucket validation: filter each bucket's SRC list to those present in records.
+    # Buckets with zero present members are skipped. We do NOT exit 5 here
+    # because the bucket map is a static config that may name SRCs not yet
+    # in the wiki; that is desirable. Exit 5 stays reserved for structurally
+    # malformed bucket maps, e.g. non-list values — defensive only.
+    filtered_buckets: dict[str, list[str]] = {}
+    for bucket_id, srcs in BUCKETS.items():
+        if not isinstance(srcs, list):
+            print(f"error: bucket {bucket_id!r} value is not a list", file=sys.stderr)
+            return 5
+        present = [s for s in srcs if s in records]
+        if present:
+            filtered_buckets[bucket_id] = present
+
+    per_paper_entries = [
+        build_per_paper_entry(src_id, rec, buckets_membership=_buckets_for(src_id))
+        for src_id, rec in sorted(records.items())
+    ]
+    bucket_entries = [
+        build_bucket_entry(bucket_id, srcs, records)
+        for bucket_id, srcs in filtered_buckets.items()
+    ]
+    new_entries = per_paper_entries + bucket_entries
+
+    yaml_path = repo_root / "data" / "research_bot.yaml"
+    if not yaml_path.is_file():
+        print(f"error: cannot find {yaml_path}", file=sys.stderr)
+        return 3
+    existing_text = yaml_path.read_text()
+    new_text = merge_yaml(existing_text=existing_text, new_entries=new_entries)
+
+    if new_text == existing_text:
+        print("no changes")
+        return 0
+
+    yaml_path.write_text(new_text)
+    print(
+        f"wrote {len(per_paper_entries)} per-paper entries and "
+        f"{len(bucket_entries)} bucket entries to {yaml_path}"
+    )
+    return 0
 
 
 if __name__ == "__main__":

@@ -349,5 +349,52 @@ class MergeYamlTest(unittest.TestCase):
         self.assertLess(idx_paper, idx_bucket)
 
 
+import tempfile
+import shutil
+
+
+class MainPipelineTest(unittest.TestCase):
+    def _temp_repo(self) -> Path:
+        """Create a tmp dir mirroring the data/ structure with the sample YAML."""
+        repo = Path(tempfile.mkdtemp())
+        (repo / "data").mkdir()
+        src = Path(__file__).parent / "fixtures" / "sample_research_bot.yaml"
+        shutil.copy(src, repo / "data" / "research_bot.yaml")
+        return repo
+
+    def test_main_writes_yaml_with_wiki_entries(self):
+        repo = self._temp_repo()
+        try:
+            rc = bfw.main(
+                ["--wiki", str(FIXTURE_WIKI), "--repo", str(repo)]
+            )
+            self.assertEqual(rc, 0)
+            text = (repo / "data" / "research_bot.yaml").read_text()
+            self.assertIn("wiki-2403-03220", text)
+            self.assertIn("wiki-bucket-field-level-inference", text)
+            self.assertIn("id: research-overview", text)  # hand entry preserved
+        finally:
+            shutil.rmtree(repo)
+
+    def test_main_is_idempotent(self):
+        repo = self._temp_repo()
+        try:
+            bfw.main(["--wiki", str(FIXTURE_WIKI), "--repo", str(repo)])
+            text1 = (repo / "data" / "research_bot.yaml").read_text()
+            bfw.main(["--wiki", str(FIXTURE_WIKI), "--repo", str(repo)])
+            text2 = (repo / "data" / "research_bot.yaml").read_text()
+            self.assertEqual(text1, text2)
+        finally:
+            shutil.rmtree(repo)
+
+    def test_main_returns_3_on_missing_wiki(self):
+        repo = self._temp_repo()
+        try:
+            rc = bfw.main(["--wiki", "/nonexistent/path", "--repo", str(repo)])
+            self.assertEqual(rc, 3)
+        finally:
+            shutil.rmtree(repo)
+
+
 if __name__ == "__main__":
     unittest.main()
