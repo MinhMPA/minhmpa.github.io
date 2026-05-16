@@ -23,9 +23,10 @@ const FAQ = JSON.parse(
   readFileSync(resolve(__dirname, "fixtures/research_bot.json"), "utf8"),
 );
 
-// Drift detection: if YAML and JSON disagree on which entries exist, this
-// test fails. Updating one without the other is the most common sync break.
-const EXPECTED_IDS = [
+// Drift detection: hand-authored entries must remain in their canonical order.
+// Wiki-derived entries (ids starting with "wiki-") are permitted on top and
+// are not part of the hand-curated drift contract.
+const EXPECTED_HAND_IDS = [
   "research-overview",
   "field-level-inference",
   "eft-modeling",
@@ -39,11 +40,21 @@ const EXPECTED_IDS = [
   "outreach",
 ];
 
-test("JSON fixture entry ids match the expected set (YAML/JSON sync)", () => {
-  assert.deepEqual(
-    FAQ.map((e) => e.id),
-    EXPECTED_IDS,
-  );
+test("JSON fixture preserves hand-authored entry ids in order", () => {
+  const handIds = FAQ.map((e) => e.id).filter((id) => !id.startsWith("wiki-"));
+  assert.deepEqual(handIds, EXPECTED_HAND_IDS);
+});
+
+test("All wiki-derived entries are tagged source: wiki", () => {
+  for (const e of FAQ) {
+    if (e.id.startsWith("wiki-")) {
+      assert.equal(
+        e.source,
+        "wiki",
+        `entry ${e.id} has id prefix 'wiki-' but is missing source: wiki`,
+      );
+    }
+  }
 });
 
 // ---------- normalize() ----------
