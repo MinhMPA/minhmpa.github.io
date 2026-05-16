@@ -395,6 +395,25 @@ class MainPipelineTest(unittest.TestCase):
         finally:
             shutil.rmtree(repo)
 
+    def test_main_writes_json_mirror(self):
+        repo = self._temp_repo()
+        (repo / "tests" / "fixtures").mkdir(parents=True)
+        # seed an empty JSON mirror
+        (repo / "tests" / "fixtures" / "research_bot.json").write_text("[]")
+        try:
+            rc = bfw.main(["--wiki", str(FIXTURE_WIKI), "--repo", str(repo)])
+            self.assertEqual(rc, 0)
+            import json
+            mirror = json.loads(
+                (repo / "tests" / "fixtures" / "research_bot.json").read_text()
+            )
+            ids = [e["id"] for e in mirror]
+            self.assertIn("research-overview", ids)
+            self.assertIn("wiki-2403-03220", ids)
+            self.assertIn("wiki-bucket-field-level-inference", ids)
+        finally:
+            shutil.rmtree(repo)
+
 
 if __name__ == "__main__":
     unittest.main()

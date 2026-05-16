@@ -23,6 +23,7 @@ Exit codes:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -563,6 +564,22 @@ def merge_yaml(*, existing_text: str, new_entries: list[dict]) -> str:
 DEFAULT_WIKI = Path("/Users/nguyenmn/research-wiki")
 
 
+def dump_yaml_to_json_mirror(yaml_text: str, json_path: Path) -> None:
+    """Write a deterministic JSON mirror of the YAML entry list.
+
+    Strips the `_LiteralStr` markers so JSON output is plain strings; preserves
+    entry ordering and key insertion order via sort_keys=False.
+    """
+    entries = yaml.safe_load(yaml_text) or []
+    # ensure regular str (not _LiteralStr) for json.dumps
+    cleaned = json.loads(json.dumps(entries, default=str))
+    json_path.parent.mkdir(parents=True, exist_ok=True)
+    # 2-space indent, newline at EOF, deterministic
+    json_path.write_text(
+        json.dumps(cleaned, indent=2, ensure_ascii=False) + "\n"
+    )
+
+
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(
         description="Generate wiki-derived FAQ entries for the research-bot widget."
@@ -632,14 +649,19 @@ def main(argv: list[str]) -> int:
     existing_text = yaml_path.read_text()
     new_text = merge_yaml(existing_text=existing_text, new_entries=new_entries)
 
+    json_path = repo_root / "tests" / "fixtures" / "research_bot.json"
+
     if new_text == existing_text:
-        print("no changes")
+        dump_yaml_to_json_mirror(existing_text, json_path)
+        print("no changes (JSON mirror refreshed)")
         return 0
 
     yaml_path.write_text(new_text)
+    dump_yaml_to_json_mirror(new_text, json_path)
     print(
         f"wrote {len(per_paper_entries)} per-paper entries and "
-        f"{len(bucket_entries)} bucket entries to {yaml_path}"
+        f"{len(bucket_entries)} bucket entries to {yaml_path}; "
+        f"refreshed JSON mirror at {json_path}"
     )
     return 0
 
