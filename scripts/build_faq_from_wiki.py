@@ -166,6 +166,40 @@ def distill_answer(
     return f"{prefix} {excerpt}"
 
 
+STOPLIST = frozenset(
+    """
+    a an the and or but of for with without to from in on at by as is are was
+    were be been has have had do does did this that these those it its into
+    onto over under between using used via based model models paper papers
+    study studies analysis results new beyond towards toward about what
+    which who where when why how can their there our we i me my your you
+    her his their them they we us if then than so such not no nor only also
+    """.split()
+)
+
+_TOKEN_RE = re.compile(r"[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*")
+
+
+def extract_title_keywords(title: str) -> list[str]:
+    """Return lowercase content tokens from a title (length >= 3, no stopwords)."""
+    if not title:
+        return []
+    raw = _TOKEN_RE.findall(title)
+    seen: set[str] = set()
+    out: list[str] = []
+    for tok in raw:
+        low = tok.lower()
+        if len(low) < 3:
+            continue
+        if low in STOPLIST:
+            continue
+        if low in seen:
+            continue
+        seen.add(low)
+        out.append(low)
+    return out
+
+
 def main(argv: list[str]) -> int:  # placeholder; filled in by later tasks
     raise NotImplementedError("filled in by subsequent tasks")
 

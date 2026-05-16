@@ -142,5 +142,41 @@ class DistillAnswerTest(unittest.TestCase):
         self.assertIn("summary is not yet available", out.lower())
 
 
+class ExtractTitleKeywordsTest(unittest.TestCase):
+    def test_strips_stopwords(self):
+        kw = bfw.extract_title_keywords("How much information can be extracted from galaxy clustering at the field level?")
+        self.assertIn("information", kw)
+        self.assertIn("galaxy", kw)
+        self.assertIn("clustering", kw)
+        self.assertIn("field", kw)
+        self.assertNotIn("how", kw)  # stoplist
+        self.assertNotIn("the", kw)
+        self.assertNotIn("at", kw)
+
+    def test_keeps_three_char_acronyms(self):
+        kw = bfw.extract_title_keywords("The EFT Likelihood for Large-Scale Structure")
+        self.assertIn("eft", kw)
+        self.assertIn("likelihood", kw)
+        self.assertIn("large-scale", kw)
+        self.assertIn("structure", kw)
+
+    def test_drops_one_and_two_char_tokens(self):
+        # below MIN_TOKEN_LENGTH (3) — won't help the matcher.
+        kw = bfw.extract_title_keywords("A B CD DESI study")
+        self.assertNotIn("a", kw)
+        self.assertNotIn("b", kw)
+        self.assertNotIn("cd", kw)
+        self.assertIn("desi", kw)
+
+    def test_lowercases(self):
+        kw = bfw.extract_title_keywords("DESI 2024 III: BAO from galaxies and quasars")
+        self.assertEqual([k for k in kw if k != k.lower()], [])
+
+    def test_preserves_hyphenated_terms_as_single_token(self):
+        kw = bfw.extract_title_keywords("Field-level inference of large-scale structure")
+        self.assertIn("field-level", kw)
+        self.assertIn("large-scale", kw)
+
+
 if __name__ == "__main__":
     unittest.main()
