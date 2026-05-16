@@ -421,6 +421,86 @@ def build_bucket_entry(
     }
 
 
+# Single-bucket question templates per the spec.
+BUCKET_PAPER_QUESTION: dict[str, str] = {
+    "field-level-inference": "Tell me about your field-level inference paper",
+    "eft-bias-modeling": "Tell me about your work on EFT galaxy bias",
+    "bao-and-large-scale-clustering": "Tell me about your BAO paper",
+    "growth-of-structure": "Tell me about your work on the growth of structure",
+    "desi-2024": "Tell me about your DESI 2024 paper",
+    "kinematic-sz": "Tell me about your work on the kinematic SZ effect",
+    "intrinsic-alignment": "Tell me about your work on galaxy shapes and sizes",
+    "primordial-non-gaussianity": "Tell me about your work on primordial non-Gaussianity",
+    "redshift-space-modeling": "Tell me about your work on the EFT likelihood in redshift space",
+    "multi-tracer-fisher": "Tell me about your multi-tracer forecast",
+}
+
+
+def _buckets_for(src_id: str) -> set[str]:
+    return {b for b, members in BUCKETS.items() if src_id in members}
+
+
+def build_per_paper_entry(
+    src_id: str,
+    record: dict,
+    *,
+    buckets_membership: set[str],
+) -> dict:
+    arxiv_id = record["arxiv_id"]
+    title = record["title"]
+    authors = record.get("authors") or []
+    authored = is_authored(authors)
+    first_author = authors[0] if authors else ""
+
+    questions = [
+        f'Tell me about "{title}"',
+        f"What is {arxiv_id} about?",
+    ]
+    if len(buckets_membership) == 1:
+        only_bucket = next(iter(buckets_membership))
+        flavor = BUCKET_PAPER_QUESTION.get(only_bucket)
+        if flavor:
+            questions.append(flavor)
+
+    # keywords: arxiv id + Nguyen (if authored) + bucket anchor keywords + title tokens
+    kw_in_order: list[str] = [arxiv_id]
+    if authored:
+        kw_in_order.append("Nguyen")
+    for b in sorted(buckets_membership):
+        kw_in_order.extend(BUCKET_KEYWORDS.get(b, []))
+    kw_in_order.extend(extract_title_keywords(title))
+
+    seen: set[str] = set()
+    keywords: list[str] = []
+    for k in kw_in_order:
+        low = k.lower()
+        if low in seen:
+            continue
+        seen.add(low)
+        keywords.append(k)
+        if len(keywords) >= 12:
+            break
+
+    answer = distill_answer(
+        body=record.get("summary_body", ""),
+        arxiv_id=arxiv_id,
+        authored=authored,
+        first_author=first_author,
+        title=title,
+    )
+
+    return {
+        "id": "wiki-" + arxiv_id.replace(".", "-"),
+        "source": "wiki",
+        "arxiv_id": arxiv_id,
+        "authored": authored,
+        "questions": questions,
+        "keywords": keywords,
+        "answer": answer,
+        "url": f"https://arxiv.org/abs/{arxiv_id}",
+    }
+
+
 def main(argv: list[str]) -> int:  # placeholder; filled in by later tasks
     raise NotImplementedError("filled in by subsequent tasks")
 

@@ -237,5 +237,62 @@ class BuildBucketEntryTest(unittest.TestCase):
         self.assertIn("SRC-9999", str(ctx.exception))
 
 
+class BuildPerPaperEntryTest(unittest.TestCase):
+    def setUp(self):
+        self.records = bfw.load_wiki_records(FIXTURE_WIKI)
+        for src_id, rec in self.records.items():
+            page_path = FIXTURE_WIKI / rec["page_path"]
+            rec["summary_body"] = bfw.extract_summary_body(page_path)
+
+    def test_authored_paper_entry_shape(self):
+        e = bfw.build_per_paper_entry(
+            "SRC-0001", self.records["SRC-0001"], buckets_membership={"field-level-inference"}
+        )
+        self.assertEqual(e["id"], "wiki-2403-03220")
+        self.assertEqual(e["source"], "wiki")
+        self.assertEqual(e["arxiv_id"], "2403.03220")
+        self.assertTrue(e["authored"])
+        self.assertEqual(e["url"], "https://arxiv.org/abs/2403.03220")
+        # three questions: title, arxiv-id, single-bucket flavor
+        self.assertEqual(len(e["questions"]), 3)
+        self.assertIn('Tell me about "How much information', e["questions"][0])
+        self.assertEqual(e["questions"][1], "What is 2403.03220 about?")
+        self.assertIn("field-level inference paper", e["questions"][2])
+        # arxiv id and Nguyen in keywords
+        self.assertIn("2403.03220", e["keywords"])
+        self.assertIn("nguyen", [k.lower() for k in e["keywords"]])
+        # answer uses authored prefix
+        self.assertTrue(e["answer"].startswith("Minh and collaborators (arXiv:2403.03220):"))
+
+    def test_unauthored_paper_entry(self):
+        e = bfw.build_per_paper_entry(
+            "SRC-0002", self.records["SRC-0002"], buckets_membership={"eft-bias-modeling"}
+        )
+        self.assertFalse(e["authored"])
+        self.assertTrue(e["answer"].startswith("Desjacques et al. (arXiv:1611.09787):"))
+        # not authored -> no "Nguyen" in keywords
+        self.assertNotIn("nguyen", [k.lower() for k in e["keywords"]])
+
+    def test_multi_bucket_paper_omits_third_question(self):
+        e = bfw.build_per_paper_entry(
+            "SRC-0001", self.records["SRC-0001"],
+            buckets_membership={"field-level-inference", "eft-bias-modeling"},
+        )
+        # two questions only (title + arxiv-id)
+        self.assertEqual(len(e["questions"]), 2)
+
+    def test_failure_marker_paper_uses_fallback_answer(self):
+        e = bfw.build_per_paper_entry(
+            "SRC-0003", self.records["SRC-0003"], buckets_membership={"multi-tracer-fisher"}
+        )
+        self.assertIn("summary is not yet available", e["answer"].lower())
+
+    def test_keyword_cap_is_twelve(self):
+        e = bfw.build_per_paper_entry(
+            "SRC-0001", self.records["SRC-0001"], buckets_membership={"field-level-inference"}
+        )
+        self.assertLessEqual(len(e["keywords"]), 12)
+
+
 if __name__ == "__main__":
     unittest.main()
