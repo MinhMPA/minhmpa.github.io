@@ -4,3 +4,5 @@ hugo_stats.json
 public/
 resources/
 node_modules/
+
+.venv/
