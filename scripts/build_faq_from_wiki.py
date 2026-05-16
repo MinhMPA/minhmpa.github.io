@@ -200,6 +200,227 @@ def extract_title_keywords(title: str) -> list[str]:
     return out
 
 
+# bucket_id -> list of SRC IDs; ground truth lives only here.
+BUCKETS: dict[str, list[str]] = {
+    "field-level-inference": [
+        "SRC-0002", "SRC-0003", "SRC-0004", "SRC-0006", "SRC-0010", "SRC-0014",
+        "SRC-0016", "SRC-0019", "SRC-0020", "SRC-0024", "SRC-0025", "SRC-0026",
+        "SRC-0027", "SRC-0032", "SRC-0033", "SRC-0034", "SRC-0037",
+    ],
+    "eft-bias-modeling": [
+        "SRC-0001", "SRC-0002", "SRC-0004", "SRC-0005", "SRC-0008", "SRC-0009",
+        "SRC-0026", "SRC-0027",
+    ],
+    "bao-and-large-scale-clustering": [
+        "SRC-0012", "SRC-0021", "SRC-0022", "SRC-0023", "SRC-0025", "SRC-0028",
+        "SRC-0029", "SRC-0030",
+    ],
+    "growth-of-structure": [
+        "SRC-0013", "SRC-0015", "SRC-0017", "SRC-0018", "SRC-0031",
+    ],
+    "desi-2024": [
+        "SRC-0021", "SRC-0022", "SRC-0023", "SRC-0028", "SRC-0029", "SRC-0030",
+    ],
+    "kinematic-sz": ["SRC-0007"],
+    "intrinsic-alignment": ["SRC-0011", "SRC-0035"],
+    "primordial-non-gaussianity": ["SRC-0035"],
+    "redshift-space-modeling": ["SRC-0008"],
+    "multi-tracer-fisher": ["SRC-0036"],
+}
+
+# Per-bucket human prose. The {papers} placeholder is replaced with a
+# comma-joined list of arxiv refs (up to 5) plus an overflow note.
+BUCKET_TEMPLATES: dict[str, str] = {
+    "field-level-inference": (
+        "Minh works on field-level Bayesian inference of cosmological parameters "
+        "from nonlinear galaxy clustering, primarily via the LEFTfield EFT-based "
+        "forward model. Relevant papers include {papers}."
+    ),
+    "eft-bias-modeling": (
+        "EFT-based galaxy bias models give a controlled, perturbative description "
+        "of how galaxies trace the matter density on large scales. Relevant "
+        "papers include {papers}."
+    ),
+    "bao-and-large-scale-clustering": (
+        "Minh works on extracting cosmological information from galaxy clustering "
+        "at the BAO scale and beyond, both via traditional summary statistics and "
+        "field-level inference. Relevant papers include {papers}."
+    ),
+    "growth-of-structure": (
+        "Minh works on measuring the growth of cosmic structure across redshift "
+        "and testing the concordance LambdaCDM expectation against current data. "
+        "Relevant papers include {papers}."
+    ),
+    "desi-2024": (
+        "Minh co-authored the DESI 2024 cosmological-results series, covering "
+        "BAO from galaxies, quasars, and the Lyman-alpha forest, and the "
+        "full-shape galaxy-clustering analysis. Relevant papers include {papers}."
+    ),
+    "kinematic-sz": (
+        "Minh worked on forward-modeling the kinematic Sunyaev-Zel'dovich effect "
+        "from galaxy surveys, including uncertainties from velocity reconstruction. "
+        "Relevant paper: {papers}."
+    ),
+    "intrinsic-alignment": (
+        "Minh works on field-level inference of galaxy intrinsic alignment from "
+        "galaxy shapes, and on using galaxy sizes as a complementary, zero-bias "
+        "tracer. Relevant papers include {papers}."
+    ),
+    "primordial-non-gaussianity": (
+        "Minh works on galaxy sizes as a complementary, zero-bias tracer of local "
+        "primordial non-Gaussianity. Relevant paper: {papers}."
+    ),
+    "redshift-space-modeling": (
+        "Minh contributed to extending the EFT likelihood for large-scale structure "
+        "to redshift space. Relevant paper: {papers}."
+    ),
+    "multi-tracer-fisher": (
+        "Minh works on multi-tracer, multi-survey forecasts to quantify the gains "
+        "from combining current and next-generation galaxy surveys. Relevant "
+        "paper: {papers}."
+    ),
+}
+
+BUCKET_KEYWORDS: dict[str, list[str]] = {
+    "field-level-inference": [
+        "field-level inference", "field-level", "FLI", "LEFTfield", "Bayesian",
+        "posterior", "forward model", "initial conditions",
+    ],
+    "eft-bias-modeling": [
+        "EFT", "effective field theory", "bias", "galaxy bias", "perturbation",
+        "perturbative", "bias expansion",
+    ],
+    "bao-and-large-scale-clustering": [
+        "BAO", "baryon acoustic oscillations", "galaxy clustering",
+        "power spectrum", "large-scale clustering",
+    ],
+    "growth-of-structure": [
+        "growth", "growth rate", "growth index", "structure growth",
+        "sigma_8", "fsigma8", "S_8",
+    ],
+    "desi-2024": [
+        "DESI", "DESI 2024", "year one", "Y1", "spectroscopic survey",
+    ],
+    "kinematic-sz": [
+        "kSZ", "kinematic SZ", "Sunyaev-Zel'dovich", "Sunyaev",
+        "velocity reconstruction",
+    ],
+    "intrinsic-alignment": [
+        "intrinsic alignment", "IA", "galaxy shapes", "galaxy sizes", "shapes",
+        "sizes",
+    ],
+    "primordial-non-gaussianity": [
+        "primordial non-Gaussianity", "PNG", "fNL", "non-Gaussianity",
+        "scale-dependent bias",
+    ],
+    "redshift-space-modeling": [
+        "redshift space", "redshift-space distortion", "RSD",
+    ],
+    "multi-tracer-fisher": [
+        "multi-tracer", "multi-survey", "Fisher", "forecast", "PFS",
+        "DESI+PFS",
+    ],
+}
+
+BUCKET_QUESTIONS: dict[str, list[str]] = {
+    "field-level-inference": [
+        "Tell me about field-level inference",
+        "What's your work on field-level inference?",
+        "What is FLI?",
+    ],
+    "eft-bias-modeling": [
+        "Tell me about EFT galaxy bias modeling",
+        "What is EFT-based bias modeling?",
+        "What's your work on the bias expansion?",
+    ],
+    "bao-and-large-scale-clustering": [
+        "Tell me about your work on BAO",
+        "What's your work on baryon acoustic oscillations?",
+        "Tell me about large-scale galaxy clustering",
+    ],
+    "growth-of-structure": [
+        "Tell me about your work on the growth of structure",
+        "What's your work on the growth rate?",
+        "What's S_8?",
+    ],
+    "desi-2024": [
+        "Tell me about your DESI papers",
+        "What's your role in DESI 2024?",
+        "Tell me about the DESI Y1 cosmology results",
+    ],
+    "kinematic-sz": [
+        "Do you work on the kinematic SZ effect?",
+        "Tell me about your kSZ paper",
+    ],
+    "intrinsic-alignment": [
+        "Do you work on intrinsic alignment?",
+        "Tell me about your work on galaxy shapes and sizes",
+    ],
+    "primordial-non-gaussianity": [
+        "Do you work on primordial non-Gaussianity?",
+        "Tell me about your work on PNG",
+    ],
+    "redshift-space-modeling": [
+        "Do you work on redshift-space modeling?",
+        "Tell me about your work on the EFT likelihood in redshift space",
+    ],
+    "multi-tracer-fisher": [
+        "Tell me about your multi-tracer forecast",
+        "What's your work on DESI+PFS?",
+    ],
+}
+
+
+def _format_papers_list(srcs: list[str], records: dict[str, dict]) -> str:
+    # sort: authored first (Minh-authored stable), then by published_date descending
+    def sort_key(src: str) -> tuple[int, str]:
+        r = records[src]
+        authored = 0 if is_authored(r.get("authors") or []) else 1
+        return (authored, "9999-99-99" if not r.get("published_date") else
+                _invert_date(str(r["published_date"])))
+
+    ordered = sorted(srcs, key=sort_key)
+    head, tail = ordered[:5], ordered[5:]
+    refs = [f"arXiv:{records[s]['arxiv_id']}" for s in head]
+    txt = ", ".join(refs[:-1]) + (f", and {refs[-1]}" if len(refs) > 1 else refs[0])
+    if tail:
+        txt += f", and {len(tail)} others — see /research/"
+    return txt
+
+
+def _invert_date(d: str) -> str:
+    """For descending sort via ascending-key trick."""
+    # Map "2024-03-05" -> "7975-96-94" so larger dates sort earlier.
+    try:
+        y, m, day = d.split("-")
+        return f"{9999 - int(y):04d}-{99 - int(m):02d}-{99 - int(day):02d}"
+    except Exception:
+        return "0000-00-00"
+
+
+def build_bucket_entry(
+    bucket_id: str,
+    srcs: list[str],
+    records: dict[str, dict],
+) -> dict:
+    if bucket_id not in BUCKETS:
+        raise KeyError(f"unknown bucket: {bucket_id!r}")
+    for s in srcs:
+        if s not in records:
+            raise KeyError(f"bucket {bucket_id!r} references unknown SRC ID {s!r}")
+
+    papers_text = _format_papers_list(srcs, records) if srcs else "(none yet)"
+    answer = BUCKET_TEMPLATES[bucket_id].replace("{papers}", papers_text)
+    return {
+        "id": f"wiki-bucket-{bucket_id}",
+        "source": "wiki",
+        "questions": list(BUCKET_QUESTIONS[bucket_id]),
+        "keywords": list(BUCKET_KEYWORDS[bucket_id]),
+        "answer": answer,
+        "url": "/research/",
+    }
+
+
 def main(argv: list[str]) -> int:  # placeholder; filled in by later tasks
     raise NotImplementedError("filled in by subsequent tasks")
 

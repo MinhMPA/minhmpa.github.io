@@ -178,5 +178,64 @@ class ExtractTitleKeywordsTest(unittest.TestCase):
         self.assertIn("large-scale", kw)
 
 
+class BuildBucketEntryTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        # tiny fake records for the test buckets
+        cls.records = {
+            "SRC-0001": {"arxiv_id": "1611.09787", "title": "Large-Scale Galaxy Bias",
+                         "authors": ["Vincent Desjacques"], "published_date": "2016-11-29"},
+            "SRC-0020": {"arxiv_id": "2403.03220", "title": "How much information...",
+                         "authors": ["Nhat-Minh Nguyen"], "published_date": "2024-03-05"},
+            "SRC-0036": {"arxiv_id": "2604.25171",
+                         "title": "Multi-tracers, multi-surveys: a joint Fisher analysis of DESI+PFS",
+                         "authors": ["Nhat-Minh Nguyen"], "published_date": "2026-04-28"},
+        }
+
+    def test_shape(self):
+        e = bfw.build_bucket_entry(
+            "field-level-inference", ["SRC-0020"], self.records
+        )
+        self.assertEqual(e["id"], "wiki-bucket-field-level-inference")
+        self.assertEqual(e["source"], "wiki")
+        self.assertEqual(e["url"], "/research/")
+        self.assertIsInstance(e["questions"], list)
+        self.assertIsInstance(e["keywords"], list)
+        self.assertIsInstance(e["answer"], str)
+
+    def test_answer_mentions_papers(self):
+        e = bfw.build_bucket_entry(
+            "multi-tracer-fisher", ["SRC-0036"], self.records
+        )
+        self.assertIn("arXiv:2604.25171", e["answer"])
+
+    def test_answer_caps_at_five_papers_with_overflow_note(self):
+        many = {f"SRC-{i:04d}": {
+            "arxiv_id": f"24{i:02d}.00000",
+            "title": f"Paper {i}",
+            "authors": ["Nhat-Minh Nguyen"],
+            "published_date": f"2024-{i:02d}-01",
+        } for i in range(1, 9)}
+        e = bfw.build_bucket_entry(
+            "field-level-inference", list(many.keys()), many
+        )
+        # at most 5 arxiv ids in the answer, plus an overflow note
+        n_arxivs = e["answer"].count("arXiv:")
+        self.assertLessEqual(n_arxivs, 5)
+        self.assertIn("and ", e["answer"])
+        self.assertIn("others", e["answer"])
+
+    def test_unknown_bucket_raises(self):
+        with self.assertRaises(KeyError):
+            bfw.build_bucket_entry("nope-not-a-bucket", [], self.records)
+
+    def test_unknown_src_in_bucket_raises(self):
+        with self.assertRaises(KeyError) as ctx:
+            bfw.build_bucket_entry(
+                "field-level-inference", ["SRC-9999"], self.records
+            )
+        self.assertIn("SRC-9999", str(ctx.exception))
+
+
 if __name__ == "__main__":
     unittest.main()
