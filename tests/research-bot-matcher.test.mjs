@@ -23,9 +23,10 @@ const FAQ = JSON.parse(
   readFileSync(resolve(__dirname, "fixtures/research_bot.json"), "utf8"),
 );
 
-// Drift detection: if YAML and JSON disagree on which entries exist, this
-// test fails. Updating one without the other is the most common sync break.
-const EXPECTED_IDS = [
+// Drift detection: hand-authored entries must remain in their canonical order.
+// Wiki-derived entries (ids starting with "wiki-") are permitted on top and
+// are not part of the hand-curated drift contract.
+const EXPECTED_HAND_IDS = [
   "research-overview",
   "field-level-inference",
   "eft-modeling",
@@ -39,11 +40,21 @@ const EXPECTED_IDS = [
   "outreach",
 ];
 
-test("JSON fixture entry ids match the expected set (YAML/JSON sync)", () => {
-  assert.deepEqual(
-    FAQ.map((e) => e.id),
-    EXPECTED_IDS,
-  );
+test("JSON fixture preserves hand-authored entry ids in order", () => {
+  const handIds = FAQ.map((e) => e.id).filter((id) => !id.startsWith("wiki-"));
+  assert.deepEqual(handIds, EXPECTED_HAND_IDS);
+});
+
+test("All wiki-derived entries are tagged source: wiki", () => {
+  for (const e of FAQ) {
+    if (e.id.startsWith("wiki-")) {
+      assert.equal(
+        e.source,
+        "wiki",
+        `entry ${e.id} has id prefix 'wiki-' but is missing source: wiki`,
+      );
+    }
+  }
 });
 
 // ---------- normalize() ----------
@@ -189,4 +200,41 @@ test("Match with url includes the url field", () => {
   const r = answerQuestion("What do you work on?", FAQ);
   assert.ok(r && !r.empty);
   assert.equal(r.url, "/research/");
+});
+
+// ---------- wiki-derived entries ----------
+// These rely on the generator having been run at least once. They assert
+// the spec's coexistence rules between hand and wiki entries.
+
+test("12. 'Tell me about 2403.03220' -> wiki per-paper entry", () => {
+  const r = answerQuestion("Tell me about 2403.03220", FAQ);
+  assert.ok(r && !r.empty, `expected a match, got ${JSON.stringify(r)}`);
+  assert.equal(r.sourceId, "wiki-2403-03220");
+});
+
+test("13. 'Tell me about your DESI 2024 paper' -> DESI bucket or per-paper", () => {
+  const r = answerQuestion("Tell me about your DESI 2024 paper", FAQ);
+  assert.ok(r && !r.empty);
+  assert.ok(
+    r.sourceId === "wiki-bucket-desi-2024" ||
+      r.sourceId.startsWith("wiki-2404-") ||
+      r.sourceId.startsWith("wiki-2411-"),
+    `unexpected sourceId ${r.sourceId}`,
+  );
+});
+
+test("14. Generic 'tell me about field-level inference' still prefers hand entry", () => {
+  const r = answerQuestion("tell me about field-level inference", FAQ);
+  assert.ok(r && !r.empty);
+  assert.equal(
+    r.sourceId,
+    "field-level-inference",
+    "hand entry should win via the +50 hand-entry bonus when content scores tie",
+  );
+});
+
+test("15. arXiv-id keyword wins against generic hand-entry overlap", () => {
+  const r = answerQuestion("what is 1611.09787 about", FAQ);
+  assert.ok(r && !r.empty);
+  assert.equal(r.sourceId, "wiki-1611-09787");
 });

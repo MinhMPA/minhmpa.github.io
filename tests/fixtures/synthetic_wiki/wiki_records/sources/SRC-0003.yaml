@@ -1,0 +1,18 @@
+record_id: SRC-0003
+record_type: source
+status: active
+duplicate_of:
+superseded_by:
+source_storage: local
+raw_path: raw/papers/2604.25171.pdf
+source_url:
+page_path: wiki_pages/sources/SRC-0003-failure-marker.md
+source_type: paper
+source_format: pdf
+title: "Multi-tracers, multi-surveys: a joint Fisher analysis of DESI+PFS"
+authors:
+  - "Nhat-Minh Nguyen"
+added_date: 2026-05-15
+processed_date: 2026-05-15
+published_date: 2026-04-28
+content_fingerprint:
