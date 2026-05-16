@@ -18,6 +18,7 @@ The implementation deliberately deviates from the spec on two minor points; both
 
 1. **Title-keyword length filter is `≥ 3`, not `≥ 4`.** Reason: the matcher in `assets/js/research-bot.js` sets `MIN_TOKEN_LENGTH = 3`. A keyword like `"EFT"` (length 3) participates in scoring only if both the keyword's own tokens and the user's query tokens survive the filter — using ≥ 3 in keyword extraction matches the matcher's behavior. The stoplist is widened to compensate.
 2. **Wiki bucket `redshift-space-modeling` keeps only SRC-0008** (already corrected in the spec during self-review).
+3. **Bucket validation is lenient.** The spec said exit code 5 should fire when the bucket map references a SRC not present in the wiki. Implementation in Task 9 instead filters each bucket's SRC list to those present in the loaded records and skips buckets that become empty. Rationale: the bucket map is a static config that may legitimately name aspirational SRC IDs while the wiki is still being populated. Exit code 5 is now reserved for structurally malformed bucket maps (e.g., a bucket value that isn't a list).
 
 If subsequent implementation reveals additional deviations, append them here before continuing.
 
