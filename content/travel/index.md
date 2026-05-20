@@ -9,7 +9,7 @@ pager: false
 show_date_updated: false
 ---
 
-Here is the current selected-talks and travel section from my updated CV.
+Recent and upcoming talks and trips on my travel schedule.
 
 - [LeCosPA seminar](https://www.lecospa.ntu.edu.tw/talks), LeCosPA, NTU, Taipei, Taiwan, May 2026.
 - [Particles, Gravitation and the Universe: from Quantum Mechanics to Quantum Gravity](https://hoivl-nlc-vn.github.io/pgu2025.html), IOP, VAST, Ha Noi, Viet Nam, November 2025. [Slides](https://ifirse.icise.vn/nugroup/meeting/uploads/2025/11/pgu3_69290367d95639.56643167_PGU2025_IOP.pdf)
