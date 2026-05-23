@@ -37,6 +37,25 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps for generator tests
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run generator unit tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Test research-bot matcher
+        run: node --test tests/*.test.mjs
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

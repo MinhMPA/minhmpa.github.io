@@ -1,0 +1,1372 @@
+[
+  {
+    "id": "research-overview",
+    "questions": [
+      "What do you work on?",
+      "What is your research about?",
+      "Tell me about your research"
+    ],
+    "keywords": [
+      "research",
+      "cosmology",
+      "field-level inference",
+      "FLI",
+      "large-scale structure",
+      "EFT",
+      "redshift space",
+      "statistical methods",
+      "astronomical observations"
+    ],
+    "answer": "Minh Nguyen works on statistical methods and observables for extracting cosmological information from astronomical observations, with interests including field-level inference, EFT-based cosmological modeling, and redshift-space statistics.\n",
+    "url": "/research/"
+  },
+  {
+    "id": "field-level-inference",
+    "questions": [
+      "What is field-level inference?",
+      "Tell me about field-level inference",
+      "What is FLI?"
+    ],
+    "keywords": [
+      "field-level inference",
+      "FLI",
+      "Bayesian inference",
+      "simulations",
+      "density field",
+      "large-scale structure",
+      "JAX-PM",
+      "redshift space"
+    ],
+    "answer": "Field-level inference aims to extract cosmological information directly from high-dimensional observed fields, rather than compressing the data only into summary statistics such as the power spectrum. Minh is interested in applying these methods to large-scale structure and redshift-space analyses.\n",
+    "url": "/research/"
+  },
+  {
+    "id": "eft-modeling",
+    "questions": [
+      "What is EFT modeling?",
+      "Tell me about EFT-based modeling",
+      "What is the effective field theory of large-scale structure?"
+    ],
+    "keywords": [
+      "EFT",
+      "effective field theory",
+      "cosmological modeling",
+      "large-scale structure",
+      "perturbation theory"
+    ],
+    "answer": "Minh is interested in EFT-based cosmological modeling as a way to connect theoretical predictions, simulations, and observational statistics for large-scale structure.\n",
+    "url": "/research/"
+  },
+  {
+    "id": "publications",
+    "questions": [
+      "Where can I find your publications?",
+      "Do you have a list of papers?",
+      "Where are your arXiv papers?"
+    ],
+    "keywords": [
+      "publications",
+      "papers",
+      "arXiv",
+      "research papers",
+      "articles"
+    ],
+    "answer": "Please see the publications section of this homepage for Minh's current paper list. The bot does not invent or summarize papers that are not listed in the public profile data.\n"
+  },
+  {
+    "id": "software",
+    "questions": [
+      "Do you have public code?",
+      "Where is your software?",
+      "Is there a GitHub repository?"
+    ],
+    "keywords": [
+      "software",
+      "code",
+      "GitHub",
+      "repositories",
+      "packages"
+    ],
+    "answer": "Please see the software or GitHub links on this homepage for public code associated with Minh's work.\n"
+  },
+  {
+    "id": "collaboration",
+    "questions": [
+      "Can we collaborate?",
+      "Are you taking students?",
+      "Do you accept visitors or postdocs?"
+    ],
+    "keywords": [
+      "collaboration",
+      "collaborate",
+      "contact",
+      "email",
+      "student",
+      "postdoc",
+      "visitor"
+    ],
+    "answer": "For collaboration inquiries, please use the contact information listed on this homepage. Relevant topics include field-level inference, cosmological statistics, large-scale structure, and EFT-based modeling.\n",
+    "url": "/contact/"
+  },
+  {
+    "id": "contact",
+    "questions": [
+      "How can I contact you?",
+      "What is your email?",
+      "How do I reach you?"
+    ],
+    "keywords": [
+      "contact",
+      "email",
+      "reach",
+      "message"
+    ],
+    "answer": "Please use the contact information listed on this homepage.\n",
+    "url": "/contact/"
+  },
+  {
+    "id": "affiliation",
+    "questions": [
+      "Where do you work?",
+      "What is your current position?",
+      "What is your affiliation?",
+      "Where are you based?"
+    ],
+    "keywords": [
+      "where",
+      "work",
+      "position",
+      "affiliation",
+      "university",
+      "institute",
+      "IPMU",
+      "Kavli",
+      "Tokyo",
+      "Japan",
+      "Michigan",
+      "fellow"
+    ],
+    "answer": "Minh is currently a Kavli IPMU Fellow at the Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo. Previously, he was a Leinweber Fellow at the Leinweber Center for Theoretical Physics, University of Michigan, and completed his PhD at the Max Planck Institute for Astrophysics and LMU Munich.\n"
+  },
+  {
+    "id": "growth-of-structure",
+    "questions": [
+      "What is your work on the growth of structure?",
+      "Tell me about the suppressed growth result",
+      "What is the S8 tension work?"
+    ],
+    "keywords": [
+      "growth",
+      "structure",
+      "growth of structure",
+      "late-time",
+      "suppression",
+      "tension",
+      "sigma 8",
+      "S8"
+    ],
+    "answer": "Minh contributed to the first ~4-sigma evidence for a late-time suppression in the growth of large-scale structure. The result was published in Physical Review Letters (2023) and covered by Scientific American and New Scientist.\n",
+    "url": "/research/"
+  },
+  {
+    "id": "awards",
+    "questions": [
+      "Have you received any awards?",
+      "What prizes have you won?",
+      "Tell me about your recognition"
+    ],
+    "keywords": [
+      "prize",
+      "award",
+      "recognition",
+      "Buchalter",
+      "honor"
+    ],
+    "answer": "Minh received the 2024 Buchalter Cosmology Prize for work on field-level inference.\n"
+  },
+  {
+    "id": "outreach",
+    "questions": [
+      "What outreach do you do?",
+      "Tell me about your public engagement",
+      "Do you work with students?"
+    ],
+    "keywords": [
+      "outreach",
+      "public engagement",
+      "students",
+      "Vietnam",
+      "VLLT",
+      "seminar",
+      "science communication",
+      "AMA",
+      "museum"
+    ],
+    "answer": "Minh organizes the VLLT Joint Seminar Series for Vietnamese undergraduate and graduate students in physics and astronomy. He is also a Science Communication Fellow at the University of Michigan Museum of Natural History and participates in Cosmology from Home Ask-Me-Anything sessions.\n",
+    "url": "/outreach/"
+  },
+  {
+    "id": "wiki-1611-09787",
+    "source": "wiki",
+    "arxiv_id": "1611.09787",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Large-Scale Galaxy Bias\"",
+      "What is 1611.09787 about?",
+      "Tell me about your work on EFT galaxy bias"
+    ],
+    "keywords": [
+      "1611.09787",
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion",
+      "large-scale",
+      "galaxy"
+    ],
+    "answer": "Desjacques et al. (arXiv:1611.09787): This review by Desjacques, Jeong, and Schmidt provides a comprehensive treatment of galaxy bias, the statistical relation between the distribution of galaxies and the underlying matter density field. The authors focus on large, quasi-linear scales, on which the clustering of galaxies admits a perturbative bias expansion that absorbs the complicated physics of galaxy formation into a finite set of coefficients called bias parameters.",
+    "url": "https://arxiv.org/abs/1611.09787"
+  },
+  {
+    "id": "wiki-1808-02002",
+    "source": "wiki",
+    "arxiv_id": "1808.02002",
+    "authored": true,
+    "questions": [
+      "Tell me about \"A rigorous EFT-based forward model for large-scale structure\"",
+      "What is 1808.02002 about?"
+    ],
+    "keywords": [
+      "1808.02002",
+      "Nguyen",
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion",
+      "field-level inference",
+      "field-level",
+      "FLI"
+    ],
+    "answer": "Minh and collaborators (arXiv:1808.02002): This paper by Schmidt, Elsner, Jasche, Nguyen, and Lavaux addresses how to perform cosmological inference from galaxy redshift surveys directly at the level of the galaxy density field, rather than via the traditional route of n-point correlation functions. The authors derive a likelihood for the observed tracer density given the underlying matter density by integrating out small-scale modes within the effective field theory (EFT) of biased tracers.",
+    "url": "https://arxiv.org/abs/1808.02002"
+  },
+  {
+    "id": "wiki-1906-07143",
+    "source": "wiki",
+    "arxiv_id": "1906.07143",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Cosmology Inference from Biased Tracers using the EFT-based Likelihood\"",
+      "What is 1906.07143 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "1906.07143",
+      "Nguyen",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "cosmology",
+      "inference"
+    ],
+    "answer": "Minh and collaborators (arXiv:1906.07143): This paper by Elsner, Schmidt, Jasche, Lavaux, and Nguyen presents the first detailed numerical application of the EFT-based field-level likelihood for biased tracers derived in earlier work. The motivation is that standard summary-statistic analyses of large-scale structure may not capture all cosmological information in the non-Gaussian galaxy field, while forward-modeling approaches that reconstruct the three-dimensional matter density directly from tracers require a rigorous likelihood.",
+    "url": "https://arxiv.org/abs/1906.07143"
+  },
+  {
+    "id": "wiki-1909-04022",
+    "source": "wiki",
+    "arxiv_id": "1909.04022",
+    "authored": false,
+    "questions": [
+      "Tell me about \"The EFT Likelihood for Large-Scale Structure\"",
+      "What is 1909.04022 about?"
+    ],
+    "keywords": [
+      "1909.04022",
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield"
+    ],
+    "answer": "Cabass et al. (arXiv:1909.04022): This paper by Cabass and Schmidt derives, using functional methods and the bias expansion, the conditional likelihood for observing a specific biased tracer field given an underlying nonlinear matter field. The motivation is to place the EFT-based approach to Bayesian forward modeling of large-scale structure on rigorous theoretical foundations. Standard analyses rely on n-point correlation functions, but these become increasingly difficult to predict and to use as n grows, because the covariance of an n-point function requires knowledge of the 2n-point function.",
+    "url": "https://arxiv.org/abs/1909.04022"
+  },
+  {
+    "id": "wiki-2004-00617",
+    "source": "wiki",
+    "arxiv_id": "2004.00617",
+    "authored": false,
+    "questions": [
+      "Tell me about \"The Likelihood for LSS: Stochasticity of Bias Coefficients at All Orders\"",
+      "What is 2004.00617 about?",
+      "Tell me about your work on EFT galaxy bias"
+    ],
+    "keywords": [
+      "2004.00617",
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion",
+      "likelihood",
+      "lss",
+      "stochasticity",
+      "coefficients"
+    ],
+    "answer": "Cabass et al. (arXiv:2004.00617): This paper by Cabass and Schmidt addresses a key correction to the EFT-based likelihood for biased tracers in large-scale structure: in the EFT of biased tracers, the noise field epsilon_g is not exactly uncorrelated with the nonlinear matter field delta, and that correlation is effectively captured by promoting each bias coefficient to carry its own stochastic component. Previous work treated the leading consequence of this, the field-dependent noise covariance, only perturbatively, via an Edgeworth-like expansion of the conditional likelihood.",
+    "url": "https://arxiv.org/abs/2004.00617"
+  },
+  {
+    "id": "wiki-2004-06707",
+    "source": "wiki",
+    "arxiv_id": "2004.06707",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Unbiased Cosmology Inference from Biased Tracers using the EFT Likelihood\"",
+      "What is 2004.06707 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2004.06707",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "unbiased",
+      "cosmology",
+      "inference"
+    ],
+    "answer": "Schmidt et al. (arXiv:2004.06707): This paper by Schmidt, Cabass, Jasche, and Lavaux presents an updated cosmological inference of the linear power spectrum normalization sigma8 from rest-frame halo catalogs using the EFT-based field-level likelihood developed in earlier work. Previous applications of this likelihood had shown a residual bias in the inferred sigma8 at the level of roughly 10 to 20 percent. The central methodological contribution here is the introduction of a cutoff Lambda_in applied to the initial conditions that serve as input to the matter forward model, in addition to the cutoff already imposed on the final-time bias fields.",
+    "url": "https://arxiv.org/abs/2004.06707"
+  },
+  {
+    "id": "wiki-2007-13721",
+    "source": "wiki",
+    "arxiv_id": "2007.13721",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Taking measurements of the kinematic Sunyaev-Zel'dovich effect forward: including uncertainties from velocity reconstruction with forward modeling\"",
+      "What is 2007.13721 about?",
+      "Tell me about your work on the kinematic SZ effect"
+    ],
+    "keywords": [
+      "2007.13721",
+      "Nguyen",
+      "kSZ",
+      "kinematic SZ",
+      "Sunyaev-Zel'dovich",
+      "Sunyaev",
+      "velocity reconstruction",
+      "taking",
+      "measurements",
+      "kinematic",
+      "sunyaev-zel",
+      "dovich"
+    ],
+    "answer": "Minh and collaborators (arXiv:2007.13721): This paper measures the kinematic Sunyaev-Zel'dovich (kSZ) effect imprinted by maxBCG clusters on the Planck SMICA 2018 CMB temperature map, with the central methodological novelty of directly accounting for uncertainties in the reconstructed peculiar velocity field through Bayesian forward modeling. Previous cross-correlation analyses of the kSZ signal relied on a single, deterministic reconstruction of the velocity field obtained by inverting the linearized continuity equation from a smoothed galaxy density, ignoring the uncertainty that this reconstruction step contributes to the final kSZ measurement.",
+    "url": "https://arxiv.org/abs/2007.13721"
+  },
+  {
+    "id": "wiki-2007-14988",
+    "source": "wiki",
+    "arxiv_id": "2007.14988",
+    "authored": false,
+    "questions": [
+      "Tell me about \"The EFT Likelihood for Large-Scale Structure in Redshift Space\"",
+      "What is 2007.14988 about?"
+    ],
+    "keywords": [
+      "2007.14988",
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion",
+      "redshift space",
+      "redshift-space distortion",
+      "RSD",
+      "likelihood"
+    ],
+    "answer": "Cabass et al. (arXiv:2007.14988): This paper extends the effective field theory (EFT) likelihood for biased tracers of large-scale structure from the rest frame to redshift space, an essential step for applying field-level Bayesian forward modeling to real galaxy survey data. The central question is how the conditional likelihood P[delta_g_tilde | delta, v] of an observed redshift-space galaxy overdensity, given the rest-frame matter density and velocity fields, should be written once redshift-space distortions are included consistently with the EFT bias expansion.",
+    "url": "https://arxiv.org/abs/2007.14988"
+  },
+  {
+    "id": "wiki-2009-14176",
+    "source": "wiki",
+    "arxiv_id": "2009.14176",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Sigma-Eight at the Percent Level: The EFT Likelihood in Real Space\"",
+      "What is 2009.14176 about?",
+      "Tell me about your work on EFT galaxy bias"
+    ],
+    "keywords": [
+      "2009.14176",
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion",
+      "sigma-eight",
+      "percent",
+      "level",
+      "likelihood"
+    ],
+    "answer": "Schmidt et al. (arXiv:2009.14176): This paper presents a real-space implementation of the effective field theory (EFT) likelihood for biased tracers of large-scale structure and tests it on the percent-level inference of the linear power-spectrum amplitude sigma_8 from rest-frame halo catalogs. The motivation is twofold: a real-space (rather than Fourier-space) formulation naturally accommodates survey window functions and, as shown in earlier work, captures the leading perturbative correction to the constant-noise EFT likelihood — namely the modulation of the noise amplitude by long-wavelength modes (equivalently, stochasticity of bias parameters) — which dominates over higher-derivative noise terms for typical matter power spectra.",
+    "url": "https://arxiv.org/abs/2009.14176"
+  },
+  {
+    "id": "wiki-2011-06587",
+    "source": "wiki",
+    "arxiv_id": "2011.06587",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Impacts of the physical data model on the forward inference of initial conditions from biased tracers\"",
+      "What is 2011.06587 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2011.06587",
+      "Nguyen",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "impacts",
+      "physical"
+    ],
+    "answer": "Minh and collaborators (arXiv:2011.06587): This paper asks which ingredients of the physical data model most strongly influence the field-level Bayesian forward inference of initial conditions from biased tracers, with the aim of identifying where modeling effort should be concentrated to obtain unbiased cosmological inference. The forward-modeling framework rests on four components — a prior on the initial conditions, a gravity model for the matter evolution, a deterministic bias model relating matter to tracers, and a stochastic likelihood for the residual scatter — and the authors systematically vary the latter three, plus the tracer number density and grid resolution.",
+    "url": "https://arxiv.org/abs/2011.06587"
+  },
+  {
+    "id": "wiki-2112-04484",
+    "source": "wiki",
+    "arxiv_id": "2112.04484",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Field-level inference of galaxy intrinsic alignment from the SDSS-III BOSS survey\"",
+      "What is 2112.04484 about?",
+      "Tell me about your work on galaxy shapes and sizes"
+    ],
+    "keywords": [
+      "2112.04484",
+      "Nguyen",
+      "intrinsic alignment",
+      "IA",
+      "galaxy shapes",
+      "galaxy sizes",
+      "shapes",
+      "sizes",
+      "field-level",
+      "inference",
+      "galaxy",
+      "intrinsic"
+    ],
+    "answer": "Minh and collaborators (arXiv:2112.04484): This paper presents a field-level Bayesian inference of the linear intrinsic-alignment amplitude of elliptical galaxies in the SDSS-III BOSS survey, replacing the traditional approach of compressing galaxy shape catalogs into shape-shape and shape-position correlation functions with a direct cross-correlation between observed galaxy ellipticities and the local large-scale tidal shear at each galaxy's position. Intrinsic alignment encodes information about galaxy formation and the primordial Universe and is also a leading systematic for weak-lensing surveys, so improving its measurement is broadly relevant.",
+    "url": "https://arxiv.org/abs/2112.04484"
+  },
+  {
+    "id": "wiki-2203-06177",
+    "source": "wiki",
+    "arxiv_id": "2203.06177",
+    "authored": false,
+    "questions": [
+      "Tell me about \"BAO scale inference from biased tracers using the EFT likelihood\"",
+      "What is 2203.06177 about?",
+      "Tell me about your BAO paper"
+    ],
+    "keywords": [
+      "2203.06177",
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering",
+      "scale",
+      "inference",
+      "biased",
+      "tracers",
+      "eft",
+      "likelihood"
+    ],
+    "answer": "Babić et al. (arXiv:2203.06177): This paper presents the first field-level inference of the isotropic baryon acoustic oscillation (BAO) scale from rest-frame halo catalogs using the effective field theory (EFT) likelihood combined with a Lagrangian forward model, providing a forward-modeling alternative to the backward \"BAO reconstruction\" techniques that currently dominate the analysis of galaxy surveys. Conventional BAO reconstruction smooths the tracer field, estimates a displacement field, and moves tracers back to their initial positions; in contrast, the EFT forward modeling jointly handles bias and the BAO scale without ever inverting the matter dynamics.",
+    "url": "https://arxiv.org/abs/2203.06177"
+  },
+  {
+    "id": "wiki-2212-05003",
+    "source": "wiki",
+    "arxiv_id": "2212.05003",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Growth of Cosmic Structure\"",
+      "What is 2212.05003 about?",
+      "Tell me about your work on the growth of structure"
+    ],
+    "keywords": [
+      "2212.05003",
+      "growth",
+      "growth rate",
+      "growth index",
+      "structure growth",
+      "sigma_8",
+      "fsigma8",
+      "S_8",
+      "cosmic",
+      "structure"
+    ],
+    "answer": "Huterer et al. (arXiv:2212.05003): This review by Huterer surveys the temporal growth of large-scale structure as a bridge between cosmological theory and observation, aimed at a non-expert astrophysics audience. The article lays out the physical foundations of structure growth, derives its behavior in simple single-component cosmological models (radiation-, matter-, and Lambda-dominated regimes), and explains how growth measurements can be used to constrain the underlying theory.",
+    "url": "https://arxiv.org/abs/2212.05003"
+  },
+  {
+    "id": "wiki-2212-07875",
+    "source": "wiki",
+    "arxiv_id": "2212.07875",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Consistency tests of field level inference with the EFT likelihood\"",
+      "What is 2212.07875 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2212.07875",
+      "Nguyen",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "consistency",
+      "tests"
+    ],
+    "answer": "Minh and collaborators (arXiv:2212.07875): This paper by Kostić, Nguyen, Schmidt, and Reinecke investigates whether the effective field theory (EFT) framework for large-scale structure can deliver robust, unbiased field-level cosmological inference from galaxy clustering when applied to synthetic data with controlled model misspecification. Field-level forward modeling in principle gives access to all cosmological information in a galaxy survey, but its viability depends on whether the joint posterior over initial conditions, cosmology, and nuisance parameters can be sampled correctly and remains unbiased when the assumed forward model is only an approximation of the truth.",
+    "url": "https://arxiv.org/abs/2212.07875"
+  },
+  {
+    "id": "wiki-2302-01331",
+    "source": "wiki",
+    "arxiv_id": "2302.01331",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Evidence for suppression of structure growth in the concordance cosmological model\"",
+      "What is 2302.01331 about?",
+      "Tell me about your work on the growth of structure"
+    ],
+    "keywords": [
+      "2302.01331",
+      "Nguyen",
+      "growth",
+      "growth rate",
+      "growth index",
+      "structure growth",
+      "sigma_8",
+      "fsigma8",
+      "S_8",
+      "evidence",
+      "suppression",
+      "structure"
+    ],
+    "answer": "Minh and collaborators (arXiv:2302.01331): Nguyen, Huterer, and Wen address the question of whether the temporal growth of large-scale structure in the dark-energy era is consistent with the prediction of flat ΛCDM and general relativity. They isolate growth from geometry by parameterizing the linear growth rate as f(a) = Ω_m(a)^γ, where γ = 0.55 is the value predicted to high accuracy by GR in flat ΛCDM, and treating γ as a free parameter that modulates the linear matter power spectrum and the CMB lensing potential via a modified version of the CAMB Boltzmann solver.",
+    "url": "https://arxiv.org/abs/2302.01331"
+  },
+  {
+    "id": "wiki-2303-09876",
+    "source": "wiki",
+    "arxiv_id": "2303.09876",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Cosmology inference at the field level from biased tracers in redshift-space\"",
+      "What is 2303.09876 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2303.09876",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "cosmology",
+      "inference",
+      "field"
+    ],
+    "answer": "Stadler et al. (arXiv:2303.09876): Stadler, Schmidt, and Reinecke extend the EFT-based field-level inference pipeline implemented in LEFTfield to model the clustering of biased tracers in redshift space, with the goal of inferring cosmology — particularly the linear growth rate f — from quasi-linear scales while marginalizing over astrophysical uncertainties. The main technical additions are the computation of the large-scale velocity field within the Lagrangian perturbation theory (LPT) gravity model, the fully nonlinear displacement of the evolved, biased density field to redshift space, and a systematic expansion of velocity bias compatible with the EFT of large-scale structure.",
+    "url": "https://arxiv.org/abs/2303.09876"
+  },
+  {
+    "id": "wiki-2304-07281",
+    "source": "wiki",
+    "arxiv_id": "2304.07281",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Sweeping Horndeski Canvas: New Growth-Rate Parameterization for Modified-Gravity Theories\"",
+      "What is 2304.07281 about?",
+      "Tell me about your work on the growth of structure"
+    ],
+    "keywords": [
+      "2304.07281",
+      "Nguyen",
+      "growth",
+      "growth rate",
+      "growth index",
+      "structure growth",
+      "sigma_8",
+      "fsigma8",
+      "S_8",
+      "sweeping",
+      "horndeski",
+      "canvas"
+    ],
+    "answer": "Minh and collaborators (arXiv:2304.07281): Wen, Nguyen, and Huterer ask whether the popular constant growth-index parameterization f(z) = Ω_M(z)^γ remains accurate enough for the precise growth-rate measurements expected from Stage IV and V large-scale structure surveys, particularly across the broad class of Horndeski theories of modified gravity. They propose and numerically validate a redshift-dependent generalization, γ(z) = γ_0 + γ_1 z^2/(1+z), and assess its performance against the exact growth predictions of viable Horndeski models.",
+    "url": "https://arxiv.org/abs/2304.07281"
+  },
+  {
+    "id": "wiki-2305-16865",
+    "source": "wiki",
+    "arxiv_id": "2305.16865",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Exploring the Growth Index $γ_L$: Insights from Different CMB Dataset Combinations and Approaches\"",
+      "What is 2305.16865 about?",
+      "Tell me about your work on the growth of structure"
+    ],
+    "keywords": [
+      "2305.16865",
+      "Nguyen",
+      "growth",
+      "growth rate",
+      "growth index",
+      "structure growth",
+      "sigma_8",
+      "fsigma8",
+      "S_8",
+      "exploring",
+      "index",
+      "insights"
+    ],
+    "answer": "Minh and collaborators (arXiv:2305.16865): Specogna, Di Valentino, Levi Said, and Nguyen investigate how the inferred value of the growth index γ_L, defined through the parameterization G(a) = Ω_m(a)^{γ_L} for the growth of linear matter perturbations, depends on the choice of CMB dataset and on the specific implementation of γ_L in the Boltzmann solver. They compare two CAMB patches: MGCAMB, which maps γ_L into a scale- and redshift-dependent function μ(a,k) entering both sub- and super-horizon perturbation evolution, and CAMB_GammaPrime_Growth, which adopts a scale-independent approach that rescales the linear matter power spectrum (and hence the CMB lensing potential) by a modified growth factor.",
+    "url": "https://arxiv.org/abs/2305.16865"
+  },
+  {
+    "id": "wiki-2310-03741",
+    "source": "wiki",
+    "arxiv_id": "2310.03741",
+    "authored": false,
+    "questions": [
+      "Tell me about \"EFTofLSS meets simulation-based inference: $σ_8$ from biased tracers\"",
+      "What is 2310.03741 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2310.03741",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "eftoflss",
+      "meets",
+      "simulation-based"
+    ],
+    "answer": "Tucci et al. (arXiv:2310.03741): Tucci and Schmidt explore how simulation-based inference (SBI) can be combined with the effective field theory of large-scale structure (EFTofLSS) to constrain σ_8 from biased tracers, sidestepping the need for explicit analytic expressions for the likelihood and covariance of nonlinear summary statistics. They argue that standard explicit-likelihood pipelines for galaxy clustering face mounting difficulties — Gaussian approximations break down at low k and on small scales, covariances are typically estimated from mocks at fixed cosmology, and bin-averaging effects complicate the bispectrum — all of which SBI naturally circumvents.",
+    "url": "https://arxiv.org/abs/2310.03741"
+  },
+  {
+    "id": "wiki-2403-03220",
+    "source": "wiki",
+    "arxiv_id": "2403.03220",
+    "authored": true,
+    "questions": [
+      "Tell me about \"How much information can be extracted from galaxy clustering at the field level?\"",
+      "What is 2403.03220 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2403.03220",
+      "Nguyen",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "much",
+      "information"
+    ],
+    "answer": "Minh and collaborators (arXiv:2403.03220): This Letter asks how much cosmological information can be robustly extracted from nonlinear galaxy clustering, by performing optimal Bayesian field-level inference of the linear matter fluctuation amplitude sigma_8 from simulated dark matter halos in a comoving volume of 8 (h^-1 Gpc)^3. The constraint comes entirely from nonlinear information: the authors jointly sample the initial conditions together with EFT galaxy bias and noise parameters using the Lagrangian EFT-based forward model LEFTfield.",
+    "url": "https://arxiv.org/abs/2403.03220"
+  },
+  {
+    "id": "wiki-2404-03000",
+    "source": "wiki",
+    "arxiv_id": "2404.03000",
+    "authored": false,
+    "questions": [
+      "Tell me about \"DESI 2024 III: Baryon Acoustic Oscillations from Galaxies and Quasars\"",
+      "What is 2404.03000 about?"
+    ],
+    "keywords": [
+      "2404.03000",
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering",
+      "DESI",
+      "DESI 2024",
+      "year one",
+      "Y1",
+      "spectroscopic survey",
+      "2024"
+    ],
+    "answer": "Collaboration et al. (arXiv:2404.03000): This paper presents the DESI 2024 baryon acoustic oscillation (BAO) measurements from galaxies and quasars using DESI Data Release 1, comprising over 5.7 million unique galaxy and quasar redshifts in the range 0.1 < z < 2.1. The sample combines 300,017 Bright Galaxy Survey galaxies (0.1 < z < 0.4), 2,138,600 Luminous Red Galaxies (0.4 < z < 1.1), 2,432,022 Emission Line Galaxies (0.8 < z < 1.6), and 856,652 quasars (0.8 < z < 2.1) over roughly 7,500 square degrees.",
+    "url": "https://arxiv.org/abs/2404.03000"
+  },
+  {
+    "id": "wiki-2404-03001",
+    "source": "wiki",
+    "arxiv_id": "2404.03001",
+    "authored": false,
+    "questions": [
+      "Tell me about \"DESI 2024 IV: Baryon Acoustic Oscillations from the Lyman Alpha Forest\"",
+      "What is 2404.03001 about?"
+    ],
+    "keywords": [
+      "2404.03001",
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering",
+      "DESI",
+      "DESI 2024",
+      "year one",
+      "Y1",
+      "spectroscopic survey",
+      "2024"
+    ],
+    "answer": "Collaboration et al. (arXiv:2404.03001): This paper presents the DESI 2024 measurement of baryon acoustic oscillations (BAO) from the Lyman-alpha forest of high-redshift quasars using the first-year dataset of the Dark Energy Spectroscopic Instrument. The analysis uses over 420,000 Lyman-alpha forest spectra together with the cross-correlation between the forest and the spatial distribution of more than 700,000 quasars. A central aspect of the work is the development of a new analysis methodology on a blinded dataset, with rigorous validation on synthetic data before unblinding.",
+    "url": "https://arxiv.org/abs/2404.03001"
+  },
+  {
+    "id": "wiki-2404-03002",
+    "source": "wiki",
+    "arxiv_id": "2404.03002",
+    "authored": false,
+    "questions": [
+      "Tell me about \"DESI 2024 VI: Cosmological Constraints from the Measurements of Baryon Acoustic Oscillations\"",
+      "What is 2404.03002 about?"
+    ],
+    "keywords": [
+      "2404.03002",
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering",
+      "DESI",
+      "DESI 2024",
+      "year one",
+      "Y1",
+      "spectroscopic survey",
+      "2024"
+    ],
+    "answer": "Collaboration et al. (arXiv:2404.03002): This paper derives cosmological constraints from the DESI Data Release 1 baryon acoustic oscillation (BAO) measurements in galaxies, quasars, and the Lyman-alpha forest, covering seven redshift bins from over six million extragalactic objects across 0.1 < z < 4.2. The BAO scales were measured in a blind analysis to mitigate confirmation bias and provide robust constraints on the transverse comoving distance and Hubble rate relative to the sound horizon.",
+    "url": "https://arxiv.org/abs/2404.03002"
+  },
+  {
+    "id": "wiki-2405-02252",
+    "source": "wiki",
+    "arxiv_id": "2405.02252",
+    "authored": true,
+    "questions": [
+      "Tell me about \"A Parameter-Masked Mock Data Challenge for Beyond-Two-Point Galaxy Clustering Statistics\"",
+      "What is 2405.02252 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2405.02252",
+      "Nguyen",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "parameter-masked",
+      "mock"
+    ],
+    "answer": "Minh and collaborators (arXiv:2405.02252): This paper, the first results from the \"Beyond-2pt\" community challenge initiated at the Aspen 2022 Summer Program, benchmarks emerging methods for analyzing galaxy clustering beyond the canonical two-point statistics. The challenge distributes high-precision mock galaxy catalogs in real space, redshift space, and on a light cone, with the underlying flat LambdaCDM cosmological parameters and the halo occupation distribution parameters masked from the participants.",
+    "url": "https://arxiv.org/abs/2405.02252"
+  },
+  {
+    "id": "wiki-2407-01524",
+    "source": "wiki",
+    "arxiv_id": "2407.01524",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Straightening the Ruler: Field-Level Inference of the BAO Scale with LEFTfield\"",
+      "What is 2407.01524 about?"
+    ],
+    "keywords": [
+      "2407.01524",
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior"
+    ],
+    "answer": "Babić et al. (arXiv:2407.01524): This paper presents the first consistent joint Bayesian inference of the isotropic baryon acoustic oscillation (BAO) scale together with the initial conditions and all bias coefficients, using the EFT-based field-level forward model LEFTfield. Standard BAO inference from galaxy clustering relies on a reconstruction procedure performed at fixed cosmology and bias, then fits the post-reconstruction power spectrum. The authors instead build the BAO scale into the forward model and sample it jointly with the high-dimensional initial-density grid (via Hamiltonian Monte Carlo) and with the bias and stochastic amplitudes (via a slice sampler), thereby removing the assumptions that contaminate the reconstruction step and additionally capturing BAO information in higher-order n-point functions such as the bispectrum.",
+    "url": "https://arxiv.org/abs/2407.01524"
+  },
+  {
+    "id": "wiki-2409-10937",
+    "source": "wiki",
+    "arxiv_id": "2409.10937",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Fast, Accurate and Perturbative Forward Modeling of Galaxy Clustering Part I: Galaxies in the Restframe\"",
+      "What is 2409.10937 about?"
+    ],
+    "keywords": [
+      "2409.10937",
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield"
+    ],
+    "answer": "Stadler et al. (arXiv:2409.10937): This paper investigates the physical and numerical convergence of the LEFTfield forward model for galaxy clustering, with a focus on rest-frame galaxies. Forward models of the galaxy density field underpin both simulation-based inference and field-level inference, but their use in cosmological analyses requires that they be simultaneously computationally fast and robust to uncertainties in the galaxy-matter relation. The authors argue that the Effective Field Theory of Large-Scale Structure provides a controlled framework that addresses both requirements, and they aim to quantify how accurately LEFTfield realises that framework numerically.",
+    "url": "https://arxiv.org/abs/2409.10937"
+  },
+  {
+    "id": "wiki-2411-04513",
+    "source": "wiki",
+    "arxiv_id": "2411.04513",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Fast, Accurate and Perturbative Forward Modeling of Galaxy Clustering Part II: Redshift Space\"",
+      "What is 2411.04513 about?"
+    ],
+    "keywords": [
+      "2411.04513",
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield"
+    ],
+    "answer": "Stadler et al. (arXiv:2411.04513): This paper extends the LEFTfield perturbative forward model from the rest frame to redshift space, addressing a key observational systematic for galaxy clustering analyses. Redshift-space distortions (RSDs) shift the observed galaxy position along the line of sight by the peculiar velocity, leading to anisotropic clustering that carries information on the growth rate of structure f, but their modelling is complicated by non-linear effects that extend to relatively large scales.",
+    "url": "https://arxiv.org/abs/2411.04513"
+  },
+  {
+    "id": "wiki-2411-12020",
+    "source": "wiki",
+    "arxiv_id": "2411.12020",
+    "authored": false,
+    "questions": [
+      "Tell me about \"DESI 2024 II: Sample Definitions, Characteristics, and Two-point Clustering Statistics\"",
+      "What is 2411.12020 about?"
+    ],
+    "keywords": [
+      "2411.12020",
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering",
+      "DESI",
+      "DESI 2024",
+      "year one",
+      "Y1",
+      "spectroscopic survey",
+      "2024"
+    ],
+    "answer": "Collaboration et al. (arXiv:2411.12020): This paper documents the galaxy and quasar samples and the two-point clustering measurements that underpin the DESI 2024 cosmological analyses, based on DESI Data Release 1 (DR1). The central question is how to translate raw spectroscopic targets into large-scale structure (LSS) catalogues that are suitable for precision clustering analyses, accounting for the complex selection effects, imaging systematics, observational completeness, and redshift-success variations of a stage-IV survey.",
+    "url": "https://arxiv.org/abs/2411.12020"
+  },
+  {
+    "id": "wiki-2411-12021",
+    "source": "wiki",
+    "arxiv_id": "2411.12021",
+    "authored": false,
+    "questions": [
+      "Tell me about \"DESI 2024 V: Full-Shape Galaxy Clustering from Galaxies and Quasars\"",
+      "What is 2411.12021 about?"
+    ],
+    "keywords": [
+      "2411.12021",
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering",
+      "DESI",
+      "DESI 2024",
+      "year one",
+      "Y1",
+      "spectroscopic survey",
+      "2024"
+    ],
+    "answer": "Adame et al. (arXiv:2411.12021): This paper presents the full-shape two-point clustering measurements of the DESI Data Release 1 galaxy and quasar samples and their cosmological implications. Using over 4.7 million unique redshifts in the range 0.1 < z < 2.1, split across six redshift bins over roughly 7,500 square degrees, the analysis extends the DR1 BAO results to also include redshift-space distortions and signals from the matter-radiation equality scale by fitting the full power spectrum rather than only the BAO feature.",
+    "url": "https://arxiv.org/abs/2411.12021"
+  },
+  {
+    "id": "wiki-2411-12022",
+    "source": "wiki",
+    "arxiv_id": "2411.12022",
+    "authored": false,
+    "questions": [
+      "Tell me about \"DESI 2024 VII: Cosmological Constraints from the Full-Shape Modeling of Clustering Measurements\"",
+      "What is 2411.12022 about?"
+    ],
+    "keywords": [
+      "2411.12022",
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering",
+      "DESI",
+      "DESI 2024",
+      "year one",
+      "Y1",
+      "spectroscopic survey",
+      "2024"
+    ],
+    "answer": "Collaboration et al. (arXiv:2411.12022): This paper presents the cosmological constraints derived from the full-shape (FS) modelling of clustering measurements of galaxies, quasars and Lyman-α forest tracers in DESI Data Release 1. The analysis adopts a full-shape model of the power spectrum that includes redshift-space distortions, validated in a series of supporting papers, and combines the FS information with the DR1 baryon acoustic oscillation (BAO) measurements of the same tracers to maximise the cosmological reach of DR1.",
+    "url": "https://arxiv.org/abs/2411.12022"
+  },
+  {
+    "id": "wiki-2503-00155",
+    "source": "wiki",
+    "arxiv_id": "2503.00155",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Late-time growth weakly affects the significance of high-redshift massive galaxies\"",
+      "What is 2503.00155 about?",
+      "Tell me about your work on the growth of structure"
+    ],
+    "keywords": [
+      "2503.00155",
+      "Nguyen",
+      "growth",
+      "growth rate",
+      "growth index",
+      "structure growth",
+      "sigma_8",
+      "fsigma8",
+      "S_8",
+      "late-time",
+      "weakly",
+      "affects"
+    ],
+    "answer": "Minh and collaborators (arXiv:2503.00155): This paper asks whether modifications of the late-time growth of cosmic structure can change the statistical significance of the massive high-redshift (z ≃ 7-15) galaxies observed by the James Webb Space Telescope. Because the growth rate of density fluctuations sets the amplitude of overdensities that collapse into galaxies, a naive expectation is that boosting late-time growth would also boost the abundance of very massive objects at very high redshift.",
+    "url": "https://arxiv.org/abs/2503.00155"
+  },
+  {
+    "id": "wiki-2504-15351",
+    "source": "wiki",
+    "arxiv_id": "2504.15351",
+    "authored": false,
+    "questions": [
+      "Tell me about \"On the Connection between Field-Level Inference and $n$-point Correlation Functions\"",
+      "What is 2504.15351 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2504.15351",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "connection",
+      "inference",
+      "point"
+    ],
+    "answer": "Schmidt et al. (arXiv:2504.15351): This paper investigates where the cosmological information extracted by Bayesian field-level inference (FLI) of galaxy clustering originates, and how it relates to the information content of n-point correlation functions. The motivation is that, while FLI is guaranteed to be optimal when the forward model correctly describes the data, real forward models are never strictly complete, so one needs analytical handles on the robustness of the resulting parameter posteriors.",
+    "url": "https://arxiv.org/abs/2504.15351"
+  },
+  {
+    "id": "wiki-2510-08573",
+    "source": "wiki",
+    "arxiv_id": "2510.08573",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Reconstructing the local density field with combined convolutional and point cloud architecture\"",
+      "What is 2510.08573 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2510.08573",
+      "Nguyen",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "reconstructing",
+      "local"
+    ],
+    "answer": "Minh and collaborators (arXiv:2510.08573): This work addresses the problem of reconstructing the local dark-matter density field from line-of-sight peculiar velocities of biased tracers (here, dark-matter halos), which are gravitationally sourced by the matter distribution but only sparsely sampled and observed along the radial direction. Standard linear methods such as direct inversion and Wiener filtering are restricted to large scales, while forward-model sampling approaches are computationally expensive and limited in resolution.",
+    "url": "https://arxiv.org/abs/2510.08573"
+  },
+  {
+    "id": "wiki-2511-05484",
+    "source": "wiki",
+    "arxiv_id": "2511.05484",
+    "authored": false,
+    "questions": [
+      "Tell me about \"Non-Gaussian Galaxy Stochasticity and the Noise-Field Formulation\"",
+      "What is 2511.05484 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2511.05484",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "non-gaussian",
+      "galaxy",
+      "stochasticity"
+    ],
+    "answer": "Rubira et al. (arXiv:2511.05484): This paper revisits how stochastic, or noise, contributions to the galaxy density field should be described within the effective field theory (EFT) of large-scale structure, and how they can be incorporated into field-level inference. The standard \"non-minimal\" formulation introduces an independent non-Gaussian noise field for every bias operator, which leads to redundancies at the level of n-point functions and is awkward to implement at the field level.",
+    "url": "https://arxiv.org/abs/2511.05484"
+  },
+  {
+    "id": "wiki-2603-20196",
+    "source": "wiki",
+    "arxiv_id": "2603.20196",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Galaxy sizes as complementary (zero-)bias tracers of local primordial non-Gaussianity\"",
+      "What is 2603.20196 about?"
+    ],
+    "keywords": [
+      "2603.20196",
+      "Nguyen",
+      "intrinsic alignment",
+      "IA",
+      "galaxy shapes",
+      "galaxy sizes",
+      "shapes",
+      "sizes",
+      "primordial non-Gaussianity",
+      "PNG",
+      "fNL",
+      "non-Gaussianity"
+    ],
+    "answer": "Minh and collaborators (arXiv:2603.20196): This paper asks whether galaxy intrinsic sizes, which are routinely measured by wide-field imaging surveys but typically discarded in clustering analyses, can serve as cosmological tracers of local primordial non-Gaussianity (PNG). The sensitivity of any tracer to local PNG via the scale-dependent bias signal scales with the ratio b_phi / b_1, where b_phi is the response to the long-wavelength primordial potential and b_1 the response to the late-time matter density.",
+    "url": "https://arxiv.org/abs/2603.20196"
+  },
+  {
+    "id": "wiki-2604-25171",
+    "source": "wiki",
+    "arxiv_id": "2604.25171",
+    "authored": true,
+    "questions": [
+      "Tell me about \"Multi-tracers, multi-surveys: a joint Fisher analysis of DESI+PFS\"",
+      "What is 2604.25171 about?",
+      "Tell me about your multi-tracer forecast"
+    ],
+    "keywords": [
+      "2604.25171",
+      "Nguyen",
+      "multi-tracer",
+      "multi-survey",
+      "Fisher",
+      "forecast",
+      "PFS",
+      "DESI+PFS",
+      "multi-tracers",
+      "multi-surveys",
+      "joint",
+      "desi"
+    ],
+    "answer": "Minh and collaborators (arXiv:2604.25171): This paper addresses the dominant systematic cost in full-shape galaxy power spectrum analyses within the EFT of large-scale structure: the need to marginalize over roughly twelve nuisance parameters per tracer per redshift bin, which significantly degrades cosmological constraints, especially on the neutrino mass M_nu. Existing remedies based on simulation-based priors tighten these parameters but inherit modeling assumptions from N-body simulations and halo-occupation-distribution (HOD) models, and have been shown to shift sigma_8 downward by about 2 sigma relative to conservative priors.",
+    "url": "https://arxiv.org/abs/2604.25171"
+  },
+  {
+    "id": "wiki-2604-25385",
+    "source": "wiki",
+    "arxiv_id": "2604.25385",
+    "authored": false,
+    "questions": [
+      "Tell me about \"On the Relation Between Field-Level Posteriors, Correlators, and their Likelihoods\"",
+      "What is 2604.25385 about?",
+      "Tell me about your field-level inference paper"
+    ],
+    "keywords": [
+      "2604.25385",
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions",
+      "relation",
+      "posteriors",
+      "correlators"
+    ],
+    "answer": "Pietroni et al. (arXiv:2604.25385): This paper develops a general field-level posterior (FLP) for cosmological data and makes the relation between field-level inference, correlator-based likelihoods, and reconstruction-based methods explicit. The motivation is to clarify which part of the information contained in the full observed field is preserved or lost when the data are compressed into low-order summary statistics such as the power spectrum and bispectrum, as galaxy surveys probe increasingly nonlinear scales.",
+    "url": "https://arxiv.org/abs/2604.25385"
+  },
+  {
+    "id": "wiki-bucket-bao-and-large-scale-clustering",
+    "source": "wiki",
+    "questions": [
+      "Tell me about your work on BAO",
+      "What's your work on baryon acoustic oscillations?",
+      "Tell me about large-scale galaxy clustering"
+    ],
+    "keywords": [
+      "BAO",
+      "baryon acoustic oscillations",
+      "galaxy clustering",
+      "power spectrum",
+      "large-scale clustering"
+    ],
+    "answer": "Minh works on extracting cosmological information from galaxy clustering at the BAO scale and beyond, both via traditional summary statistics and field-level inference. Relevant papers include arXiv:2411.12020, arXiv:2411.12021, arXiv:2411.12022, arXiv:2407.01524, and arXiv:2404.03000, and 3 others — see /research/.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-desi-2024",
+    "source": "wiki",
+    "questions": [
+      "Tell me about your DESI papers",
+      "What's your role in DESI 2024?",
+      "Tell me about the DESI Y1 cosmology results"
+    ],
+    "keywords": [
+      "DESI",
+      "DESI 2024",
+      "year one",
+      "Y1",
+      "spectroscopic survey"
+    ],
+    "answer": "Minh co-authored the DESI 2024 cosmological-results series, covering BAO from galaxies, quasars, and the Lyman-alpha forest, and the full-shape galaxy-clustering analysis. Relevant papers include arXiv:2411.12020, arXiv:2411.12021, arXiv:2411.12022, arXiv:2404.03000, and arXiv:2404.03001, and 1 others — see /research/.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-eft-bias-modeling",
+    "source": "wiki",
+    "questions": [
+      "Tell me about EFT galaxy bias modeling",
+      "What is EFT-based bias modeling?",
+      "What's your work on the bias expansion?"
+    ],
+    "keywords": [
+      "EFT",
+      "effective field theory",
+      "bias",
+      "galaxy bias",
+      "perturbation",
+      "perturbative",
+      "bias expansion"
+    ],
+    "answer": "EFT-based galaxy bias models give a controlled, perturbative description of how galaxies trace the matter density on large scales. Relevant papers include arXiv:1808.02002, arXiv:2411.04513, arXiv:2409.10937, arXiv:2009.14176, and arXiv:2007.14988, and 3 others — see /research/.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-field-level-inference",
+    "source": "wiki",
+    "questions": [
+      "Tell me about field-level inference",
+      "What's your work on field-level inference?",
+      "What is FLI?"
+    ],
+    "keywords": [
+      "field-level inference",
+      "field-level",
+      "FLI",
+      "LEFTfield",
+      "Bayesian",
+      "posterior",
+      "forward model",
+      "initial conditions"
+    ],
+    "answer": "Minh works on field-level Bayesian inference of cosmological parameters from nonlinear galaxy clustering, primarily via the LEFTfield EFT-based forward model. Relevant papers include arXiv:2510.08573, arXiv:2405.02252, arXiv:2403.03220, arXiv:2212.07875, and arXiv:2011.06587, and 12 others — see /research/.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-growth-of-structure",
+    "source": "wiki",
+    "questions": [
+      "Tell me about your work on the growth of structure",
+      "What's your work on the growth rate?",
+      "What's S_8?"
+    ],
+    "keywords": [
+      "growth",
+      "growth rate",
+      "growth index",
+      "structure growth",
+      "sigma_8",
+      "fsigma8",
+      "S_8"
+    ],
+    "answer": "Minh works on measuring the growth of cosmic structure across redshift and testing the concordance LambdaCDM expectation against current data. Relevant papers include arXiv:2503.00155, arXiv:2305.16865, arXiv:2304.07281, arXiv:2302.01331, and arXiv:2212.05003.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-intrinsic-alignment",
+    "source": "wiki",
+    "questions": [
+      "Do you work on intrinsic alignment?",
+      "Tell me about your work on galaxy shapes and sizes"
+    ],
+    "keywords": [
+      "intrinsic alignment",
+      "IA",
+      "galaxy shapes",
+      "galaxy sizes",
+      "shapes",
+      "sizes"
+    ],
+    "answer": "Minh works on field-level inference of galaxy intrinsic alignment from galaxy shapes, and on using galaxy sizes as a complementary, zero-bias tracer. Relevant papers include arXiv:2603.20196, and arXiv:2112.04484.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-kinematic-sz",
+    "source": "wiki",
+    "questions": [
+      "Do you work on the kinematic SZ effect?",
+      "Tell me about your kSZ paper"
+    ],
+    "keywords": [
+      "kSZ",
+      "kinematic SZ",
+      "Sunyaev-Zel'dovich",
+      "Sunyaev",
+      "velocity reconstruction"
+    ],
+    "answer": "Minh worked on forward-modeling the kinematic Sunyaev-Zel'dovich effect from galaxy surveys, including uncertainties from velocity reconstruction. Relevant paper: arXiv:2007.13721.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-multi-tracer-fisher",
+    "source": "wiki",
+    "questions": [
+      "Tell me about your multi-tracer forecast",
+      "What's your work on DESI+PFS?"
+    ],
+    "keywords": [
+      "multi-tracer",
+      "multi-survey",
+      "Fisher",
+      "forecast",
+      "PFS",
+      "DESI+PFS"
+    ],
+    "answer": "Minh works on multi-tracer, multi-survey forecasts to quantify the gains from combining current and next-generation galaxy surveys. Relevant paper: arXiv:2604.25171.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-primordial-non-gaussianity",
+    "source": "wiki",
+    "questions": [
+      "Do you work on primordial non-Gaussianity?",
+      "Tell me about your work on PNG"
+    ],
+    "keywords": [
+      "primordial non-Gaussianity",
+      "PNG",
+      "fNL",
+      "non-Gaussianity",
+      "scale-dependent bias"
+    ],
+    "answer": "Minh works on galaxy sizes as a complementary, zero-bias tracer of local primordial non-Gaussianity. Relevant paper: arXiv:2603.20196.",
+    "url": "/research/"
+  },
+  {
+    "id": "wiki-bucket-redshift-space-modeling",
+    "source": "wiki",
+    "questions": [
+      "Do you work on redshift-space modeling?",
+      "Tell me about your work on the EFT likelihood in redshift space"
+    ],
+    "keywords": [
+      "redshift space",
+      "redshift-space distortion",
+      "RSD"
+    ],
+    "answer": "Minh contributed to extending the EFT likelihood for large-scale structure to redshift space. Relevant paper: arXiv:2007.14988.",
+    "url": "/research/"
+  }
+]

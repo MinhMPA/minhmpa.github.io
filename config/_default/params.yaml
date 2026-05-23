@@ -5,7 +5,7 @@
 
 # Appearance
 appearance:
-  mode: light
+  mode: system
   color: emerald
 
 # SEO
@@ -33,7 +33,7 @@ header:
     blox: "navbar"
     fixed_to_top: true
     show_search: false
-    show_theme_chooser: false
+    show_theme_chooser: auto
     logo:
       text: "Minh Nguyen"
 
