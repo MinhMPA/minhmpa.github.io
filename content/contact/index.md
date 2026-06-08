@@ -10,7 +10,7 @@ show_date_updated: false
 ---
 
 Kavli Institute for the Physics and Mathematics of the Universe  
-Office A18  
+Office A10, 3F  
 5-1-5 Kashiwanoha, Kashiwa, Chiba 277-8583, Japan
 
 Email: [nhat.minh.nguyen@ipmu.jp](mailto:nhat.minh.nguyen@ipmu.jp)
