@@ -1,149 +1,175 @@
 ---
 title: "The Universe Makes Pancakes First"
 date: 2026-07-10
-summary: The early universe was smooth to one part in a hundred thousand. Gravity turned it into the cosmic web, and the order it works in — sheets, then filaments, then knots — all falls out of one approximation you can drag in your browser.
+summary: The early universe was a plain with almost no relief; the CMB's part-in-a-hundred-thousand temperature ripples carry its imprint. Gravity raised that relief into the cosmic web — in a stranger order than almost anyone pictures. With a browser-tab universe to watch it happen.
 ---
 
-You've seen the cosmic web, that vast lattice of galaxies threaded through every documentary about the cosmos. You've probably pictured it forming wrong. I did, for years.
+You are not a galaxy. Galaxies do not exist yet. You are a parcel of matter, thirteen-odd billion years ago, somewhere in a universe that is very nearly featureless.
 
-The early universe was almost perfectly smooth.
+Nearly. We have an image of that era: the cosmic microwave background, light released when the universe was about four hundred thousand years old. Its temperature varies across the sky by roughly one part in a hundred thousand, and those variations carry the imprint of small unevennesses in the matter — the only relief the young universe had. If the matter field were a landscape, it would be a plain running to every horizon, its ridges and basins so shallow no eye could find them. There are no landmarks. There is nowhere in particular to stand.
 
-We can measure how smooth. The cosmic microwave background says the density of matter, everywhere on the sky, was the same to about one part in a hundred thousand. A featureless soup, barely rippled. And yet look at it now: a web of filaments strung across hundreds of millions of light-years, dense knots where they cross, and between them enormous empty voids. One of the largest, most intricate patterns in nature, grown out of one of the flattest starting conditions in nature.
+Today the same universe holds the cosmic web: filaments of galaxies strung across hundreds of millions of light-years, dense knots at their crossings, and voids between them so empty they are the emptiest places there are. One of the largest patterns in nature, standing where the plain used to be.
 
-The thing that did it was gravity, and nothing else. That part isn't surprising. What surprised me, the first time I really sat with it, is the *order* gravity works in. Matter doesn't fall straight to a point. It flattens first — into sheets — then it strings into filaments, and only then does it draw up into knots. Pancakes before noodles before dumplings. The universe makes pancakes first, and the reason it has to is a small, beautiful piece of geometry that you can watch happen in a browser tab.
+This post is about how you get from one to the other. The answer is not that something drew the web. The initial field chooses the geography; gravity makes that geography visible. And the way it does so — the specific order it works in — is the part almost everyone pictures wrong. I model structure formation for a living, and I pictured it wrong for years.
 
-I built the tab. Everything below is a tour of what it's showing you, and why the physics is simpler than the pictures make it look.
+## The smallest advantage
 
-## Gravity is an amplifier
+Suppose your parcel sits on one of those shallow ridges — a region holding slightly more matter than average. Slightly is enough. A ridge pulls on its surroundings a little harder than the plain does, so matter drifts toward it. Having gained, it pulls harder still. A slight excess compounds itself. A shallow ridge gains matter and rises; a shallow basin loses matter and empties. Nothing arbitrates this. Gravity has no threshold below which it declines to act; any unevenness, however small, is an instruction to become more uneven.
+
+Notice what the process cannot do. It cannot put a ridge where the initial field put none. It cannot drain a basin that was never there.
 
 <!-- PULL-QUOTE (screenshot-bait): the two sentences below -->
-Structure formation is not creation. It is amplification.
+Gravity does not draw a new pattern. It raises the contrast of the pattern already present.
 
-Take that nearly smooth field and find a patch that happens to be a hair denser than average. It pulls a little harder than its surroundings, so it gathers a little more matter, so it gets denser, so it pulls harder still. The rich get richer. Meanwhile the slightly-underdense regions lose the tug of war and drain out, widening into voids. Run that feedback for thirteen billion years and the one-part-in-a-hundred-thousand ripples become order-unity lumps.
+Cosmic expansion matters too — the universe stretches the plain while gravity works against the stretch, and their competition sets the pace and how much time the process gets. But the pace is all it sets. The map was drawn at the beginning.
 
-Nothing here is invented along the way. The web you end up with was already latent in the initial ripples — gravity just turns up the contrast until the structure separates from the background. It is less like building and more like developing a photograph.
+In physical terms, the density contrast grows.
 
-{{< figure src="grow-universe.gif" alt="A near-uniform field sharpening into a cosmic web as cosmic time runs forward." caption="Cosmic time running forward, from a ≈ 0.05 (redshift ~19) to today. The web doesn't appear, it *condenses*. Every filament was already written into the starting field; gravity is developing the negative." >}}
+## Watch the hidden landscape rise
 
-How far the contrast develops depends on how loud the initial ripples were. That amplitude has a name, σ₈, and it's one of the dials on the box. Turn it up and the very same patch of universe collapses further, from a smooth haze into hard knots and empty voids — same arrangement of structure, pushed to a later stage of the same process.
+You can watch this happen. Below is a small universe — 250 megaparsecs of one, computed live in your browser. It opens near the beginning, at one-twentieth of today's cosmic expansion, rendered as a translucent volume: a pale plain, faintly creased. (The dots you will meet later are tracers of a continuous field, not miniature pieces of cosmic substance.)
 
-{{< figure src="sigma8-sweep.gif" alt="The same box sharpening from a smooth haze to dense knots as the fluctuation amplitude increases." caption="Raising σ₈, the amplitude of the initial fluctuations, on a fixed patch. The clusters stay where they were — the initial ripples decided that — but the collapse runs harder. Amplitude sets how far, not where." >}}
+Before touching anything, pick one region a shade paler than the rest and commit to a prediction about it. Then, in the control panel, scroll to **Cosmic time** and press **▶ Grow the universe**, holding your eye where you left it.
 
-## Why pancakes come first
-
-Now the surprising part. Why sheets before filaments before knots?
-
-Quick, before you read on: picture a clump of matter collapsing under its own gravity. Did you picture it shrinking to a point, like a deflating balloon? Almost everyone does. That's the wrong picture, and the real one is stranger.
-
-For a blob to collapse straight to a point, it would have to be a perfect sphere shrinking evenly on all sides. But a random patch of a random field is never a sphere. It's a lumpy ellipsoid, longer along some directions than others. And an ellipsoid held together by its own gravity collapses along its *shortest* axis first, because that's where the pull is strongest and the distance to fall is smallest. Squeeze one axis to nothing and you don't get a point. You get a pancake.
-
-That is Zel'dovich's insight, and the approximation named after it turns it into something you can compute. The Zel'dovich approximation says: to find where a bit of matter goes, take its original position on a grid, call it **q**, and slide it by a displacement,
-
-> **x**(t) = **q** + D(t) · **Ψ**(**q**)
-
-where **Ψ** is a fixed pattern of arrows baked into the initial field, and D(t) is a single number — the growth factor — that grows with time and multiplies every arrow at once. That's the whole dynamics. One frozen displacement field, turned up by one dial.
-
-If you want the derivations under all of this — the Zel'dovich displacement, its second-order (2LPT) correction, and the Fourier-space machinery in the next section — Donghui Jeong's PhD thesis works through them with unusual care: [*Cosmology with high (z > 1) redshift galaxy surveys*](https://repositories.lib.utexas.edu/items/1c8a7013-91cd-4b13-816a-8db317c366ac) (University of Texas at Austin, 2010).
-
-The direction of collapse lives in how those arrows converge. At each point, the way the displacement stretches and squeezes the local matter is captured by a small 3×3 symmetric matrix (the gradient of **Ψ**), and that matrix has three eigenvalues, λ₁ ≥ λ₂ ≥ λ₃ — one collapse rate for each principal axis. An axis has "turned around" and collapsed when D(t) times its eigenvalue crosses a threshold. So count them:
-
-- **0** axes collapsed → you're in a **void**
-- **1** axis → a **sheet** (one-dimensional collapse — the pancake)
-- **2** axes → a **filament** (two-dimensional collapse)
-- **3** axes → a **node** (three-dimensional collapse — a cluster)
-
-The entire vocabulary of the cosmic web — void, sheet, filament, node — is just the number of collapsing eigenvalues at each point. That's what I find beautiful about it. You don't need four separate theories for four kinds of structure. One linear approximation contains all three dimensionalities of collapse, and they light up in order because the biggest eigenvalue always crosses first.
-
-{{< figure src="web-type.gif" alt="The growing web colored by collapse type: sheets, then filaments, then nodes lighting up in sequence." caption="The same growth, but now each particle is colored by *how many* of its axes are collapsing: dark voids, then green sheets, blue filaments, and the orange nodes where all three have gone. Watch the order — flat regions light up first, knots last." >}}
-
-> **Under the hood — the classifier.** Each particle carries the deformation tensor of the displacement field; the shader solves its cubic characteristic equation in closed form for the three eigenvalues and counts how many exceed a threshold (a T-web classification, after Forero-Romero et al. 2009), and that count picks the color (`index.html:651`). The strict Zel'dovich caustic sits at D·λ = 1, but by today that leaves almost no nodes, so the box uses a gentler threshold — the geometry of the ordering is the same either way.
-
-## The reason it fits in a browser
-
-There is a fair question hiding here: gravity is a long-range force, every lump pulling on every other lump, so how does this run at sixty frames a second on a laptop with no server?
-
-Because the hard step is only hard in the wrong coordinates. The displacement **Ψ** comes from a potential that obeys Poisson's equation, ∇²φ = δ — the density field δ tells the potential how to curve. In real space that's a global problem: the value at every point depends on every other point, which is the O(N²) trap that makes N-body simulations expensive. But go to Fourier space, decompose the field into waves, and Poisson's equation stops being an integral and becomes plain algebra, one wave at a time:
-
-> φ(**k**) = −δ(**k**) / k²,  so  **Ψ**(**k**) = i **k** δ(**k**) / k²
-
-Every wavelength evolves independently of every other. No wave talks to its neighbors. And the Fast Fourier Transform carries the field between real space and Fourier space in O(N log N) time instead of O(N²). So the whole pipeline is short: draw a random density field, multiply each wave by the amplitude the cosmology assigns it, take three inverse FFTs to get the displacement arrows, and slide the particles. That's it. That is why the dials answer the instant you touch them — you are not re-simulating gravity, you are re-scaling a field you already solved.
-
-> **Under the hood — shaping the field.** The amplitude each wave gets is the power spectrum P(k), whose shape comes from the Eisenstein–Hu (1998) transfer function, baryon acoustic wiggles included, evaluated live for the current Ω_m (`index.html:349`). The little P(k) inset in the corner is the exact curve the waves are drawn from; the FFT machinery that turns it into structure is a few dozen lines (`fft3d`, `:336`). Second-order corrections (2LPT) add one more term that sharpens the knots toward a full N-body answer (`:479`). This Fourier/FFT treatment and the 2LPT term are both derived carefully in [Jeong (2010)](https://repositories.lib.utexas.edu/items/1c8a7013-91cd-4b13-816a-8db317c366ac).
-
-## The dots are not the point
-
-One last thing the visualization can quietly mislead you about. The glowing dots are not particles, in the sense of little objects the universe is made of. They are tracers — samples of a continuous mass distribution, each one marking where a parcel of the originally-smooth field has been carried.
-
-That distinction is not pedantic; it changes what you're allowed to draw. Because the dots only sample an underlying continuum, you can render the same physics two completely different ways. You can show the tracers themselves, as points — the splat view, where the cosmic web is a spray of light. Or you can bin the tracers back into the smooth density they were sampling and ray-march that density as a translucent solid — the cloud view, where the web is a volume you could almost cut with a knife. Same field, same physics, two honest pictures of it.
-
-{{< figure src="splats-vs-clouds.jpg" alt="The same cosmic web rendered as sparse glowing points on the left and as a continuous ray-marched volume on the right." caption="The identical box, same seed and same instant. Left: the tracers drawn as points. Right: the continuous density those tracers sample, ray-marched as a volume. Neither is more real than the other — the points sample the cloud, and the cloud is what the points are sampling." >}}
-
-> **Under the hood — where the brightness comes from.** Each particle carries a single-stream density from the Jacobian of the displacement: 1 + δ = 1 / det(**I** + D·**A**), literally one over how much a fluid element has been stretched (`index.html:645`). Where that determinant crosses zero — a caustic, where infinitely many streams pile up — the density formally diverges, which is exactly the bright edge you see lighting up a collapsing pancake.
-
-## What it gets right, and what it doesn't
-
-I would rather you leave with the caveats than without them.
-
-This is the Zel'dovich approximation, plus an optional second-order term. It is not a full gravitational solve. First and second order are honest about the linear and mildly-nonlinear regime, but once streams of matter pass through each other in the dense knots — shell-crossing — the approximation stops being quantitatively right. The pancakes and filaments are real and correctly ordered; the exact densities inside the brightest nodes are not something I'd put on a plot. And the single-stream density politely looks away from precisely the multi-stream regions where the true dynamics get hard.
-
-None of that touches the story, though. Amplification, anisotropic collapse in a fixed order, the whole web taxonomy falling out of three eigenvalues — all of that is exactly right, and cheap enough to hold in your hand and turn over. (One implementation note, since someone always asks: the box runs on a fixed random seed, so it's reproducible. Every reload is the same universe, and every dial you move changes the physics rather than the luck of the draw.)
-
-So here it is. Turn the amplitude up and watch the contrast develop. Color by collapse type and watch the sheets ignite before the knots. Switch it to a cloud. Then, if you want to feel how little of this is really moving, remember that behind all of it there is just one displacement field and one growing number.
-
-<div style="max-width:1100px;margin:2rem auto;">
+<div style="max-width:1100px;margin:1.6rem auto;">
   <div style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#05060a;">
-    <button id="cw-launch" aria-label="Launch the interactive Cosmic Web Sandbox"
+    <button id="cw-e1" aria-label="Launch the sandbox: early universe, cloud view"
       style="position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;
              background:url('hero-poster.png') center/cover;color:#fff;font:inherit;
              display:flex;align-items:center;justify-content:center;">
-      <span style="background:rgba(0,0,0,.55);padding:.7em 1.2em;border-radius:999px;font-size:1.05rem;">
-        ▶&nbsp; Launch the interactive sandbox
+      <span style="background:rgba(0,0,0,.55);padding:.7em 1.2em;border-radius:999px;font-size:1.0rem;">
+        ▶&nbsp; Launch — the plain, at one-twentieth of today's expansion
       </span>
     </button>
   </div>
-  <p style="text-align:center;font-size:.85em;opacity:.7;margin:.5rem 0 0;">
-    Runs entirely in your browser, no server ·
-    <a href="https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/" target="_blank" rel="noopener">open full screen&nbsp;⤢</a>
-  </p>
 </div>
 <script>
-  document.getElementById('cw-launch').addEventListener('click', function () {
+  document.getElementById('cw-e1').addEventListener('click', function () {
     var f = document.createElement('iframe');
-    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1';
-    f.title = 'Cosmic Web Sandbox';
-    f.loading = 'lazy';
-    f.allow = 'fullscreen';
-    f.allowFullscreen = true;
+    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1&a=0.05&render=volume';
+    f.title = 'Cosmic Web Sandbox — early universe, cloud view';
+    f.loading = 'lazy'; f.allow = 'fullscreen'; f.allowFullscreen = true;
     f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
     this.replaceWith(f);
   });
 </script>
 
-<!-- PULL-QUOTE (screenshot-bait): the last sentence of this paragraph -->
-The cosmic web can look designed, this vast, deliberate-seeming lattice threaded through the dark. It isn't. It's the least imaginative thing gravity could do to a nearly smooth field: pull the dense parts together, in the order the geometry forces. Flat first, then thin, then a point. The universe makes pancakes first, and everything else is patience.
+Nothing enters the box. The existing pattern sharpens. Ridges gather; basins drain. The structure you end with was in the box when you started; you simply could not see it yet.
 
-So go make some. [Grow a universe](https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1&color=web&a=0.05), color it by collapse type, and watch the sheets ignite before the knots. Then find a setting that comes out looking wrong to you, a tilt or an amplitude or a whole cosmology that breaks your intuition, and come tell me what broke. I read every reply, and I'm honestly curious which one gets you.
+{{< figure src="grow-universe.gif" alt="A near-uniform field sharpening into a cosmic web as cosmic time runs forward." caption="Cosmic time running forward, from a ≈ 0.05 (redshift ~19) to today. Nothing enters the box; the relief that was always there rises until you can see it." >}}
+
+## The collapse you pictured is wrong
+
+Now follow your parcel into one of the gathering ridges, because this is where the picture in your head is about to fail.
+
+Here is the picture I carried for years, and the one most people draw: an overdense region contracts toward its center, growing rounder and denser, until it becomes a compact clump. Collapse, in this picture, means falling to a point. It seems too obvious to question — a body of matter falls inward; what else could it do?
+
+Question it anyway. Falling to a point is what a perfectly spherical region would do: contraction at the same rate from every direction at once. And nothing about your parcel's neighborhood is perfectly spherical. It is a patch of a random field — matter piled slightly deeper on one side, a basin grazing it on another. A random patch has no reason to contract equally in every direction. Whatever it does, it will do unevenly.
+
+So the question "where does the matter go?" becomes a sharper one: along which directions does it go first? That question has an exact answer, and the answer is the whole shape of the cosmic web.
+
+## One direction, then two, then three
+
+Stand at your parcel and measure the squeeze. A generic patch of a random field is being compressed at three different rates along three perpendicular directions — a strongest squeeze, a middling one, and a weakest. (You can picture the patch as a slightly flattened ellipsoid if it helps, but the three unequal rates are the load-bearing fact.) The direction with the largest compression reaches collapse first, while the other two are still on their way.
+
+Play it forward. The fastest direction finishes and the patch flattens: collapse along one axis of three. Where a moment ago there was a vague thickening of the plain, there is now a wall — matter drained from two sides onto a surface. Astronomers call these sheets. Zel'dovich, who worked this out in 1970 with little more than the argument you just read, called them by the flatter name the shape deserves.
+
+<!-- PULL-QUOTE (screenshot-bait): the line below -->
+First a pancake. Then a filament. Only later, a knot.
+
+The collapsing does not stop. Within the sheet, the second direction finishes: the wall drains along itself into a ridge of ridges — a filament, collapse along two axes. And where filaments meet, the third and slowest direction finally arrives, and matter falls in from every remaining side to form a node — collapse along all three, the dense knots where clusters of galaxies live. The point-collapse you pictured does eventually happen. It happens last, and only in the rare places where all three directions have finished.
+
+Watch it happen before we name it. The box below opens early again, with every tracer colored by its collapse state. Ignore the bright knots. Watch what appears first.
+
+<div style="max-width:1100px;margin:1.6rem auto;">
+  <div style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#05060a;">
+    <button id="cw-e2" aria-label="Launch the sandbox: collapse-type colors"
+      style="position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;
+             background:url('hero-poster.png') center/cover;color:#fff;font:inherit;
+             display:flex;align-items:center;justify-content:center;">
+      <span style="background:rgba(0,0,0,.55);padding:.7em 1.2em;border-radius:999px;font-size:1.0rem;">
+        ▶&nbsp; Launch — same box, colored by collapse count
+      </span>
+    </button>
+  </div>
+</div>
+<script>
+  document.getElementById('cw-e2').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1&color=web&a=0.05';
+    f.title = 'Cosmic Web Sandbox — collapse-type colors';
+    f.loading = 'lazy'; f.allow = 'fullscreen'; f.allowFullscreen = true;
+    f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
+    this.replaceWith(f);
+  });
+</script>
+
+What you just watched was a count. At every point, tally how many of the three directions have collapsed, and you have named every environment in the cosmic web: zero, a void; one, a sheet; two, a filament; three, a node. In this dynamical classifier, the four web environments correspond to the number of principal directions undergoing collapse — one modest counting argument underneath the entire taxonomy. That is what I find beautiful here. Not four theories for four kinds of structure. One.
+
+{{< figure src="web-type.gif" alt="The growing web colored by collapse type: sheets, then filaments, then nodes lighting up in sequence." caption="The same growth, each tracer colored by how many of its directions have collapsed: voids dark, sheets green, filaments blue, nodes orange. Flat structures light up first. Knots come last." >}}
 
 <details>
-<summary>Code map, for the curious</summary>
+<summary>Technical interlude — the classifier, precisely</summary>
 
-All line numbers refer to the single self-contained <code>index.html</code> of the <a href="https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/">Cosmic Web Sandbox</a>.
-
-<table>
-<thead><tr><th>Piece</th><th>Where</th></tr></thead>
-<tbody>
-<tr><td>Seeded Gaussian white-noise field</td><td><code>mulberry32</code> :282, <code>fillGaussian</code> :291, <code>buildGrid</code> :429</td></tr>
-<tr><td>In-place 3D FFT (real ↔ Fourier)</td><td><code>fftLine</code> :304, <code>fft3d</code> :336</td></tr>
-<tr><td>P(k) shape — Eisenstein–Hu (1998)</td><td><code>makeTransfer</code> :349; <code>makePk</code> :401</td></tr>
-<tr><td>Growth factor D(a), Carroll+92</td><td><code>growth</code> :418</td></tr>
-<tr><td>Zel'dovich displacement Ψ(k)=i k δ/k²</td><td>:454</td></tr>
-<tr><td>Second-order (2LPT) term</td><td>:479</td></tr>
-<tr><td>Growth applied as a single GPU uniform</td><td><code>refreshAmp</code> :854</td></tr>
-<tr><td>Single-stream Jacobian density</td><td>vertex shader :645</td></tr>
-<tr><td>Collapse-type (eigenvalue) classifier</td><td>vertex shader :651</td></tr>
-<tr><td>Volumetric (cloud) render</td><td><code>renderPost</code> / volume path</td></tr>
-<tr><td>Measured P(k) from the box</td><td><code>measurePk</code> :1324</td></tr>
-</tbody>
-</table>
+<p>The three compression rates are the eigenvalues λ₁ ≥ λ₂ ≥ λ₃ of the deformation tensor, the 3×3 symmetric gradient of the displacement field <strong>Ψ</strong> below. A direction counts as collapsed when D(t)·λ crosses a threshold, and the count (0–3) picks the color — a T-web-style dynamical classification, after Forero-Romero et al. (2009): one useful classifier of web environments, not their unique definition. The strict Zel'dovich caustic sits at D·λ = 1, but at that threshold almost no nodes exist by today, so the box uses a gentler one; the ordering is the same either way. The shader solves the cubic characteristic equation in closed form (<code>index.html:651</code> of the sandbox). For careful derivations of the displacement field and its second-order (2LPT) correction, see Donghui Jeong's PhD thesis, <a href="https://repositories.lib.utexas.edu/items/1c8a7013-91cd-4b13-816a-8db317c366ac"><em>Cosmology with high (z &gt; 1) redshift galaxy surveys</em></a> (University of Texas at Austin, 2010).</p>
 
 </details>
+
+## One field and one growing number
+
+Everything so far — the amplification, the three-way collapse, the count — compresses into one line. It is the line the browser universe actually computes, and it deserves to be read slowly.
+
+> **x**(t) = **q** + D(t) · **Ψ**(**q**)
+
+Read it as your parcel's whole story. **q** is where you began on the primordial plain. **Ψ**(**q**) is a fixed arrow attached to that spot — direction and length prescribed once by the initial field, never redrawn. D(t) is the growth factor: a single number, the same number everywhere in the universe, rising as cosmic time passes. Your position now, **x**(t), is your origin plus your arrow times that number. That is the Zel'dovich approximation, and it is the whole dynamics: every parcel slides along its own frozen arrow, and the only thing that ever changes is one number.
+
+This is why the geography was never in doubt. The arrows were fixed at the beginning; time only turns the dial that scales them. And the initial ripples in the matter density — ripples in the sense of a pattern of slight excesses and deficits; nothing rolls through space like surf — came with one more property that matters: their initial amplitude determines how much relief gravity has to amplify. In the box below, that amplitude is the dial marked **σ₈**. Sweep it with the realization held fixed and watch what changes and what refuses to: collapse runs further or less far, but the ridges stand exactly where they stood. The primordial field chose the geography. Amplitude sets how far collapse has progressed.
+
+<div style="max-width:1100px;margin:1.6rem auto;">
+  <div style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#05060a;">
+    <button id="cw-e3" aria-label="Launch the sandbox: full dials, sigma-8 ready to sweep"
+      style="position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;
+             background:url('hero-poster.png') center/cover;color:#fff;font:inherit;
+             display:flex;align-items:center;justify-content:center;">
+      <span style="background:rgba(0,0,0,.55);padding:.7em 1.2em;border-radius:999px;font-size:1.0rem;">
+        ▶&nbsp; Launch — full dials, σ₈ ready to sweep
+      </span>
+    </button>
+  </div>
+</div>
+<script>
+  document.getElementById('cw-e3').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1';
+    f.title = 'Cosmic Web Sandbox — full controls';
+    f.loading = 'lazy'; f.allow = 'fullscreen'; f.allowFullscreen = true;
+    f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
+    this.replaceWith(f);
+  });
+</script>
+
+{{< figure src="sigma8-sweep.gif" alt="The same box sharpening from a smooth haze to dense knots as the fluctuation amplitude increases." caption="Sweeping σ₈, the amplitude of the initial ripples, with the realization held fixed. Collapse runs further or less far; the ridges stand where they stood. Amplitude sets how far, not where." >}}
+
+## Where the vision stops being exact
+
+Honesty about the tool. The Zel'dovich approximation is exact about the question this post asked — which directions collapse, and in what order — and increasingly wrong about what happens deep inside the structures afterwards. Once streams of matter pass through one another — shell crossing, in the trade — real gravity would pull them back; frozen arrows let them keep going. So the sheets and filaments here are real and correctly ordered, while the exact densities inside the brightest knots are not numbers I would put on a plot. (The box offers an optional second-order correction, 2LPT, that sharpens the knots toward the full answer. And one implementation note, since someone always asks: it runs on a fixed random seed, so it is reproducible — every reload is the same universe, and every dial changes the physics rather than the luck of the draw.)
+
+How a laptop solves for the arrows at all — why the calculation collapses to a handful of Fourier transforms, and where the browser gets a power spectrum — is its own story, for a companion post: *How to fit a universe in a browser*.<!-- TODO: link companion post when published --> The full sandbox, with every control this post kept out of your way, is here: [open the Cosmic Web Sandbox&nbsp;⤢](https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/).
+
+<details>
+<summary>Technical note — dots, clouds, and where the brightness comes from</summary>
+
+<p>Because the dots are tracers of a continuous field, the same physics renders two honest ways: draw the tracers themselves as points, or bin them back into the density they sample and ray-march it as a translucent volume — the cloud view the first encounter opened in.</p>
+
+{{< figure src="splats-vs-clouds.jpg" alt="The same cosmic web rendered as sparse glowing points on the left and as a continuous ray-marched volume on the right." caption="The identical box, same seed and same instant — tracers as points on the left, the continuous density they sample on the right. The points sample the cloud; the cloud is what the points are sampling." >}}
+
+<p>Brightness carries a single-stream density from the Jacobian of the displacement, 1 + δ = 1 / det(<strong>I</strong> + D·<strong>A</strong>) — one over how much a fluid element has been stretched (<code>index.html:645</code>). Where that determinant crosses zero, streams pile up in a caustic and the density formally diverges: that is the bright edge lighting a collapsing sheet.</p>
+
+</details>
+
+## The old pattern, made visible
+
+Go back to the plain one last time — the parcel, the shallow ridge no eye could find. Every structure in tonight's sky was already there: the wall of galaxies as a slight extra depth of matter, the void as a grazing shallowness, the great cluster as the crossing of three faint creases. Nothing designed the web, and nothing needed to. Gravity took the buried map and raised its contrast, one direction at a time, until the map became legible. Flat first, then thin, then a point.
+
+<!-- PULL-QUOTE (screenshot-bait): the closing line -->
+The universe makes pancakes first, and everything else is patience.
