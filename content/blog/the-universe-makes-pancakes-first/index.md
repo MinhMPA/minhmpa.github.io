@@ -4,9 +4,11 @@ date: 2026-07-10
 summary: The early universe was a plain with almost no relief; the CMB's part-in-a-hundred-thousand temperature ripples carry its imprint. Gravity raised that relief into the cosmic web — in a stranger order than almost anyone pictures. With a browser-tab universe to watch it happen.
 ---
 
-You are not a galaxy. Galaxies do not exist yet. You are a parcel of matter, thirteen-odd billion years ago, somewhere in a universe that is very nearly featureless.
+{{< figure src="hero_cover.png" alt="Filaments of matter draining across a dark plain into bright knots of light." >}}
 
-Nearly. We have an image of that era: the cosmic microwave background, light released when the universe was about four hundred thousand years old. Its temperature varies across the sky by roughly one part in a hundred thousand, and those variations carry the imprint of small unevennesses in the matter — the only relief the young universe had. If the matter field were a landscape, it would be a plain running to every horizon, its ridges and basins so shallow no eye could find them. There are no landmarks. There is nowhere in particular to stand.
+Imagine a universe with no galaxy. Galaxies do not exist yet. It was our universe, thirteen-odd billion years ago: just tiny clumps of matter scattered across a universe that is very nearly featureless.
+
+Nearly. We have an image of that era from the cosmic microwave background---light released when the universe was about four hundred thousand years old. Its temperature varies across the sky by roughly one part in a hundred thousand, and those variations carry the imprint of small unevennesses in the matter — the only relief the young universe had. If the matter field were a landscape, it would be a plain running to every horizon, its ridges and basins so shallow no eye could find them. There are no landmarks. There is nowhere in particular to stand.
 
 Today the same universe holds the cosmic web: filaments of galaxies strung across hundreds of millions of light-years, dense knots at their crossings, and voids between them so empty they are the emptiest places there are. One of the largest patterns in nature, standing where the plain used to be.
 
