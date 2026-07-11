@@ -10,6 +10,8 @@ Imagine a universe with no galaxy. Galaxies do not exist yet. It was our univers
 
 Nearly. We have an image of that era from the cosmic microwave background---light released when the universe was about four hundred thousand years old. Its temperature varies across the sky by roughly one part in a hundred thousand, and those variations carry the imprint of small unevennesses in the matter — the only relief the young universe had. If the matter field were a landscape, it would be a plain running to every horizon, its ridges and basins so shallow no eye could find them. There are no landmarks. There is nowhere in particular to stand.
 
+{{< figure src="planck-cmb-2018.webp" alt="The Planck 2018 all-sky map of the cosmic microwave background: a mottled ellipse of faint warm and cool spots." caption="The whole sky, four hundred thousand years in: the Planck 2018 map of the cosmic microwave background. Warmer and cooler spots differ by about one part in a hundred thousand — the buried relief everything below grows from. Credit: ESA/Planck Collaboration. To feel how the cosmological dials reshape this map, try the [interactive Planck simulator](https://chrisnorth.github.io/planckapps/Simulator/)." >}}
+
 Today the same universe holds the cosmic web: filaments of galaxies strung across hundreds of millions of light-years, dense knots at their crossings, and voids between them so empty they are the emptiest places there are. One of the largest patterns in nature, standing where the plain used to be.
 
 This post is about how you get from one to the other. The answer is not that something drew the web. The initial field chooses the geography; gravity makes that geography visible. And the way it does so — the specific order it works in — is the part almost everyone pictures wrong. I model structure formation for a living, and I pictured it wrong for years.
@@ -31,7 +33,7 @@ In physical terms, the density contrast grows.
 
 You can watch this happen. Below is a small universe — 250 megaparsecs of one, computed live in your browser. It opens near the beginning, at one-twentieth of today's cosmic expansion, rendered as a translucent volume: a pale plain, faintly creased. (The dots you will meet later are tracers of a continuous field, not miniature pieces of cosmic substance.)
 
-Before touching anything, pick one region a shade paler than the rest and commit to a prediction about it. Then, in the control panel, scroll to **Cosmic time** and press **▶ Grow the universe**, holding your eye where you left it.
+Before touching anything, pick one region a shade paler than the rest and commit to a prediction about it. Then press **Controls** (top right) and, under **Cosmic time**, press **▶ Grow the universe** — holding your eye where you left it.
 
 <div style="max-width:1100px;margin:1.6rem auto;">
   <div style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#05060a;">
@@ -48,7 +50,7 @@ Before touching anything, pick one region a shade paler than the rest and commit
 <script>
   document.getElementById('cw-e1').addEventListener('click', function () {
     var f = document.createElement('iframe');
-    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1&a=0.05&render=volume';
+    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1&a=0.05&render=volume&v=2';
     f.title = 'Cosmic Web Sandbox — early universe, cloud view';
     f.loading = 'lazy'; f.allow = 'fullscreen'; f.allowFullscreen = true;
     f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
@@ -98,7 +100,7 @@ Watch it happen before we name it. The box below opens early again, with every t
 <script>
   document.getElementById('cw-e2').addEventListener('click', function () {
     var f = document.createElement('iframe');
-    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1&color=web&a=0.05';
+    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1&color=web&a=0.05&v=2';
     f.title = 'Cosmic Web Sandbox — collapse-type colors';
     f.loading = 'lazy'; f.allow = 'fullscreen'; f.allowFullscreen = true;
     f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
@@ -125,7 +127,7 @@ Everything so far — the amplification, the three-way collapse, the count — c
 
 Read it as your parcel's whole story. **q** is where you began on the primordial plain. **Ψ**(**q**) is a fixed arrow attached to that spot — direction and length prescribed once by the initial field, never redrawn. D(t) is the growth factor: a single number, the same number everywhere in the universe, rising as cosmic time passes. Your position now, **x**(t), is your origin plus your arrow times that number. That is the Zel'dovich approximation, and it is the whole dynamics: every parcel slides along its own frozen arrow, and the only thing that ever changes is one number.
 
-This is why the geography was never in doubt. The arrows were fixed at the beginning; time only turns the dial that scales them. And the initial ripples in the matter density — ripples in the sense of a pattern of slight excesses and deficits; nothing rolls through space like surf — came with one more property that matters: their initial amplitude determines how much relief gravity has to amplify. In the box below, that amplitude is the dial marked **σ₈**. Sweep it with the realization held fixed and watch what changes and what refuses to: collapse runs further or less far, but the ridges stand exactly where they stood. The primordial field chose the geography. Amplitude sets how far collapse has progressed.
+This is why the geography was never in doubt. The arrows were fixed at the beginning; time only turns the dial that scales them. And the initial ripples in the matter density — ripples in the sense of a pattern of slight excesses and deficits; nothing rolls through space like surf — came with one more property that matters: their initial amplitude determines how much relief gravity has to amplify. In the box below, open **Controls**; the amplitude is the dial marked **σ₈**. Sweep it with the realization held fixed and watch what changes and what refuses to: collapse runs further or less far, but the ridges stand exactly where they stood. The primordial field chose the geography. Amplitude sets how far collapse has progressed.
 
 <div style="max-width:1100px;margin:1.6rem auto;">
   <div style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#05060a;">
@@ -142,7 +144,7 @@ This is why the geography was never in doubt. The arrows were fixed at the begin
 <script>
   document.getElementById('cw-e3').addEventListener('click', function () {
     var f = document.createElement('iframe');
-    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1';
+    f.src = 'https://minhmpa.github.io/lss-lab/cosmic-web-sandbox/?embed=1&v=2';
     f.title = 'Cosmic Web Sandbox — full controls';
     f.loading = 'lazy'; f.allow = 'fullscreen'; f.allowFullscreen = true;
     f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
