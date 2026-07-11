@@ -14,7 +14,7 @@ Nearly. We have an image of that era from the cosmic microwave background---ligh
 
 Today the same universe holds the cosmic web: filaments of galaxies strung across hundreds of millions of light-years, dense knots at their crossings, and voids between them so empty they are the emptiest places there are. One of the largest patterns in nature, standing where the plain used to be.
 
-This post is about how you get from one to the other. The answer is not that something drew the web. The initial field chooses the geography; gravity makes that geography visible. And the way it does so — the specific order it works in — is the part almost everyone pictures wrong. I model structure formation for a living, and I pictured it wrong for years.
+This post is about how you get from one to the other. The answer is not that something drew the web. On the largest scales the chief sculptor is gravity: the initial field chooses the geography, and gravity makes that geography visible. And the way it does so — the specific order it works in — is the part almost everyone pictures wrong. I model structure formation for a living, and I pictured it wrong for years.
 
 ## The smallest advantage
 
@@ -108,7 +108,7 @@ Watch it happen before we name it. The box below opens early again, with every t
   });
 </script>
 
-What you just watched was a count. At every point, tally how many of the three directions have collapsed, and you have named every environment in the cosmic web: zero, a void; one, a sheet; two, a filament; three, a node. In this dynamical classifier, the four web environments correspond to the number of principal directions undergoing collapse — one modest counting argument underneath the entire taxonomy. That is what I find beautiful here. Not four theories for four kinds of structure. One.
+What you just watched was a count. At every point, tally how many of the three directions have collapsed, and you have named every environment in the cosmic web: zero, a void; one, a sheet; two, a filament; three, a node. In this dynamical classifier, the four web environments correspond to the number of principal directions undergoing collapse — one modest counting argument underneath this entire taxonomy. That is what I find beautiful here. Not four theories for four kinds of structure: one approximation, one count.
 
 {{< figure src="web-type.gif" alt="The growing web colored by collapse type: sheets, then filaments, then nodes lighting up in sequence." caption="The same growth, each tracer colored by how many of its directions have collapsed: voids dark, sheets green, filaments blue, nodes orange. Flat structures light up first. Knots come last." >}}
 
@@ -127,7 +127,7 @@ Everything so far — the amplification, the three-way collapse, the count — c
 
 Read it as your parcel's whole story. **q** is where you began on the primordial plain. **Ψ**(**q**) is a fixed arrow attached to that spot — direction and length prescribed once by the initial field, never redrawn. D(t) is the growth factor: a single number, the same number everywhere in the universe, rising as cosmic time passes. Your position now, **x**(t), is your origin plus your arrow times that number. That is the Zel'dovich approximation, and it is the whole dynamics: every parcel slides along its own frozen arrow, and the only thing that ever changes is one number.
 
-This is why the geography was never in doubt. The arrows were fixed at the beginning; time only turns the dial that scales them. And the initial ripples in the matter density — ripples in the sense of a pattern of slight excesses and deficits; nothing rolls through space like surf — came with one more property that matters: their initial amplitude determines how much relief gravity has to amplify. In the box below, open **Controls**; the amplitude is the dial marked **σ₈**. Sweep it with the realization held fixed and watch what changes and what refuses to: collapse runs further or less far, but the ridges stand exactly where they stood. The primordial field chose the geography. Amplitude sets how far collapse has progressed.
+This is why the geography was never in doubt. The arrows were fixed at the beginning; time only turns the dial that scales them. And the initial ripples in the matter density — ripples in the sense of a pattern of slight excesses and deficits; nothing rolls through space like surf — came with one more property that matters: their initial amplitude determines how much relief gravity has to amplify. In the box below, open **Controls**; the amplitude is the dial marked **σ₈**. Sweep it with the realization held fixed and watch what changes and what refuses to: collapse runs further or less far, but the ridges stand exactly where they stood. The primordial field chose the geography. Amplitude mainly sets how far collapse has progressed.
 
 <div style="max-width:1100px;margin:1.6rem auto;">
   <div style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#05060a;">
@@ -152,7 +152,7 @@ This is why the geography was never in doubt. The arrows were fixed at the begin
   });
 </script>
 
-{{< figure src="sigma8-sweep.gif" alt="The same box sharpening from a smooth haze to dense knots as the fluctuation amplitude increases." caption="Sweeping σ₈, the amplitude of the initial ripples, with the realization held fixed. Collapse runs further or less far; the ridges stand where they stood. Amplitude sets how far, not where." >}}
+{{< figure src="sigma8-sweep.gif" alt="The same box sharpening from a smooth haze to dense knots as the fluctuation amplitude increases." caption="Sweeping σ₈, the amplitude of the initial ripples, with the realization held fixed. Collapse runs further or less far; the ridges stand where they stood. Amplitude chiefly sets how far, not where." >}}
 
 ## Where the vision stops being exact
 
