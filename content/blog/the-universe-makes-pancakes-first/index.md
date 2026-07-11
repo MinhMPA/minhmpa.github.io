@@ -14,7 +14,7 @@ Nearly. We have an image of that era from the cosmic microwave background---ligh
 
 Today the same universe holds the cosmic web: filaments of galaxies strung across hundreds of millions of light-years, dense knots at their crossings, and voids between them so empty they are the emptiest places there are. One of the largest patterns in nature, standing where the plain used to be.
 
-This post is about how you get from one to the other. The answer is not that something drew the web. On the largest scales the chief sculptor is gravity: the initial field chooses the geography, and gravity makes that geography visible. And the way it does so — the specific order it works in — is the part almost everyone pictures wrong. I model structure formation for a living, and I pictured it wrong for years.
+This post is about how you get from one to the other. The answer is not that something drew the web. On the largest scales, gravity does the work: the initial field chooses the geography, and gravity makes that geography visible. And the way it does so — the specific order it works in — is the part almost everyone pictures wrong. I model structure formation for a living, and I pictured it wrong for years.
 
 ## The smallest advantage
 
@@ -152,7 +152,7 @@ This is why the geography was never in doubt. The arrows were fixed at the begin
   });
 </script>
 
-{{< figure src="sigma8-sweep.gif" alt="The same box sharpening from a smooth haze to dense knots as the fluctuation amplitude increases." caption="Sweeping σ₈, the amplitude of the initial ripples, with the realization held fixed. Collapse runs further or less far; the ridges stand where they stood. Amplitude chiefly sets how far, not where." >}}
+{{< figure src="sigma8-sweep.gif" alt="The same box sharpening from a smooth haze to dense knots as the fluctuation amplitude increases." caption="Sweeping σ₈, the amplitude of the initial ripples, with the realization held fixed. Collapse runs further or less far; the ridges stand where they stood. Amplitude mostly sets how far, not where." >}}
 
 ## Where the vision stops being exact
 
