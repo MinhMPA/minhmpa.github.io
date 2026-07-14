@@ -16,6 +16,9 @@ main:
   - name: Teach
     url: teach/
     weight: 40
+  - name: Visualization
+    url: https://minhmpa.github.io/lss-lab/
+    weight: 45
   - name: Outreach
     url: outreach/
     weight: 50
