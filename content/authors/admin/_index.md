@@ -69,10 +69,10 @@ I am a cosmologist working at the interface of nonlinear structure formation, st
 
 My work includes the first 4-sigma evidence for a late-time suppression in the growth of large-scale structure, highlighted in [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001) and covered by [Scientific American](https://www.scientificamerican.com/article/a-possible-crisis-in-the-cosmos-could-lead-to-a-new-understanding-of-the-universe/) and [New Scientist](https://www.newscientist.com/article/2391414-the-universes-evolution-seems-to-be-slowing-and-we-dont-know-why/). I have also developed field-level Bayesian inference methods for galaxy surveys, a research direction that led to a second [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.221006) paper and the [2024 Buchalter Cosmology Prize](https://www.buchaltercosmologyprize.org/).
 
-I am currently a Kavli IPMU Fellow at the Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo. From July 2026, I also serve as a faculty and group leader of the [astrophysics and cosmology group](https://ifirse.icise.vn/astrophysics-cosmology-group.html) at IFIRSE, ICISE. Before joining IPMU, I was a Leinweber Fellow at the University of Michigan and completed my PhD at the Max Planck Institute for Astrophysics and LMU Munich. My [CV](https://minhmpa.github.io/academic-cv/), research highlights, talks and travel, teaching, outreach, and contact information are available through the navigation tabs above.
+I am currently a Postdoctoral Fellow at the Kavli IPMU, University of Tokyo. From July 2026, I also serve as a faculty and group leader of the [astrophysics and cosmology group](https://ifirse.icise.vn/astrophysics-cosmology-group.html) at IFIRSE, ICISE. Before joining KIPMU, I was a Leinweber Fellow at the LCTP (now LITP), University of Michigan and completed my PhD at the Max Planck Institute for Astrophysics and LMU Munich. My [resume](https://minhmpa.github.io/academic-cv/), research highlights, talks and travel, teaching, outreach, and contact information are available through the navigation tabs above.
 
 ## Research Program
 
-- **Inference:** field-level Bayesian inference, forward modeling, EFT-informed likelihoods, and simulation-based validation.
-- **Physics:** growth of structure, gravity, dark energy, primordial physics, and consistency tests of ΛCDM.
-- **Surveys:** galaxy clustering, weak lensing, CMB/LSS cross-correlations, and current or future surveys including PFS, DESI, Roman, Euclid, HSC, Rubin, and CMB-S4.
+- **Inference:** field-level inference, EFT-based and simulation-based inference.
+- **Physics:** growth of structure, gravity, dark energy, primordial physics.
+- **Surveys:** galaxy clustering, weak lensing, CMB/LSS cross-correlations, and current or future surveys including DESI, PFS, Vera C. Rubin LSST.
