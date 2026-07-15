@@ -12,9 +12,9 @@ show_date_updated: false
 Recent and upcoming talks and trips on my travel schedule.
 
 - [VSOA10: Cosmology](https://www.icisequynhon.com/conferences/2026/VSOA10/program.html), ICISE Quy Nhon, Viet Nam, July to August 2026.
-- [YITP International Molecule-type Workshop and APCTP Global Cooperation Workshop, **Theoretical challenges towards non-linearities from the early universe**](https://drive.google.com/file/d/1wUD2GyyKjBkYW5w3N5etGHqj4SF-ohjO/), YITP, Kyoto, Japan, July 2026.
-- [Croucher Advanced Study Institute, **Primordial Non-Gaussianities**](https://projects.croucher.org.hk/advanced-study-institutes/primordial-non-gaussianities/programme), CityUHK, Hong Kong, June 2026.
-- [LeCosPA seminar](https://www.lecospa.ntu.edu.tw/talks), LeCosPA, NTU, Taipei, Taiwan, May 2026.
+- [YITP International Molecule-type Workshop and APCTP Global Cooperation Workshop, **Theoretical challenges towards non-linearities from the early universe**](https://drive.google.com/file/d/1wUD2GyyKjBkYW5w3N5etGHqj4SF-ohjO/), YITP, Kyoto, Japan, July 2026. [Slides](/slides/YITP-PNG-2026/MinhNguyen_YITP-PNG-boundaries_2026July.html)
+- [Croucher Advanced Study Institute, **Primordial Non-Gaussianities**](https://projects.croucher.org.hk/advanced-study-institutes/primordial-non-gaussianities/programme), CityUHK, Hong Kong, June 2026. [Slides](/slides/MinhNguyen_AIS-PNG_CityUHK_2026June16.pdf)
+- [LeCosPA seminar](https://www.lecospa.ntu.edu.tw/talks), LeCosPA, NTU, Taipei, Taiwan, June 2026. [Slides](/slides/LeCosPa_seminar_2026June1.pdf)
 - [Particles, Gravitation and the Universe: from Quantum Mechanics to Quantum Gravity](https://hoivl-nlc-vn.github.io/pgu2025.html), IOP, VAST, Ha Noi, Viet Nam, November 2025. [Slides](https://ifirse.icise.vn/nugroup/meeting/uploads/2025/11/pgu3_69290367d95639.56643167_PGU2025_IOP.pdf)
 - **[ASIAA Colloquium](https://www.asiaa.sinica.edu.tw/activity/colloquium.php)**, ASIAA/NTU, Taipei, Taiwan, February 2025. [Recording](https://youtu.be/0fDK0Zgzot0?si=-bJSrUl8tGN-OJAn)
 - [**Theory and Data Analysis Challenges for Cosmological Large-Scale Structure Observations**](https://sites.google.com/kyoto-u.ac.jp/yitp-t-24-05/home), YITP, Kyoto, Japan, November 2024. [Slides](https://drive.google.com/file/d/1jv74155GLxoVUjkwyAIAaAZPKakZBIzs/view?usp=sharing)
