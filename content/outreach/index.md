@@ -48,5 +48,5 @@ Here is the Cosmology from Home 2023 session, including the [Reddit thread](http
 This is similar to Skype a Scientist, but managed by the American Physical Society. If you are in the United States, consider signing up [here](https://www.aps.org/programs/outreach/physiciststogo.cfm).
 
 <p align="center">
-  <img src="/images/cosmic_structure_growth_lineart.png" alt="Cosmic structure growth line art" width="100%" />
+  <img src="/images/IMG_9543.jpg" alt="Minh Nguyen explaining baryon acoustic oscillations at a public science event" width="100%" />
 </p>
