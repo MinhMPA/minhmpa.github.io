@@ -10,6 +10,7 @@ sections:
   - block: resume-biography-3
     content:
       username: admin
+      avatar: /images/blog_profile.png
       text: ""
       button:
         text: Download CV
