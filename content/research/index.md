@@ -107,5 +107,5 @@ I have also worked on measuring and modeling galaxy-shape correlations with the 
 - [MPA research highlight](https://www.mpa-garching.mpg.de/1052846/hl202204?c=27981)
 
 <p align="center">
-  <img src="/images/research_profile.png" alt="Research profile photo" width="100%" />
+  <img src="/images/Aspen_beyond_2pt_workshop.jpg" alt="Aspen workshop photo" width="100%" />
 </p>

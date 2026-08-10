@@ -41,5 +41,5 @@ Recent and upcoming talks and trips on my travel schedule.
 - [Berkeley Cosmology Group Seminar](https://cosmology.lbl.gov/bcg_seminars_21_22.html), BCCP, Berkeley, April 2022.
 
 <p align="center">
-  <img src="/images/Aspen_beyond_2pt_workshop.jpg" alt="Aspen workshop photo" width="100%" />
+  <img src="/images/IMG_9501.jpg" alt="Minh Nguyen speaking at an astronomy event" width="100%" />
 </p>
