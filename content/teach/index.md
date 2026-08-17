@@ -19,7 +19,19 @@ My students have been recognized by awards such as the 2024 Origins PhD Award fo
 
 ## Teaching
 
-I am continuously refining my teaching approach to provide students an inclusive and active learning experience. I taught an astronomy and cosmology course for motivated high school students at Michigan Math and Science Scholars, ["Climbing the Distance Ladder to the Big Bang: How Astronomers Survey the Universe"](https://sites.lsa.umich.edu/mmss/astronomy/).
+I am continuously refining my teaching approach to provide students an inclusive and active learning experience.
+
+### VSOA10: Cosmology
+
+At [VSOA10: Cosmology](https://www.icisequynhon.com/conferences/2026/VSOA10/program.html), held at ICISE in Quy Nhon, Viet Nam, from July 27 to August 1, 2026, I taught a three-part lecture series on large-scale structure and led the corresponding hands-on session.
+
+<p align="center">
+  <img src="/images/teach_profile.jpg" alt="Minh Nguyen teaching at VSOA10: Cosmology at ICISE" width="100%" />
+</p>
+
+### Michigan Math and Science Scholars (MMSS)
+
+I taught an astronomy and cosmology course for motivated high school students at Michigan Math and Science Scholars, ["Climbing the Distance Ladder to the Big Bang: How Astronomers Survey the Universe"](https://sites.lsa.umich.edu/mmss/astronomy/).
 
 The course encouraged students to climb the ladder of higher education, especially in astronomy, astrophysics, and cosmology, and it received overwhelmingly positive responses.
 
