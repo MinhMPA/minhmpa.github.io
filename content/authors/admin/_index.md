@@ -5,11 +5,13 @@ first_name: Minh
 last_name: Nguyen
 superuser: true
 highlight_name: true
-role: Field-level inference for fundamental physics with galaxy surveys
+role: Cosmologist
 avatar_alt: Portrait of Minh Nguyen
 organizations:
-  - name: Kavli Institute for the Physics and Mathematics of the Universe, University of Tokyo
+  - name: Kavli IPMU Fellow, University of Tokyo
     url: https://www.ipmu.jp/en
+  - name: Faculty and Group Leader, IFIRSE at ICISE
+    url: https://ifirse.icise.vn/astrophysics-cosmology-group.html
 profiles:
   - icon: at-symbol
     url: 'mailto:nhat.minh.nguyen@ipmu.jp'
@@ -65,14 +67,8 @@ work:
 
 ## About Me
 
-I am a cosmologist working at the interface of nonlinear structure formation, statistical inference, and galaxy surveys. My research develops forward-modeling and field-level Bayesian inference methods to extract maximal information from cosmic structure and use it to test growth, gravity, dark energy, and primordial physics.
+I am a cosmologist developing forward-modeling and field-level Bayesian inference methods for galaxy surveys. I use them to extract more information from cosmic structure and test gravity, dark energy, and primordial physics.
 
-My work includes the first 4-sigma evidence for a late-time suppression in the growth of large-scale structure, highlighted in [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001) and covered by [Scientific American](https://www.scientificamerican.com/article/a-possible-crisis-in-the-cosmos-could-lead-to-a-new-understanding-of-the-universe/) and [New Scientist](https://www.newscientist.com/article/2391414-the-universes-evolution-seems-to-be-slowing-and-we-dont-know-why/). I have also developed field-level Bayesian inference methods for galaxy surveys, a research direction that led to a second [Physical Review Letters](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.221006) paper and the [2024 Buchalter Cosmology Prize](https://www.buchaltercosmologyprize.org/).
+My work includes the first [4-sigma evidence for suppressed late-time growth of large-scale structure](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.111001) and [field-level inference methods](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.221006) that extract substantially more cosmological information than standard analyses. These results appeared in two *Physical Review Letters* papers; the suppressed-growth result received coverage in [*Scientific American*](https://www.scientificamerican.com/article/a-possible-crisis-in-the-cosmos-could-lead-to-a-new-understanding-of-the-universe/) and [*New Scientist*](https://www.newscientist.com/article/2391414-the-universes-evolution-seems-to-be-slowing-and-we-dont-know-why/), while the field-level inference work was recognized with the [2024 Buchalter Cosmology Prize](https://www.buchaltercosmologyprize.org/).
 
-I am currently a Postdoctoral Fellow at the Kavli IPMU, University of Tokyo. From July 2026, I also serve as a faculty and group leader of the [astrophysics and cosmology group](https://ifirse.icise.vn/astrophysics-cosmology-group.html) at IFIRSE, ICISE. Before joining KIPMU, I was a Leinweber Fellow at the LCTP (now LITP), University of Michigan and completed my PhD at the Max Planck Institute for Astrophysics and LMU Munich. My [resume](https://minhmpa.github.io/academic-cv/), research highlights, talks and travel, teaching, outreach, and contact information are available through the navigation tabs.
-
-## Research Program
-
-- **Inference:** field-level inference, EFT-based and simulation-based inference.
-- **Physics:** growth of structure, gravity, dark energy, primordial physics.
-- **Surveys:** galaxy clustering, weak lensing, CMB/LSS cross-correlations, and current or future surveys including DESI, PFS, Vera C. Rubin LSST.
+I welcome inquiries from prospective students and postdocs, and from researchers interested in collaboration.
