@@ -153,3 +153,68 @@ def test_author_metadata_and_profile_elements_are_preserved(
 
     assert "/ˈmiːn ˈŋwɪn/" in homepage.visible_text
     assert SOCIAL_URLS <= homepage.hrefs
+
+
+def test_homepage_actions_and_target_behavior(homepage: ParsedHomePage) -> None:
+    expected_actions = {
+        "Research": ("/research/", False),
+        "Publications": (
+            "https://scholar.google.com/citations?hl=en&user=Wfr8DzAAAAAJ",
+            True,
+        ),
+        "Download CV": ("/cv/Nhat-Minh-Nguyen-academic-cv.pdf", True),
+        "Contact": ("/contact/", False),
+    }
+    action_links = {
+        str(link["text"]): link
+        for link in homepage.links
+        if "homepage-action"
+        in str(link["attrs"].get("class", "")).split()
+    }
+
+    assert set(action_links) == set(expected_actions)
+    assert "homepage-actions" in homepage.classes
+
+    for label, (expected_href, opens_new_tab) in expected_actions.items():
+        attrs = action_links[label]["attrs"]
+        assert attrs["href"] == expected_href
+        if opens_new_tab:
+            assert attrs["target"] == "_blank"
+            assert "noopener" in str(attrs["rel"]).split()
+        else:
+            assert "target" not in attrs
+            assert "rel" not in attrs
+
+
+def test_homepage_hides_profile_detail_panels(homepage: ParsedHomePage) -> None:
+    assert "Interests" not in homepage.visible_text
+    assert "Education" not in homepage.visible_text
+    assert "homepage-profile-details" not in homepage.classes
+
+    author_source = AUTHOR_SOURCE.read_text(encoding="utf-8")
+    assert "\ninterests:\n" in author_source
+    assert "\neducation:\n" in author_source
+
+
+def test_homepage_keeps_visual_configuration_and_legacy_button_support() -> None:
+    homepage_source = (ROOT / "content" / "_index.md").read_text(
+        encoding="utf-8"
+    )
+    partial_source = (
+        ROOT / "layouts" / "partials" / "blox" / "resume-biography-3.html"
+    ).read_text(encoding="utf-8")
+
+    for setting in (
+        'spacing: "5rem"',
+        "avatar: /images/blog_profile.png",
+        "css_class: dark",
+        "color: black",
+        "filename: cosmic-surprise.png",
+        "brightness: 0.55",
+        "size: cover",
+        "position: center",
+        "parallax: false",
+    ):
+        assert setting in homepage_source
+
+    assert "{{ with $block.content.button }}" in partial_source
