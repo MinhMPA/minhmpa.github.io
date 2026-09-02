@@ -1,0 +1,29 @@
+{
+  "hits": {
+    "hits": [
+      {
+        "id": "1234567",
+        "metadata": {
+          "titles": [{"title": "A field-level inference test"}],
+          "authors": [{"full_name": "Nhat-Minh Nguyen"}, {"full_name": "Fabian Schmidt"}],
+          "earliest_date": "2024-03-05",
+          "arxiv_eprints": [{"value": "2403.03220"}],
+          "dois": [{"value": "10.1103/PhysRevLett.133.221006"}],
+          "citation_count": 20
+        }
+      },
+      {
+        "id": "1234568",
+        "metadata": {
+          "titles": [{"title": "A precision cosmology result"}],
+          "authors": [{"full_name": "Nhat-Minh Nguyen"}, {"full_name": "Collaborator"}],
+          "earliest_date": "2023-02-03",
+          "arxiv_eprints": [{"value": "2302.01331"}],
+          "dois": [{"value": "10.1103/PhysRevLett.131.111001"}],
+          "citation_count": 10
+        }
+      }
+    ]
+  },
+  "links": {"next": "https://example.test/page-2"}
+}
