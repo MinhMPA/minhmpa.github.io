@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "hits": [
+      {
+        "id": "1234569",
+        "metadata": {
+          "titles": [{"title": "A 100% test of growth & bias"}],
+          "authors": [{"full_name": "Nhat-Minh Nguyen"}],
+          "earliest_date": "2025-01-15"
+        }
+      }
+    ]
+  },
+  "links": {}
+}
