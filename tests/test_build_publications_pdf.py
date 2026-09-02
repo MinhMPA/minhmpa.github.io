@@ -54,6 +54,24 @@ def test_normalize_orders_newest_first_and_adds_annotations() -> None:
     assert by_doi["10.1103/physrevlett.133.221006"].recognition == "Buchalter Cosmology Prize 2024"
 
 
+def test_normalize_orders_equal_dates_by_numeric_record_id_descending() -> None:
+    hits = [
+        {
+            "id": record_id,
+            "metadata": {
+                "titles": [{"title": f"Publication {record_id}"}],
+                "earliest_date": "2024-01-01",
+                "authors": [],
+            },
+        }
+        for record_id in ("9", "11", "10")
+    ]
+
+    publications = bpp.normalize_publications(hits)
+
+    assert [item.record_id for item in publications] == ["11", "10", "9"]
+
+
 def test_compute_metrics_uses_all_records_and_zero_fallback() -> None:
     hits = (
         load_fixture("inspire_literature_page_1.json")["hits"]["hits"]
@@ -61,6 +79,14 @@ def test_compute_metrics_uses_all_records_and_zero_fallback() -> None:
     )
     metrics = bpp.compute_metrics(bpp.normalize_publications(hits))
     assert metrics == bpp.Metrics(publications=3, citations=30, h_index=2)
+
+
+@pytest.mark.parametrize(
+    ("count", "expected"),
+    [(0, "0 citations"), (1, "1 citation"), (22, "22 citations")],
+)
+def test_citation_label_uses_singular_only_for_one(count: int, expected: str) -> None:
+    assert bpp.citation_label(count) == expected
 
 
 def test_latex_escape_handles_reserved_characters() -> None:
