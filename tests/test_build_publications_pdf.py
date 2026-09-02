@@ -87,3 +87,47 @@ def test_render_latex_contains_summary_links_fallback_and_recognition() -> None:
     assert "arXiv:2403.03220" in source
     assert "INSPIRE record" in source
     assert "Generated from INSPIRE HEP on 2026-09-02" in source
+
+
+def fixture_fetcher(url: str) -> dict:
+    if url.endswith("/authors/1986925"):
+        return load_fixture("inspire_author.json")
+    if "page-2" in url:
+        return load_fixture("inspire_literature_page_2.json")
+    return load_fixture("inspire_literature_page_1.json")
+
+
+def test_generate_publications_pdf_atomically_publishes_result(tmp_path: Path) -> None:
+    output = tmp_path / "publications.pdf"
+
+    def fake_compiler(source: str, build_dir: Path) -> Path:
+        assert "3 publications" in source
+        compiled = build_dir / "publications.pdf"
+        compiled.write_bytes(b"%PDF-1.7\nvalid")
+        return compiled
+
+    metrics = bpp.generate_publications_pdf(
+        output,
+        json_fetcher=fixture_fetcher,
+        compiler=fake_compiler,
+        generated_on="2026-09-02",
+    )
+    assert output.read_bytes() == b"%PDF-1.7\nvalid"
+    assert metrics == bpp.Metrics(3, 30, 2)
+
+
+def test_failed_compilation_preserves_existing_pdf(tmp_path: Path) -> None:
+    output = tmp_path / "publications.pdf"
+    output.write_bytes(b"old valid PDF")
+
+    def failing_compiler(source: str, build_dir: Path) -> Path:
+        raise bpp.GenerationError("LaTeX compilation failed")
+
+    with pytest.raises(bpp.GenerationError, match="compilation failed"):
+        bpp.generate_publications_pdf(
+            output,
+            json_fetcher=fixture_fetcher,
+            compiler=failing_compiler,
+            generated_on="2026-09-02",
+        )
+    assert output.read_bytes() == b"old valid PDF"

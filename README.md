@@ -28,6 +28,21 @@ hugo --gc --minify
 
 This is the quickest way to catch build errors before pushing.
 
+## Publications PDF
+
+The landing-page publication list is generated from INSPIRE author record
+`1986925`. Install `latexmk` and LuaLaTeX, then run:
+
+```bash
+python scripts/build_publications_pdf.py
+```
+
+The command refreshes
+`static/publications/Nhat-Minh-Nguyen-publications.pdf`. It reports the live
+publication, citation, and h-index totals. Generation happens in a temporary
+directory, so a failed API request or LaTeX build leaves the last valid PDF
+untouched.
+
 ## Review Workflow
 
 For a quick review after any change:

@@ -2,13 +2,30 @@
 
 from __future__ import annotations
 
+import argparse
+import json
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
 from dataclasses import dataclass
+from datetime import date
+from pathlib import Path
 from typing import Callable
 from urllib.parse import urlencode
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
 
 AUTHOR_ID = "1986925"
 AUTHOR_NAME = "Nhat-Minh Nguyen"
 API_ROOT = "https://inspirehep.net/api"
+DEFAULT_OUTPUT = (
+    Path(__file__).resolve().parent.parent
+    / "static"
+    / "publications"
+    / "Nhat-Minh-Nguyen-publications.pdf"
+)
 
 RECOGNITION_BY_DOI = {
     "10.1103/physrevlett.131.111001": "Editors’ Suggestion",
@@ -18,6 +35,21 @@ RECOGNITION_BY_DOI = {
 
 class GenerationError(RuntimeError):
     """Raised when INSPIRE data or PDF generation is unusable."""
+
+
+def fetch_json(url: str) -> dict:
+    request = Request(
+        url,
+        headers={"User-Agent": "minhmpa-homepage-publications/1.0"},
+    )
+    try:
+        with urlopen(request, timeout=30) as response:
+            payload = json.load(response)
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise GenerationError(f"could not fetch INSPIRE data: {exc}") from exc
+    if not isinstance(payload, dict):
+        raise GenerationError("INSPIRE returned a non-object JSON response")
+    return payload
 
 
 @dataclass(frozen=True)
@@ -232,3 +264,76 @@ def render_latex(
             )
     lines.extend([r"\end{itemize}", r"\end{document}"])
     return "\n".join(lines) + "\n"
+
+
+def compile_latex(source: str, build_dir: Path) -> Path:
+    if shutil.which("latexmk") is None or shutil.which("lualatex") is None:
+        raise GenerationError("latexmk and lualatex are required")
+    tex_path = build_dir / "publications.tex"
+    tex_path.write_text(source, encoding="utf-8")
+    result = subprocess.run(
+        [
+            "latexmk", "-lualatex", "-interaction=nonstopmode",
+            "-halt-on-error", "publications.tex",
+        ],
+        cwd=build_dir,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    pdf_path = build_dir / "publications.pdf"
+    if result.returncode != 0 or not pdf_path.is_file():
+        diagnostic = (result.stdout + result.stderr)[-4000:]
+        raise GenerationError(f"LaTeX compilation failed:\n{diagnostic}")
+    return pdf_path
+
+
+def generate_publications_pdf(
+    output: Path = DEFAULT_OUTPUT,
+    *,
+    json_fetcher: Callable[[str], dict] = fetch_json,
+    compiler: Callable[[str, Path], Path] = compile_latex,
+    generated_on: str | None = None,
+) -> Metrics:
+    author = json_fetcher(f"{API_ROOT}/authors/{AUTHOR_ID}")
+    bai = resolve_bai(author)
+    publications = normalize_publications(
+        fetch_literature(bai, fetch_json=json_fetcher)
+    )
+    metrics = compute_metrics(publications)
+    source = render_latex(
+        publications,
+        metrics,
+        generated_on=generated_on or date.today().isoformat(),
+    )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(
+        prefix=".publications-build-", dir=output.parent
+    ) as temporary:
+        compiled = compiler(source, Path(temporary))
+        if not compiled.is_file():
+            raise GenerationError("compiler did not produce a PDF")
+        os.replace(compiled, output)
+    return metrics
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Regenerate Nhat-Minh Nguyen's INSPIRE publications PDF."
+    )
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    args = parser.parse_args()
+    try:
+        metrics = generate_publications_pdf(args.output)
+    except GenerationError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+    print(
+        f"Wrote {args.output} ({metrics.publications} publications, "
+        f"{metrics.citations} citations, h-index {metrics.h_index})"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
