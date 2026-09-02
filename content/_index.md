@@ -13,16 +13,12 @@ sections:
       avatar: /images/blog_profile.png
       text: ""
       buttons:
-        - text: Research
-          url: /research/
-        - text: Publications
-          url: https://scholar.google.com/citations?hl=en&user=Wfr8DzAAAAAJ
-          new_tab: true
-        - text: Download CV
+        - text: CV
           url: /cv/Nhat-Minh-Nguyen-academic-cv.pdf
           new_tab: true
-        - text: Contact
-          url: /contact/
+        - text: Publications
+          url: /publications/Nhat-Minh-Nguyen-publications.pdf
+          new_tab: true
       hide_interests: true
       hide_education: true
     design:

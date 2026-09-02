@@ -156,34 +156,30 @@ def test_author_metadata_and_profile_elements_are_preserved(
 
 
 def test_homepage_actions_and_target_behavior(homepage: ParsedHomePage) -> None:
-    expected_actions = {
-        "Research": ("/research/", False),
-        "Publications": (
-            "https://scholar.google.com/citations?hl=en&user=Wfr8DzAAAAAJ",
-            True,
+    expected_actions = [
+        ("CV", "/cv/Nhat-Minh-Nguyen-academic-cv.pdf"),
+        (
+            "Publications",
+            "/publications/Nhat-Minh-Nguyen-publications.pdf",
         ),
-        "Download CV": ("/cv/Nhat-Minh-Nguyen-academic-cv.pdf", True),
-        "Contact": ("/contact/", False),
-    }
-    action_links = {
-        str(link["text"]): link
+    ]
+    action_links = [
+        link
         for link in homepage.links
         if "homepage-action"
         in str(link["attrs"].get("class", "")).split()
-    }
+    ]
 
-    assert set(action_links) == set(expected_actions)
+    assert [str(link["text"]) for link in action_links] == [
+        label for label, _ in expected_actions
+    ]
     assert "homepage-actions" in homepage.classes
 
-    for label, (expected_href, opens_new_tab) in expected_actions.items():
-        attrs = action_links[label]["attrs"]
+    for link, (_, expected_href) in zip(action_links, expected_actions):
+        attrs = link["attrs"]
         assert attrs["href"] == expected_href
-        if opens_new_tab:
-            assert attrs["target"] == "_blank"
-            assert "noopener" in str(attrs["rel"]).split()
-        else:
-            assert "target" not in attrs
-            assert "rel" not in attrs
+        assert attrs["target"] == "_blank"
+        assert "noopener" in str(attrs["rel"]).split()
 
 
 def test_homepage_hides_profile_detail_panels(homepage: ParsedHomePage) -> None:
