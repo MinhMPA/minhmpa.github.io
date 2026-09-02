@@ -1,8 +1,8 @@
 # INSPIRE Publications PDF Design
 
-**Date:** 2026-09-02  
-**Status:** Approved for implementation planning  
-**Branch:** `homepage-cleanup-plan`  
+**Date:** 2026-09-02<br>
+**Status:** Approved for implementation planning<br>
+**Branch:** `homepage-cleanup-plan`<br>
 **Pull request:** #3
 
 ## Objective
