@@ -79,6 +79,7 @@ def test_render_latex_contains_summary_links_fallback_and_recognition() -> None:
     )
     publications = bpp.normalize_publications(hits)
     source = bpp.render_latex(publications, bpp.compute_metrics(publications), generated_on="2026-09-02")
+    assert r"Nhat-Minh Nguyen \textemdash{} Publications" in source
     assert "3 publications" in source
     assert "30 citations" in source
     assert "h-index 2" in source
@@ -87,6 +88,56 @@ def test_render_latex_contains_summary_links_fallback_and_recognition() -> None:
     assert "arXiv:2403.03220" in source
     assert "INSPIRE record" in source
     assert "Generated from INSPIRE HEP on 2026-09-02" in source
+
+
+def test_render_latex_strips_mathml_from_live_titles() -> None:
+    publication = bpp.Publication(
+        record_id="123",
+        title=(
+            "Exploring the growth index "
+            '<math display="inline"><mrow><msub><mrow><mi>γ</mi></mrow>'
+            "<mrow><mi>L</mi></mrow></msub></mrow></math>: Insights"
+        ),
+        author_count=2,
+        arxiv_id="2305.16865",
+        earliest_date="2023-05-01",
+        citations=22,
+        doi=None,
+        recognition=None,
+    )
+
+    source = bpp.render_latex([publication], bpp.Metrics(1, 22, 1), generated_on="2026-09-02")
+
+    assert "<math" not in source
+    assert r"Exploring the growth index γ\_L: Insights" in source
+
+
+def test_render_latex_plainifies_tex_from_live_titles() -> None:
+    publication = bpp.Publication(
+        record_id="124",
+        title=(
+            "How I stop worrying about non-universality and $b_ϕ$: "
+            "Constraining local $f_{\\rm NL}$ with $b_ϕ$ priors"
+        ),
+        author_count=2,
+        arxiv_id="2607.01314",
+        earliest_date="2026-07-01",
+        citations=0,
+        doi=None,
+        recognition=None,
+    )
+
+    source = bpp.render_latex([publication], bpp.Metrics(1, 0, 0), generated_on="2026-09-02")
+
+    assert r"How I stop worrying about non-universality and b\_φ:" in source
+    assert r"Constraining local f\_NL with b\_φ priors" in source
+    assert r"\$" not in source
+
+
+def test_render_latex_uses_compact_spacing_for_long_live_lists() -> None:
+    source = bpp.render_latex([], bpp.Metrics(24, 4444, 17), generated_on="2026-09-02")
+
+    assert r"\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=6pt}" in source
 
 
 def fixture_fetcher(url: str) -> dict:

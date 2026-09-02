@@ -3,12 +3,15 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
 import tempfile
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -208,6 +211,45 @@ def citation_label(count: int) -> str:
     return f"{count:,} citation" if count == 1 else f"{count:,} citations"
 
 
+def _mathml_text(element: ET.Element) -> str:
+    """Return a compact plain-text rendering for the MathML used by INSPIRE."""
+    tag = element.tag.rsplit("}", 1)[-1]
+    children = list(element)
+    if tag == "msub" and len(children) >= 2:
+        return f"{_mathml_text(children[0])}_{_mathml_text(children[1])}"
+    if tag == "msup" and len(children) >= 2:
+        return f"{_mathml_text(children[0])}^{_mathml_text(children[1])}"
+
+    value = element.text or ""
+    for child in children:
+        value += _mathml_text(child)
+        value += child.tail or ""
+    return value
+
+
+def _plain_mathml(match: re.Match[str]) -> str:
+    try:
+        return _mathml_text(ET.fromstring(match.group(0)))
+    except ET.ParseError:
+        return re.sub(r"<[^>]+>", "", match.group(0))
+
+
+def _plain_tex_math(match: re.Match[str]) -> str:
+    expression = match.group(1)
+    expression = expression.replace(r"\phi", "φ").replace(r"\gamma", "γ")
+    expression = re.sub(r"\\(?:rm|mathrm)\s*", "", expression)
+    return expression.translate(str.maketrans("", "", "{}"))
+
+
+def plain_title(value: object) -> str:
+    """Turn occasional INSPIRE markup and TeX in titles into readable text."""
+    title = html.unescape(str(value))
+    title = re.sub(r"<math\b[^>]*>.*?</math>", _plain_mathml, title, flags=re.DOTALL)
+    title = re.sub(r"\$([^$]*)\$", _plain_tex_math, title)
+    title = re.sub(r"<[^>]+>", "", title)
+    return title.replace("ϕ", "φ")
+
+
 def render_latex(
     publications: list[Publication], metrics: Metrics, *, generated_on: str
 ) -> str:
@@ -215,6 +257,7 @@ def render_latex(
         r"\documentclass[10pt,a4paper]{article}",
         r"\usepackage[a4paper,margin=19mm]{geometry}",
         r"\usepackage{fontspec}",
+        r"\usepackage{newcomputermodern}",
         r"\usepackage{microtype}",
         r"\usepackage{xcolor}",
         r"\usepackage{hyperref}",
@@ -229,10 +272,10 @@ def render_latex(
         r"\fancyhf{}",
         r"\fancyfoot[C]{\color{muted}\thepage}",
         r"\setlength{\headheight}{13pt}",
-        r"\setlist[itemize]{leftmargin=*,itemsep=5pt,topsep=6pt}",
+        r"\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=6pt}",
         r"\begin{document}",
         r"\color{darktext}",
-        r"{\LARGE\bfseries Publications}\par",
+        r"{\LARGE\bfseries Nhat-Minh Nguyen \textemdash{} Publications}\par",
         r"\vspace{3pt}",
         (
             f"{{\\color{{muted}}{metrics.publications:,} publications \\textbullet\\ "
@@ -243,7 +286,7 @@ def render_latex(
         r"\begin{itemize}",
     ]
     for publication in publications:
-        title = latex_escape(publication.title)
+        title = latex_escape(plain_title(publication.title))
         title_link = f"\\href{{{publication.record_url}}}{{{title}}}"
         source_link = (
             f"\\href{{https://arxiv.org/abs/{publication.arxiv_id}}}"
