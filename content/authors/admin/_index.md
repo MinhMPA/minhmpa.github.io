@@ -10,8 +10,6 @@ avatar_alt: Portrait of Minh Nguyen
 organizations:
   - name: Kavli IPMU Fellow, University of Tokyo
     url: https://www.ipmu.jp/en
-  - name: Incoming Faculty and Group Leader, IFIRSE at ICISE
-    url: https://ifirse.icise.vn/astrophysics-cosmology-group.html
 profiles:
   - icon: at-symbol
     url: 'mailto:nhat.minh.nguyen@ipmu.jp'
