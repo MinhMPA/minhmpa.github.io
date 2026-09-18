@@ -109,7 +109,9 @@ def homepage(tmp_path_factory: pytest.TempPathFactory) -> ParsedHomePage:
 def test_homepage_identity_copy_and_navigation(homepage: ParsedHomePage) -> None:
     assert "Cosmologist" in homepage.visible_text
     assert "Kavli IPMU Fellow, University of Tokyo" in homepage.visible_text
-    assert "Faculty and Group Leader, IFIRSE at ICISE" in homepage.visible_text
+    assert "ICISE" not in homepage.visible_text
+    assert "IFIRSE" not in homepage.visible_text
+    assert not any("icise" in href.lower() for href in homepage.hrefs)
     assert (
         "I am a cosmologist developing forward-modeling and field-level Bayesian "
         "inference methods for galaxy surveys."
