@@ -1,0 +1,96 @@
+---
+title: "We don't ask airplanes to flap like birds. Why do we expect AI to write like us?"
+date: 2026-09-29
+summary: Feynman pointed out that airplanes fly without flapping their wings. But writing is not only the mechanism that carries a finished thought onto the page — it is part of how the thought gets made, which is what makes handing it to AI a different bargain than handing over my handwriting.
+---
+
+{{< figure src="airplane-bird-AI-human-write.png" caption="A bird and an airplane reach the same sky by different means. Below, the tangled route from a half-formed idea to a finished page — and the smooth one that bypasses it." >}}
+
+When I was a kid, I loved writing assignments. My handwriting, unfortunately, was terrible.
+
+I was lucky that my teachers seemed to keep two things separate. I still had to work on my penmanship, but bad handwriting did not cost me points on an essay. I was never going to win a school handwriting contest, yet every so often a teacher would read one of my pieces aloud to the class. I still remember writing a letter to a classmate that ran more than four pages in my school notebook.
+
+Maybe that was when I began to think of handwriting as just the means by which a thought made its way onto the page. Neater handwriting made the thought easier to read, certainly. But what my teachers really wanted to know was what the child behind those crooked letters was trying to say.
+
+So I welcomed the keyboard without hesitation. It let me write faster, and it spared everyone else from having to decipher my handwriting.
+
+Then came email. At the time, pen-pal columns in newspapers and letter-writing clubs were still common. You could send a letter and wait weeks for a reply. Email turned those weeks into days, then hours. The distance between two people collapsed, but there were still two people at either end, writing to one another.
+
+In a 1985 discussion about whether machines could think like human beings, Richard Feynman made a useful comparison. Airplanes fly, he pointed out, but they do not fly the way birds do. They do not need to flap their wings.
+
+A new tool does not have to imitate an old mechanism to accomplish the same task.
+
+For a long time, that was how I thought about AI.
+
+When AI became good enough at writing, I was happy to use it. It fixed awkward sentences, trimmed passages that ran too long, and, especially, saved me many hours of wrestling with English. If I already knew what I wanted to say, AI was simply helping me get it onto the page more efficiently.
+
+But after using it for a while, something began to bother me.
+
+Often, I did not actually know what I wanted to say yet.
+
+I have had ideas that seemed perfectly clear in my head, only to discover halfway down the page that one end of the argument did not connect to the other. Sometimes a sentence refuses to come together because I have not figured out what I mean. I revise the sentence, then revise the thought behind it. More than once, I have reached the end of a piece only to realize that something I believed when I started no longer seemed quite defensible.
+
+Writing, it turns out, does not begin after thinking is finished. Writing is part of the thinking.
+
+And that is exactly where AI enters.
+
+I can give it a half-formed idea and get back several polished paragraphs, sometimes complete with arguments I had not thought of myself.
+
+Many of those suggestions are genuinely good. We have always learned how to think through books, conversations, and arguments with other people. AI can challenge an assumption, point out a flaw, or suggest a direction I had missed. Sometimes it makes me think harder.
+
+The problem lies in an even more seductive possibility:
+
+**AI can think for me just enough to make me believe I have finished thinking.**
+
+A vague idea in my head becomes a smooth, coherent paragraph on the screen. It reads so well that I can almost persuade myself I had thought it through that clearly all along. The messy stretch in between — the part that would have forced me to ask what I actually meant — has been bypassed.
+
+There is an irony here. I also use AI to make AI-assisted writing sound less like AI.
+
+If the thinking is mine but the prose is clumsy, I have no objection to letting a machine clean it up. As a child, I did not want bad handwriting to get in the way of a good essay. I see no virtue now in making a reader suffer through bad sentences simply because I wrote them myself.
+
+But suppose I give the machine an idea I have not finished thinking through. It gives me back a complete argument. Then I ask it to rewrite that argument so that it sounds more like me.
+
+At some point, I have to ask: How much of the thinking behind these words is actually mine?
+
+There is another side to that question, and it belongs to the reader.
+
+I once read an account by an editor who had written to a professor she trusted, asking for his thoughts about cognition and some of her concerns about living with AI. A polished reply came back. An AI agent had written it. She described feeling disappointed.
+
+I do not know how closely the professor reviewed or revised the letter before sending it. But I understand the disappointment.
+
+She had written to him because she wanted to know what *he* thought. The letter made the round trip successfully. What had become uncertain was whether the mind she encountered on its return was his.
+
+Perhaps writing and reading have always been, at some level, encounters between people.
+
+When I seek out someone's writing, I often want more than information. I want to know how that person sees a problem, what they noticed, and how they worked their way toward the conclusion on the page. The words give me access to a line of thought different from my own. I may agree with it or reject it, but at least I have encountered it.
+
+A 2024 study published in *PNAS* found something that points in this direction. In experiments on the feeling of being heard, responses generated by AI initially made people feel more heard than responses written by humans. But when people believed the response had come from AI, that feeling diminished.
+
+Perhaps this helps explain why we are so preoccupied with making AI writing sound "human."
+
+The issue may not be that humans possess some special sentence structure or turn of phrase that machines must learn to imitate. What we often hope to find in writing is a person thinking on the other side of the words.
+
+Seen this way, writing and reading are two sides of the same encounter. For the writer, words are a place where thoughts take shape, get tested, and change. For the reader, those same words offer a way into another person's thinking.
+
+So the airplane metaphor still works for me, just not quite in the way I first imagined.
+
+The luggage has not already been packed.
+
+Writing is often the moment when I am still deciding what belongs in the suitcase, what needs to come out, and how everything fits together. AI can help with that work. It can even suggest a few things I had not thought to bring.
+
+I just do not want to open the suitcase at the end and discover that I have no memory of packing half of what is inside.
+
+When my teacher read my essay aloud to the class all those years ago, no one except her ever saw my handwriting. The voice my classmates heard was hers, not mine.
+
+But the thoughts they heard were still the ones I had sat with, struggled over, and eventually written down.
+
+Airplanes do not need to flap their wings. AI does not need to hold a pen the way I do.
+
+What we want from writing that feels "human" may be something else entirely: that the person whose name appears on it has had the chance to think through what they are saying, and that when a reader comes to those words, there is still a mind there to meet.
+
+---
+
+## References
+
+1. R. P. Feynman, "The Computing Machines in the Future," Nishina Memorial Lecture, Gakushuin University, Tokyo, August 9, 1985, [Nishina Memorial Foundation](https://www.nishina-mf.or.jp/wp/wp-content/uploads/2020/03/OCR_nkz-23.pdf).
+2. Y. Yin, N. Jia, and C. J. Wakslak, "AI can help people feel heard, but an AI label diminishes this impact," *PNAS* **121**, e2319112121 (2024), [doi:10.1073/pnas.2319112121](https://www.pnas.org/doi/10.1073/pnas.2319112121).
