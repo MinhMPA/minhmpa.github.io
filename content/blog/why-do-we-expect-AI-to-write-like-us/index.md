@@ -4,7 +4,7 @@ date: 2026-09-29
 summary: Feynman pointed out that airplanes fly without flapping their wings. But writing is not only the mechanism that carries a finished thought onto the page — it is part of how the thought gets made, which is what makes handing it to AI a different bargain than handing over my handwriting.
 ---
 
-{{< figure src="airplane-bird-AI-human-write.png" caption="A bird and an airplane reach the same sky by different means. Below, the tangled route from a half-formed idea to a finished page — and the smooth one that bypasses it." >}}
+{{< figure src="airplane-bird-AI-human-write.png" alt="A bird and an airliner cross the same sky; below, a writer at a desk watches scattered notes and tangled lines converge into a printed page." caption="A bird and an airplane reach the same sky by different means. Below, the tangled route from a half-formed idea to a finished page — and the smooth one that bypasses it." >}}
 
 When I was a kid, I loved writing assignments. My handwriting, unfortunately, was terrible.
 
