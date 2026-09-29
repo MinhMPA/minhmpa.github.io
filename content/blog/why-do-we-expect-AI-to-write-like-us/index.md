@@ -1,5 +1,5 @@
 ---
-title: "We don't ask airplanes to flap like birds. Why do we expect AI to write like us?"
+title: "We don't ask airplanes to flap like birds. Why do we insist AI write like us?"
 date: 2026-09-29
 summary: Feynman pointed out that airplanes fly without flapping their wings. But writing is not only the mechanism that carries a finished thought onto the page — it is part of how the thought gets made, which is what makes handing it to AI a different bargain than handing over my handwriting.
 ---
