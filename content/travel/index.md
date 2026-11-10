@@ -11,6 +11,7 @@ show_date_updated: false
 
 Recent and upcoming talks and trips on my travel schedule.
 
+- [From Quantum Gravity to Cosmology](https://indico.ipmu.jp/event/520/overview), Kavli IPMU, Kashiwa, Japan, September 28 to October 2, 2026. Talk: “New paths towards the first detection of primordial non-Gaussianities from large-scale structure”. [Slides](/slides/MinhNguyen-fromQuantumGravitytoCosmology.pdf)
 - [VSOA10: Cosmology](https://www.icisequynhon.com/conferences/2026/VSOA10/program.html), ICISE Quy Nhon, Viet Nam, July to August 2026.
 - [YITP International Molecule-type Workshop and APCTP Global Cooperation Workshop, **Theoretical challenges towards non-linearities from the early universe**](https://drive.google.com/file/d/1wUD2GyyKjBkYW5w3N5etGHqj4SF-ohjO/), YITP, Kyoto, Japan, July 2026. [Slides](/slides/YITP-PNG-2026/MinhNguyen_YITP-PNG-boundaries_2026July.html)
 - [Croucher Advanced Study Institute, **Primordial Non-Gaussianities**](https://projects.croucher.org.hk/advanced-study-institutes/primordial-non-gaussianities/programme), CityUHK, Hong Kong, June 2026. [Slides](/slides/MinhNguyen_AIS-PNG_CityUHK_2026June16.pdf)
