@@ -132,6 +132,7 @@ def test_homepage_identity_copy_and_navigation(homepage: ParsedHomePage) -> None
     assert nav_labels == [
         "Research",
         "Travel",
+        "Publication",
         "Teaching",
         "Visualization",
         "Outreach",
