@@ -119,12 +119,18 @@ def authors(metadata: dict) -> str:
 def reference(metadata: dict, year: str) -> tuple[str, str | None]:
     """Prefer the journal article; keep preprints accurately labelled."""
     infos = [p for p in metadata.get("publication_info", [])
-             if p.get("journal_title") and p.get("material", "").lower() != "erratum"]
+             if (p.get("journal_title") or p.get("pubinfo_freetext"))
+             and p.get("material", "").lower() != "erratum"]
     dois = [normalize_doi(d.get("value")) for d in metadata.get("dois", [])
             if d.get("material", "").lower() != "erratum"]
     doi = next((d for d in dois if d), None)
     if infos and doi:
-        info = infos[0]
+        # Some journals (e.g. Open Journal of Astrophysics) are represented
+        # only by a free-text reference. They are still published papers.
+        info = next((p for p in infos if p.get("journal_title")), infos[0])
+        url = "https://doi.org/" + quote(doi, safe="/:;")
+        if not info.get("journal_title"):
+            return f"[{text(info['pubinfo_freetext'])}]({url}).", doi
         journal = JOURNALS.get(info["journal_title"], info["journal_title"])
         volume = info.get("journal_volume", "")
         if journal == "JCAP":
@@ -134,7 +140,6 @@ def reference(metadata: dict, year: str) -> tuple[str, str | None]:
         if pages:
             label += f", {pages}"
         label += f", {info.get('year') or year}"
-        url = "https://doi.org/" + quote(doi, safe="/:;")
         return f"[{text(label)}]({url}).", doi
     arxiv = metadata.get("arxiv_eprints") or []
     if arxiv:
@@ -180,6 +185,8 @@ def render_page(records: list[dict], updated: str) -> str:
         ref, doi = reference(metadata, metadata["earliest_date"][:4])
         recognition = RECOGNITION_BY_DOI.get(doi or "")
         title = text(metadata["titles"][0]["title"])
+        if not title.endswith((".", "?", "!")):
+            title += "."
         entry = f'{number}. {author_line.rstrip(".")}. “{title}” {ref}'
         if recognition:
             entry += f" {recognition}."

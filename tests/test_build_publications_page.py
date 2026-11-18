@@ -51,6 +51,16 @@ def test_jcap_citation_uses_issue_and_publication_year():
     assert "[JCAP 07, 028, 2025]" in page.reference(metadata, "2024")[0]
 
 
+def test_free_text_journal_reference_takes_precedence_over_preprint():
+    metadata = paper()["metadata"]
+    metadata.update({
+        "dois": [{"value": "10.33232/001c.137793", "material": "publication"}],
+        "publication_info": [{"pubinfo_freetext": "The Open J. of Astrophysics 8 (2025)", "material": "publication"}],
+    })
+    citation, _ = page.reference(metadata, "2025")
+    assert citation == "[The Open J. of Astrophysics 8 (2025)](https://doi.org/10.33232/001c.137793)."
+
+
 def test_collaboration_and_small_group_citations():
     metadata = paper()["metadata"]
     assert page.authors(metadata) == "Yu, **Nguyen**"
