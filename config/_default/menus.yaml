@@ -10,6 +10,9 @@ main:
   - name: Travel
     url: travel/
     weight: 30
+  - name: Publication
+    url: publications/
+    weight: 35
   - name: Teaching
     url: teach/
     weight: 40

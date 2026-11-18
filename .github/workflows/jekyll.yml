@@ -6,6 +6,11 @@ env:
 on:
   push:
     branches: ["master", "main"]
+  pull_request:
+    branches: ["master", "main"]
+  schedule:
+    # First of each month, 02:17 UTC (09:17 in Viet Nam).
+    - cron: '17 2 1 * *'
   workflow_dispatch:
 
 permissions:
@@ -50,20 +55,35 @@ jobs:
       - name: Install Python deps for generator tests
         run: pip install -r scripts/requirements.txt
 
-      - name: Run generator unit tests
-        run: python3 -m unittest discover -s tests -v
+      - name: Run publication and FAQ tests
+        run: python3 -m pytest tests/test_build_publications_pdf.py tests/test_build_publications_page.py tests/test_build_faq_from_wiki.py -q
 
       - name: Test research-bot matcher
         run: node --test tests/*.test.mjs
 
+      - name: Refresh publications from INSPIRE
+        run: python3 scripts/build_publications_page.py --snapshot-output /tmp/publications-source.json
+
+      - name: Save publication source and page for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: inspire-publications
+          path: |
+            /tmp/publications-source.json
+            content/publications/index.md
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
 
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify --baseURL "https://minhmpa.github.io/"
+
+      - name: Check homepage navigation
+        run: python3 -m pytest tests/test_homepage.py -q
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -71,6 +91,7 @@ jobs:
           path: ./public
 
   deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
