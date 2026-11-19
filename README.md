@@ -37,13 +37,17 @@ newest first, in the CV's author–title–journal/preprint format. Journal DOI
 links replace arXiv preprint links when a journal reference becomes available.
 Author order is preserved; collaboration papers use the collaboration name.
 
-The **Deploy Hugo Site to GitHub Pages** workflow refreshes this page on the
+The page includes a download link to the publication-list PDF. The homepage
+keeps the CV button; publications are reached through the navigation tab.
+
+The **Deploy Hugo Site to GitHub Pages** workflow refreshes the page and PDF on the
 first of each month at **02:17 UTC (09:17 Viet Nam time)**, and on ordinary site
-deployments. It downloads the complete list, validates it, and builds and deploys
+deployments. It downloads the complete list with citation counts once, validates
+it, generates both formats from the same records and update date, and deploys
 the refreshed website. No API key or local computer is needed. The generated
-page is updated in the deployed site; monthly runs do not commit to the
+page and PDF are updated in the deployed site; monthly runs do not commit to the
 protected source branch. Each run retains an `inspire-publications` artifact
-containing the generated page and its source records.
+containing the generated page, PDF, and their source records.
 
 To update it manually in GitHub:
 
@@ -51,17 +55,19 @@ To update it manually in GitHub:
 2. Choose **Run workflow**, select **master**, and click **Run workflow**.
 3. Wait for both the build and deployment to finish.
 
-To refresh the local copy (Python 3.10 or newer; standard library only):
+To refresh both local copies (Python 3.10 or newer, plus the LaTeX dependencies below):
 
 ```bash
-python3 scripts/build_publications_page.py
+python3 scripts/build_publications_page.py --snapshot-output /tmp/publications-source.json
+python3 scripts/build_publications_pdf.py --from-snapshot /tmp/publications-source.json
 hugo --gc --minify
 ```
 
-For an inspectable source snapshot, add `--snapshot-output /tmp/publications-source.json`.
-To reproduce that page offline, use `--from-snapshot /tmp/publications-source.json`.
+Both generators accept `--from-snapshot /tmp/publications-source.json` to
+reproduce the saved records and update date offline.
 Failed downloads, incomplete lists, duplicate records, or missing citation data
-stop the refresh before replacing the existing page. Failed workflow runs do
+stop the refresh before replacing the existing page. A failed PDF compilation
+also stops the workflow before deployment. Failed workflow runs do
 not deploy, leaving the last successful website available. Pull requests and
 manual runs on other branches build for review without publishing.
 
@@ -72,8 +78,11 @@ once this change is merged into the default branch.
 
 ## Publications PDF
 
-The landing-page publication list is generated from INSPIRE author record
-`1986925`. Install `latexmk` and LuaLaTeX, then run:
+The PDF linked from the Publication tab is generated from INSPIRE author record
+`1986925`. Install `latexmk`, LuaLaTeX, the LaTeX packages used by the generator,
+and the New Computer Modern fonts. On Ubuntu, these are provided by `latexmk`,
+`texlive-luatex`, `texlive-latex-extra`, and `texlive-fonts-extra`.
+To refresh only the PDF directly from INSPIRE, run:
 
 ```bash
 python scripts/build_publications_pdf.py

@@ -337,12 +337,25 @@ def generate_publications_pdf(
     json_fetcher: Callable[[str], dict] = fetch_json,
     compiler: Callable[[str, Path], Path] = compile_latex,
     generated_on: str | None = None,
+    snapshot_path: Path | None = None,
 ) -> Metrics:
-    author = json_fetcher(f"{API_ROOT}/authors/{AUTHOR_ID}")
-    bai = resolve_bai(author)
-    publications = normalize_publications(
-        fetch_literature(bai, fetch_json=json_fetcher)
-    )
+    if snapshot_path is None:
+        author = json_fetcher(f"{API_ROOT}/authors/{AUTHOR_ID}")
+        bai = resolve_bai(author)
+        records = fetch_literature(bai, fetch_json=json_fetcher)
+    else:
+        try:
+            snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
+            if snapshot["author_id"] != AUTHOR_ID:
+                raise GenerationError("snapshot belongs to a different author")
+            records = snapshot["records"]
+            if not isinstance(records, list) or not records:
+                raise GenerationError("snapshot has no publication records")
+            snapshot_date = date.fromisoformat(snapshot["updated"]).isoformat()
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            raise GenerationError(f"could not read publication snapshot: {exc}") from exc
+        generated_on = generated_on or snapshot_date
+    publications = normalize_publications(records)
     metrics = compute_metrics(publications)
     source = render_latex(
         publications,
@@ -365,9 +378,13 @@ def main() -> int:
         description="Regenerate Nhat-Minh Nguyen's INSPIRE publications PDF."
     )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument(
+        "--from-snapshot", type=Path,
+        help="Use the publication page's INSPIRE snapshot and update date offline",
+    )
     args = parser.parse_args()
     try:
-        metrics = generate_publications_pdf(args.output)
+        metrics = generate_publications_pdf(args.output, snapshot_path=args.from_snapshot)
     except GenerationError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1

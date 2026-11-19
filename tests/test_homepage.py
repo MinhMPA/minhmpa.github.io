@@ -161,10 +161,6 @@ def test_author_metadata_and_profile_elements_are_preserved(
 def test_homepage_actions_and_target_behavior(homepage: ParsedHomePage) -> None:
     expected_actions = [
         ("CV", "/cv/Nhat-Minh-Nguyen-academic-cv.pdf"),
-        (
-            "Publications",
-            "/publications/Nhat-Minh-Nguyen-publications.pdf",
-        ),
     ]
     action_links = [
         link

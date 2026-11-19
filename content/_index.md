@@ -16,9 +16,6 @@ sections:
         - text: CV
           url: /cv/Nhat-Minh-Nguyen-academic-cv.pdf
           new_tab: true
-        - text: Publications
-          url: /publications/Nhat-Minh-Nguyen-publications.pdf
-          new_tab: true
       hide_interests: true
       hide_education: true
     design:
