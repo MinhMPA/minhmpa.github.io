@@ -163,7 +163,7 @@ def test_render_latex_plainifies_tex_from_live_titles() -> None:
 def test_render_latex_uses_compact_spacing_for_long_live_lists() -> None:
     source = bpp.render_latex([], bpp.Metrics(24, 4444, 17), generated_on="2026-09-02")
 
-    assert r"\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=6pt}" in source
+    assert r"\setlist[itemize]{leftmargin=*,itemsep=0pt,parsep=0pt,topsep=6pt}" in source
 
 
 def fixture_fetcher(url: str) -> dict:
@@ -207,4 +207,55 @@ def test_failed_compilation_preserves_existing_pdf(tmp_path: Path) -> None:
             compiler=failing_compiler,
             generated_on="2026-09-02",
         )
+    assert output.read_bytes() == b"old valid PDF"
+
+
+def test_snapshot_uses_saved_records_metrics_and_date_without_network(tmp_path: Path) -> None:
+    records = (
+        load_fixture("inspire_literature_page_1.json")["hits"]["hits"]
+        + load_fixture("inspire_literature_page_2.json")["hits"]["hits"]
+    )
+    snapshot = tmp_path / "source.json"
+    snapshot.write_text(json.dumps({
+        "author_id": bpp.AUTHOR_ID, "updated": "2026-11-19", "records": records,
+    }))
+    output = tmp_path / "publications.pdf"
+
+    def no_network(url: str) -> dict:
+        pytest.fail("A saved snapshot must not fetch newer INSPIRE data")
+
+    def compiler(source: str, build_dir: Path) -> Path:
+        assert "3 publications" in source
+        assert "30 citations" in source
+        assert "h-index 2" in source
+        assert "Generated from INSPIRE HEP on 2026-11-19" in source
+        compiled = build_dir / "publications.pdf"
+        compiled.write_bytes(b"%PDF-1.7\nsnapshot")
+        return compiled
+
+    metrics = bpp.generate_publications_pdf(
+        output, snapshot_path=snapshot, json_fetcher=no_network, compiler=compiler,
+    )
+    assert metrics == bpp.Metrics(3, 30, 2)
+    assert output.read_bytes() == b"%PDF-1.7\nsnapshot"
+
+
+@pytest.mark.parametrize("failure", ["author", "empty", "date", "json"])
+def test_invalid_snapshot_preserves_existing_pdf(tmp_path: Path, failure: str) -> None:
+    data = {
+        "author_id": bpp.AUTHOR_ID, "updated": "2026-11-19",
+        "records": load_fixture("inspire_literature_page_1.json")["hits"]["hits"],
+    }
+    if failure == "author":
+        data["author_id"] = "1"
+    elif failure == "empty":
+        data["records"] = []
+    elif failure == "date":
+        data["updated"] = "unknown"
+    snapshot = tmp_path / "source.json"
+    snapshot.write_text("{" if failure == "json" else json.dumps(data))
+    output = tmp_path / "publications.pdf"
+    output.write_bytes(b"old valid PDF")
+    with pytest.raises(bpp.GenerationError):
+        bpp.generate_publications_pdf(output, snapshot_path=snapshot)
     assert output.read_bytes() == b"old valid PDF"

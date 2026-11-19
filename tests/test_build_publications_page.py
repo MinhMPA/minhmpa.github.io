@@ -87,6 +87,7 @@ def test_fetches_every_page_and_validates_total():
         return payloads[len(urls) - 1]
     assert page.fetch_records(fetch) == [first, second]
     assert "a+Nhat.Minh.Nguyen.1" in urls[1]
+    assert "citation_count" in urls[1]
     assert urls[-1].endswith("page=2")
     payloads[1]["links"] = {}
     urls.clear()

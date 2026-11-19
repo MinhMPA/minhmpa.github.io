@@ -13,7 +13,9 @@ show_date_updated: false
 
 All 25 works listed on my [INSPIRE profile](https://inspirehep.net/authors/1986925?ui-citation-summary=true), newest first. Journal references are used where available; other entries link to arXiv preprints.
 
-Updated 2026-11-18. Refreshed monthly from INSPIRE.
+[Download the publication list (PDF)](/publications/Nhat-Minh-Nguyen-publications.pdf).
+
+Updated 2026-11-19. Page and PDF refreshed monthly from INSPIRE.
 
 1. **Nguyen**. “From quantum fluctuations to galaxy power spectrum multipoles.” [arXiv preprint](https://arxiv.org/abs/2609.09272), 2026.
 

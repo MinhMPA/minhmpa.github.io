@@ -64,13 +64,22 @@ jobs:
       - name: Refresh publications from INSPIRE
         run: python3 scripts/build_publications_page.py --snapshot-output /tmp/publications-source.json
 
-      - name: Save publication source and page for review
+      - name: Install LaTeX for the publications PDF
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y latexmk texlive-luatex texlive-latex-extra texlive-fonts-extra
+
+      - name: Refresh publications PDF from the same INSPIRE records
+        run: python3 scripts/build_publications_pdf.py --from-snapshot /tmp/publications-source.json
+
+      - name: Save publication source, page, and PDF for review
         uses: actions/upload-artifact@v4
         with:
           name: inspire-publications
           path: |
             /tmp/publications-source.json
             content/publications/index.md
+            static/publications/Nhat-Minh-Nguyen-publications.pdf
 
       - name: Setup Pages
         id: pages
