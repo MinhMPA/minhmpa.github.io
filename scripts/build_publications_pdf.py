@@ -272,7 +272,7 @@ def render_latex(
         r"\fancyhf{}",
         r"\fancyfoot[C]{\color{muted}\thepage}",
         r"\setlength{\headheight}{13pt}",
-        r"\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=6pt}",
+        r"\setlist[itemize]{leftmargin=*,itemsep=0pt,parsep=0pt,topsep=6pt}",
         r"\begin{document}",
         r"\color{darktext}",
         r"{\LARGE\bfseries Nhat-Minh Nguyen \textemdash{} Publications}\par",

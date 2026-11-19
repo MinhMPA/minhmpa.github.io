@@ -163,7 +163,7 @@ def test_render_latex_plainifies_tex_from_live_titles() -> None:
 def test_render_latex_uses_compact_spacing_for_long_live_lists() -> None:
     source = bpp.render_latex([], bpp.Metrics(24, 4444, 17), generated_on="2026-09-02")
 
-    assert r"\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=6pt}" in source
+    assert r"\setlist[itemize]{leftmargin=*,itemsep=0pt,parsep=0pt,topsep=6pt}" in source
 
 
 def fixture_fetcher(url: str) -> dict:
